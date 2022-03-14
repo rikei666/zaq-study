@@ -15,7 +15,7 @@ public class Problem_0008_StringToInteger {
 			return 0;
 		}
 		// str 是符合日常书写的，正经整数形式
-		boolean posi = str[0] == '-' ? false : true;
+		boolean posi = str[0] == '-' ? false : true; //按照负数处理，比整数多表示一个数
 		int minq = Integer.MIN_VALUE / 10;
 		int minr = Integer.MIN_VALUE % 10;
 		int res = 0;

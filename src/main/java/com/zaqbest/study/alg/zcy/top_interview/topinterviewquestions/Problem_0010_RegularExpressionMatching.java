@@ -9,6 +9,8 @@ public class Problem_0010_RegularExpressionMatching {
 			}
 		}
 		for (int i = 0; i < pattern.length; i++) {
+			//1，连续两个*
+			//2，*出现在开始位置
 			if (pattern[i] == '*' && (i == 0 || pattern[i - 1] == '*')) {
 				return false;
 			}
