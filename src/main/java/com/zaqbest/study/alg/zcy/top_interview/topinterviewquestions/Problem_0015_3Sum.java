@@ -11,7 +11,7 @@ public class Problem_0015_3Sum {
 		List<List<Integer>> ans = new ArrayList<>();
 		// 第一个数选了i位置的数
 		for (int i = 0; i < nums.length - 2; i++) {
-			if (i == 0 || nums[i - 1] != nums[i]) {
+			if (i == 0 || nums[i - 1] != nums[i]) { //跳过相同的数字，小技巧
 				List<List<Integer>> nexts = twoSum1(nums, i + 1, -nums[i]);
 				for (List<Integer> cur : nexts) {
 					cur.add(0, nums[i]);
