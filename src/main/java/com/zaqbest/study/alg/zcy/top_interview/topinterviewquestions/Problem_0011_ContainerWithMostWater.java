@@ -1,5 +1,12 @@
 package com.zaqbest.study.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 11.盛水最多的容器
+ * https://leetcode-cn.com/problems/container-with-most-water/
+ *
+ * @see
+ * {@link com.zaqbest.study.alg.zcy.training.study.Problem_0042_Trap}
+ */
 public class Problem_0011_ContainerWithMostWater {
 
 	public static int maxArea(int[] h) {

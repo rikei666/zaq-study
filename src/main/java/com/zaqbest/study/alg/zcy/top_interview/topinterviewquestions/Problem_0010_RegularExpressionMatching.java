@@ -1,5 +1,10 @@
 package com.zaqbest.study.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 10. 正则表达式匹配
+ * https://leetcode-cn.com/problems/regular-expression-matching/
+ *
+ */
 public class Problem_0010_RegularExpressionMatching {
 
 	public static boolean isValid(char[] str, char[] pattern) {
@@ -46,17 +51,20 @@ public class Problem_0010_RegularExpressionMatching {
 			return si == str.length;
 		}
 		// si 没越界 pi 没越界
+		//pattern[pi]不存在（已经越界），或者不是*的情况 => 1，str[si]和pattern[pi]的字符必须能对上 2，str[si+1]和pattern[pi+1]能匹配
 		if (pi + 1 >= pattern.length || pattern[pi + 1] != '*') {
 			return ((str[si] == pattern[pi]) || (pattern[pi] == '.')) && process1(str, pattern, si + 1, pi + 1);
 		}
-		// si 没越界 pi 没越界 pi+1 *
+		// str[si]和pattern[pi]没有配上， si 没越界 pi 没越界 pi+1 *
 		if (pattern[pi] != '.' && str[si] != pattern[pi]) {
 			return process1(str, pattern, si, pi + 2);
 		}
-		// si 没越界 pi 没越界 pi+1 * [pi]可配[si]
+		// str[si]和pattern[pi]配上了， si 没越界 pi 没越界 pi+1 * [pi]可配[si]
+		//?* 0份
 		if (process1(str, pattern, si, pi + 2)) {
 			return true;
 		}
+		//?* >0份
 		while (si < str.length && (str[si] == pattern[pi] || pattern[pi] == '.')) {
 			if (process1(str, pattern, si + 1, pi + 2)) {
 				return true;
