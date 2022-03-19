@@ -3,6 +3,9 @@ package com.zaqbest.study.alg.zcy.top_interview.topinterviewquestions;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 剪枝技巧
+ */
 public class Problem_0022_GenerateParentheses {
 
 	public static List<String> generateParenthesis(int n) {
