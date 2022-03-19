@@ -1,5 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 42 接雨水问题
+ *
+ * {@link com.zaqbest.study.foundation.alg.zcy.training.study.Problem_0042_Trap}
+ */
 public class Problem_0042_TrappingRainWater {
 
 	public static int trap(int[] arr) {

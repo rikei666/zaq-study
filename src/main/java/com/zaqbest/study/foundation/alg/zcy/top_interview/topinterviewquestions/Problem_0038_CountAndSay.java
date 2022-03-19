@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 没啥意思的题目
+ */
 public class Problem_0038_CountAndSay {
 
 	public static String countAndSay(int n) {

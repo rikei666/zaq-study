@@ -1,5 +1,9 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * str 任意小写字母
+ * pattern  ？和*， ？任意一个字符，*任意字符
+ */
 public class Problem_0044_WildcardMatching {
 
 	public static boolean isMatch1(String str, String pattern) {

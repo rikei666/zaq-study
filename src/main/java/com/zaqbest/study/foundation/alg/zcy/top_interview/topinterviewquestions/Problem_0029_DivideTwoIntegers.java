@@ -65,6 +65,7 @@ public class Problem_0029_DivideTwoIntegers {
 				return Integer.MAX_VALUE;
 			}
 			int res = div(add(dividend, 1), divisor);
+			//需要补偿一个数，参考md文件
 			return add(res, div(minus(dividend, multi(res, divisor)), divisor));
 		}
 		// dividend不是系统最小，divisor也不是系统最小

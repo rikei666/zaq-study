@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 剪枝
+ */
 public class Problem_0037_SudokuSolver {
 
 	public static void solveSudoku(char[][] board) {

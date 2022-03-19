@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 考虑数值相等的情况
+ */
 public class Problem_0033_SearchInRotatedSortedArray {
 
 	public static int search(int[] arr, int num) {

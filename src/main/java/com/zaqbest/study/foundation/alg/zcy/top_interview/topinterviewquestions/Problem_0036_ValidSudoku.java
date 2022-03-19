@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 验证数独，是否是有效的数独
+ */
 public class Problem_0036_ValidSudoku {
 
 	public static boolean isValidSudoku(char[][] board) {
