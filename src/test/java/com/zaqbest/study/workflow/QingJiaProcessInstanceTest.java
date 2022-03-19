@@ -49,7 +49,7 @@ public class QingJiaProcessInstanceTest extends BaseTest {
 				createStandaloneProcessEngineConfiguration();
 		//设置数据库连接属性
 		engineConfiguration.setJdbcDriver("com.mysql.jdbc.Driver");
-		engineConfiguration.setJdbcUrl("jdbc:mysql://my.zaqbest.com:3306/zaqdb?createDatabaseIfNotExist=true"
+		engineConfiguration.setJdbcUrl("jdbc:mysql://node.zaqbest.com:3306/zaqdb?createDatabaseIfNotExist=true"
 				+ "&useUnicode=true&characterEncoding=utf8");
 		engineConfiguration.setJdbcUsername("zaqdb");
 		engineConfiguration.setJdbcPassword("GF2fMX6czaB2NSwG");
