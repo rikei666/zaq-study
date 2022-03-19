@@ -3,6 +3,9 @@ package com.zaqbest.study.alg.zcy.top_interview.topinterviewquestions;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/**
+ * 小根堆
+ */
 public class Problem_0023_MergeKSortedLists {
 
 	public static class ListNode {
