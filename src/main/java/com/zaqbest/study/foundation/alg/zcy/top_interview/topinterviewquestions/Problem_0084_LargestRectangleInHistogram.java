@@ -2,6 +2,10 @@ package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions
 
 import java.util.Stack;
 
+/**
+ * 思路
+ * - 单调栈
+ */
 public class Problem_0084_LargestRectangleInHistogram {
 
 	public static int largestRectangleArea(int[] height) {

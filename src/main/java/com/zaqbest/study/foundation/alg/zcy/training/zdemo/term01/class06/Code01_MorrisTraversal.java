@@ -24,7 +24,9 @@ public class Code01_MorrisTraversal {
 		Node mostRight;
 		while (cur != null) {
 			mostRight = cur.left;
+			//有左树
 			if (mostRight != null) {
+				//左树上，真实的最右节点
 				while (mostRight.right != null && mostRight.right != cur) {
 					mostRight = mostRight.right;
 				}
@@ -37,6 +39,7 @@ public class Code01_MorrisTraversal {
 				}
 			}
 			System.out.print(cur.value + " ");
+			//没有左树
 			cur = cur.right;
 		}
 		System.out.println();
@@ -56,6 +59,7 @@ public class Code01_MorrisTraversal {
 				}
 				if (mostRight.right == null) {
 					mostRight.right = cur;
+					//向左移动之前打印cur
 					System.out.print(cur.value + " ");
 					cur = cur.left;
 					continue;

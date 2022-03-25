@@ -1,5 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 在矩阵中查找单词
+ *
+ * 思路
+ * 双样本对应模型
+ * 深度优先遍历（需要恢复现场）
+ */
 public class Problem_0079_WordSearch {
 
 	public static boolean exist(char[][] board, String word) {

@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 思路
+ * - 从左往右的尝试模型
+ * - 有条件的递推
+ *
+ */
 public class Problem_0091_DecodeWays {
 
 	public static int numDecodings1(String s) {

@@ -23,6 +23,7 @@ public class Problem_0078_Subsets {
 			process(nums, index + 1, path, ans);
 			path.addLast(nums[index]);
 			process(nums, index + 1, path, ans);
+			//恢复现场
 			path.removeLast();
 		}
 	}
