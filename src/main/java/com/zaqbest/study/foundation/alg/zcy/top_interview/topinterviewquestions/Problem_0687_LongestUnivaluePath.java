@@ -47,6 +47,7 @@ public class Problem_0687_LongestUnivaluePath {
 			len = Math.max(len, rinfo.len + 1);
 		}
 		int max = Math.max(Math.max(linfo.max, rinfo.max), len);
+		//如果能串起来，则都串起来
 		if (l != null && r != null && l.val == x.val && r.val == x.val) {
 			max = Math.max(max, linfo.len + rinfo.len + 1);
 		}

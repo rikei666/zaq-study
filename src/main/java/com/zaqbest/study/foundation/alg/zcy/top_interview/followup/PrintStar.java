@@ -1,5 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.followup;
 
+/**
+ * 转圈打印*
+ *
+ * 剥洋葱模型，有意思
+ */
 public class PrintStar {
 
 	public static void printStar(int N) {
