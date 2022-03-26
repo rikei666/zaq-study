@@ -3,6 +3,8 @@ package com.zaqbest.study.foundation.alg.zcy.training.zdemo.term04.class05;
 import java.util.LinkedList;
 
 /**
+ * 表达式求值
+ *
  * 给定一个字符串str，str表示一个公式，公式里可能有整数、加减乘除符号和左右 括号，返回公式的计算结果。
  * 【举例】
  * str="48*((70-65)-43)+8*1"，返回-1816。

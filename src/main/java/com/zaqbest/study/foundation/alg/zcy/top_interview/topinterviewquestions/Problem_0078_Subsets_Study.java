@@ -12,18 +12,13 @@ public class Problem_0078_Subsets_Study {
 		ans.add(new ArrayList<>());
 
 		for (int i = 0; i < nums.length; i++){
-			List<List<Integer>> tmp = new ArrayList<>();
-			tmp.addAll(ans);
-
-			for (List<Integer> item: ans){
-				List<Integer> newItem = new ArrayList<>(item);
-				newItem.add(nums[i]);
-				tmp.add(newItem);
+			int size = ans.size();
+			for (int j = 0; j < size; j++){
+				List<Integer> item = new ArrayList<>(ans.get(j));
+				item.add(nums[i]);
+				ans.add(item);
 			}
-
-			ans = tmp;
 		}
-
 		return ans;
 	}
 
