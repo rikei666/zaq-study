@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
-
+/**
+ * {@link Problem_0121_BestTimeToBuyAndSellStock}
+ * {@link Problem_0122_BestTimeToBuyAndSellStockII}
+ * {@link Problem_0123_BestTimeToBuyAndSellStockIII}
+ * {@link Problem_0188_BestTimeToBuyAndSellStockIV}
+ * {@link Problem_0309_BestTimeToBuyAndSellStockWithCooldown}
+ */
 public class Problem_0121_BestTimeToBuyAndSellStock {
 
 	public static int maxProfit(int[] prices) {
