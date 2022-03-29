@@ -1,5 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 验证有效回文
+ *
+ * 思路
+ * 双指针
+ * 非字母和数字处理技巧
+ */
 public class Problem_0125_ValidPalindrome {
 
 	public static boolean isPalindrome(String s) {

@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 围棋包围问题
+ */
 public class Problem_0130_SurroundedRegions {
 
 	public static void solve1(char[][] board) {

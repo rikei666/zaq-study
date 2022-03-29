@@ -2,6 +2,9 @@ package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions
 
 import java.util.*;
 
+/**
+ * 单词接龙（单词阶梯）
+ */
 public class Problem_0127_WordLadder {
 
 	public static int ladderLength1(String start, String to, List<String> list) {
@@ -61,6 +64,13 @@ public class Problem_0127_WordLadder {
 		return res;
 	}
 
+	/**
+	 * 从小的一头开始搜索，如果需要，交换startSet和endSet
+	 * @param beginWord
+	 * @param endWord
+	 * @param wordList
+	 * @return
+	 */
 	public static int ladderLength2(String beginWord, String endWord, List<String> wordList) {
 		HashSet<String> dict = new HashSet<>(wordList);
 		if (!dict.contains(endWord)) {

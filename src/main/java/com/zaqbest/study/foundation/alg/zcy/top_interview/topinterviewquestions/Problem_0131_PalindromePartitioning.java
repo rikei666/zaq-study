@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 回文划分方案有多少种
+ *
+ * 思路
+ * - 预处理dp
+ * - 深度优先遍历dfs
+ * - 恢复现场
+ */
 public class Problem_0131_PalindromePartitioning {
 
 	public static List<List<String>> partition(String s) {
