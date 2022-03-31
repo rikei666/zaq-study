@@ -1,5 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 把一个整数按照2进制进行反转
+ * 例如：0010 1100 => 0011 0100
+ *
+ * 思路：
+ * - 位操作（有点意思）
+ */
 public class Problem_0190_ReverseBits {
 
 	// 代码看着很魔幻吧？

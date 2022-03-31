@@ -1,5 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 原地转动数组
+ * 要求：时间复杂度O(N）,空间复杂度O(1)
+ *
+ * 思路：
+ * - 3次逆序（L逆序，R逆序，整体逆序）
+ */
 public class Problem_0189_RotateArray {
 
 	public void rotate1(int[] nums, int k) {

@@ -3,6 +3,13 @@ package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * Given a list of non-negative integers nums,
+ * arrange them such that they form the largest number and return it.
+ *
+ * Input: nums = [10,2]
+ * Output: "210"
+ */
 public class Problem_0179_LargestNumber {
 
 	public static class MyComparator implements Comparator<String> {
@@ -26,6 +33,7 @@ public class Problem_0179_LargestNumber {
 		}
 		String ans = builder.toString();
 		char[] str = ans.toCharArray();
+		//去除前导的0
 		int index = -1;
 		for (int i = 0; i < str.length; i++) {
 			if (str[i] != '0') {

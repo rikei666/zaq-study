@@ -12,4 +12,20 @@ public class Problem_0171_ExcelSheetColumnNumber {
 		return ans;
 	}
 
+	public static String numberToTitle(int n){
+		String ans = "";
+		while (n > 0){
+			int m = n % 26;
+			if (m > 0) {
+				ans = (char) (m - 1 + 'A') + ans;
+			}
+			n /= 26;
+		}
+
+		return ans;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(numberToTitle(titleToNumber("FXSHRXW")));
+	}
 }
