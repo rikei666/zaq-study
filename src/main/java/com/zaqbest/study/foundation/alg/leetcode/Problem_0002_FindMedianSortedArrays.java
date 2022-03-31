@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.leetcode;
 
-import com.zaqbest.study.foundation.alg.zcy.training.zdemo.term04.class04.Code02_FindKthMinNumber;
+import com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term04.class04.Code02_FindKthMinNumber;
 
 /**
  * 4. 寻找两个正序数组的中位数

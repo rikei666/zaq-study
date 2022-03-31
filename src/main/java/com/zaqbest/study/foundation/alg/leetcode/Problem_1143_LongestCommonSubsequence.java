@@ -1,8 +1,8 @@
 package com.zaqbest.study.foundation.alg.leetcode;
 
-import com.zaqbest.study.foundation.alg.zcy.basic.zdemo.class12.Code05_LongestSubsequence;
-import com.zaqbest.study.foundation.alg.zcy.training.zdemo.term03.class03.Code04_LCSubsequence;
-import com.zaqbest.study.foundation.alg.zcy.training.zdemo.term03.class03.Code05_LCSubstring;
+import com.zaqbest.study.foundation.alg.zcy.s10_primary.class12.Code05_LongestSubsequence;
+import com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term03.class03.Code04_LCSubsequence;
+import com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term03.class03.Code05_LCSubstring;
 
 /**
  * 1143. 最长公共子序列

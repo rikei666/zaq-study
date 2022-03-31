@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.leetcode;
 
-import com.zaqbest.study.foundation.alg.zcy.basic.zdemo.class11.Code06_ConvertToLetterString;
+import com.zaqbest.study.foundation.alg.zcy.s10_primary.class11.Code06_ConvertToLetterString;
 
 /**
  * 0091 解码方法

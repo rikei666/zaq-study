@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.leetcode;
 
-import com.zaqbest.study.foundation.alg.zcy.training.zdemo.term03.class03.Code05_LCSubstring;
+import com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term03.class03.Code05_LCSubstring;
 
 /**
  * 718. 最长重复子数组

@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.leetcode;
 
-import com.zaqbest.study.foundation.alg.zcy.training.zdemo.term05.class01.Problem02_MinWindowLength;
+import com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term05.class01.Problem02_MinWindowLength;
 
 /**
  * 0076. 最小覆盖子串

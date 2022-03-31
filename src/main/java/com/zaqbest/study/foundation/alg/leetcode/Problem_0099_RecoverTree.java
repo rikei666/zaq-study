@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.leetcode;
 
-import com.zaqbest.study.foundation.alg.zcy.training.zdemo.term04.class07.Code02_RecoverBST;
+import com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term04.class07.Code02_RecoverBST;
 
 import java.util.LinkedList;
 import java.util.Queue;

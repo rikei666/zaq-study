@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.leetcode;
 
-import com.zaqbest.study.foundation.alg.zcy.training.zdemo.term04.class08.Code05_MinimumCostToMergeStones;
+import com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term04.class08.Code05_MinimumCostToMergeStones;
 
 /**
  * 1000. 合并石头的最低成本
