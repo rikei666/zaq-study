@@ -3,10 +3,19 @@ package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions
 import java.util.HashSet;
 import java.util.List;
 
+/**
+ * 思路
+ * - 使用哈希表解法
+ * 	 哈希表（由于str比较长，不能忽略长度，所以复杂度也是O(n)，而不是O（1））
+ *
+ * - 前缀树解法
+ *   可以减少一阶（从O(N^3）减到O(N^2))
+ */
 public class Problem_0139_WordBreak {
 
 	public static boolean wordBreak(String s, List<String> wordDict) {
 		Node root = new Node();
+		// 创建前缀树 start
 		for (String str : wordDict) {
 			char[] chs = str.toCharArray();
 			Node node = root;
@@ -20,8 +29,10 @@ public class Problem_0139_WordBreak {
 			}
 			node.end = true;
 		}
+		// 创建前缀树 end
 		char[] str = s.toCharArray();
 		int N = str.length;
+		//dp[i]指的是str[i...N-1]可以被分解
 		boolean[] dp = new boolean[N + 1];
 		dp[N] = true;
 		for (int i = N - 1; i >= 0; i--) {

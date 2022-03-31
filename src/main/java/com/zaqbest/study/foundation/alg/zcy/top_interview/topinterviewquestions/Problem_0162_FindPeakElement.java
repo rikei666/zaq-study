@@ -1,5 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 找到一个局部高点
+ *  [i-1] < [i] < [i+1], [i]就是局部高点
+ *
+ *  思路
+ *  - 采用二分法，时间复杂度O(logN)
+ */
 public class Problem_0162_FindPeakElement {
 
 	public static int findPeakElement(int[] nums) {

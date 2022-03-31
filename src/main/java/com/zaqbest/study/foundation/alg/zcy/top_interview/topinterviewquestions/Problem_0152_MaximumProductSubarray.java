@@ -1,5 +1,19 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 子数组的最大累乘积
+ *
+ * 思路
+ * 依次考虑以[i]作为结尾的情况
+ * maxDp[i]表示[0..i-1]的最大值
+ * minDp[i]表示[0..i-1]的最小值
+ * 以[i]作为结尾的最大值，有下列3种情况
+ * a）[i]单独使用
+ * b）[i]和maxDp[i-1]相乘
+ * c）[i]和minDp[i-1]相乘
+ *
+ * 求最小值的方法相同
+ */
 public class Problem_0152_MaximumProductSubarray {
 
 	public static int maxProduct(int[] nums) {

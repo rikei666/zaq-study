@@ -1,5 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 链表排序
+ *
+ * 思路
+ * - 归并排序在链表上的实现
+ * - coding细节能力
+ */
 public class Problem_0148_SortList {
 
 	public static class ListNode {
@@ -24,6 +31,7 @@ public class Problem_0148_SortList {
 		for (int len = 1; len < N; len <<= 1) {
 			while (teamFirst != null) {
 				ListNode[] hthtn = hthtn(teamFirst, len);
+				//长度为2的数组【merge后的头，merge后的尾】
 				ListNode[] mhmt = merge(hthtn[0], hthtn[1], hthtn[2], hthtn[3]);
 				if (h == teamFirst) {
 					h = mhmt[0];
@@ -40,6 +48,12 @@ public class Problem_0148_SortList {
 		return h;
 	}
 
+	/**
+	 *
+	 * @param teamFirst
+	 * @param len
+	 * @return 【L头，L尾，R头， R尾， 下一组的头】
+	 */
 	public static ListNode[] hthtn(ListNode teamFirst, int len) {
 		ListNode ls = teamFirst;
 		ListNode le = teamFirst;
@@ -71,6 +85,14 @@ public class Problem_0148_SortList {
 		return new ListNode[] { ls, le, rs, re, next };
 	}
 
+	/**
+	 *
+	 * @param ls
+	 * @param le
+	 * @param rs
+	 * @param re
+	 * @return 长度为2的数组【merge后的头，merge后的尾】
+	 */
 	public static ListNode[] merge(ListNode ls, ListNode le, ListNode rs, ListNode re) {
 		if (rs == null) {
 			return new ListNode[] { ls, le };

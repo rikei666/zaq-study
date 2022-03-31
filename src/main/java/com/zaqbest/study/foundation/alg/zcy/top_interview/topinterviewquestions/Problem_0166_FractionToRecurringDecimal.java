@@ -2,6 +2,14 @@ package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions
 
 import java.util.HashMap;
 
+/**
+ * 分数转换为循环小数
+ *
+ * 思路：
+ * coding问题
+ *
+ * 俗称烂题，没啥算法技巧
+ */
 public class Problem_0166_FractionToRecurringDecimal {
 
 	public String fractionToDecimal(int numerator, int denominator) {

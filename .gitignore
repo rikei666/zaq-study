@@ -40,3 +40,4 @@ target
 
 # Maven ignore
 .flattened-pom.xml
+~$*.docx

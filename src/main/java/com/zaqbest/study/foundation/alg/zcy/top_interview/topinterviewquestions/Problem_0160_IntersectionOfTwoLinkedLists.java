@@ -1,5 +1,13 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 两个无环链表第一个相交的节点
+ *
+ * 思路：
+ * 1，判断最后一个节点是否相同，不相同就是不相交的
+ * 2，两个链表相差n个节点，则长链表先走n步，然后两个链表一起走，
+ *   第一个相交的节点就是所求结果
+ */
 public class Problem_0160_IntersectionOfTwoLinkedLists {
 
 	public class ListNode {

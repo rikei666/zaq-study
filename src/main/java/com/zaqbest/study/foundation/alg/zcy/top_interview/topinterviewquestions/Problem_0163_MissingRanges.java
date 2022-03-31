@@ -3,6 +3,12 @@ package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 查找范围内缺失的区间
+ *
+ * 问题描述
+ * https://cdn.zaqbest.com/2022/03/31/57283c3adc9b4c927a6f43c31e24891b.PNG
+ */
 public class Problem_0163_MissingRanges {
 
 	public static List<String> findMissingRanges(int[] nums, int lower, int upper) {
@@ -16,6 +22,7 @@ public class Problem_0163_MissingRanges {
 			}
 			lower = num + 1;
 		}
+		//所有数字处理完，看下是否到达upper
 		if (lower <= upper) {
 			ans.add(miss(lower, upper));
 		}

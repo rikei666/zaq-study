@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions;
 
+/**
+ * 检查链表是否有环
+ *
+ * 思路
+ * - 快慢指针
+ */
 public class Problem_0141_LinkedListCycle {
 
 	public static class ListNode {
@@ -18,6 +24,7 @@ public class Problem_0141_LinkedListCycle {
 		ListNode slow = head.next;
 		ListNode fast = head.next.next;
 		while (slow != fast) {
+			//一旦走到null, 就肯定不存在环
 			if (fast.next == null || fast.next.next == null) {
 				return null;
 			}

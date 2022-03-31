@@ -3,6 +3,12 @@ package com.zaqbest.study.foundation.alg.zcy.top_interview.topinterviewquestions
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 最多有多少个点共线
+ *
+ * 思路
+ * - 特殊考虑：1,同一个位置 2, 共X 3,共Y
+ */
 public class Problem_0149_MaxPointsOnALine {
 
 	public static int maxPoints(int[][] points) {

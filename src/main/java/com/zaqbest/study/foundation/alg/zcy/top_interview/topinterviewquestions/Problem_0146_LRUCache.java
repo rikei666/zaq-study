@@ -5,6 +5,8 @@ import java.util.HashMap;
 /*
  * 在leetcode上提交时，把文字替换成下面的代码
  * 然后把类名、构造方法名从Problem_0146_LRUCache改为LRUCache即可
+ *
+ * 经典算法，必考题
  */
 
 public class Problem_0146_LRUCache {
