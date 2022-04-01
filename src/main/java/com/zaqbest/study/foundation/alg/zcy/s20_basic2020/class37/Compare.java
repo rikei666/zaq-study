@@ -2,9 +2,9 @@ package com.zaqbest.study.foundation.alg.zcy.s20_basic2020.class37;
 
 import java.util.TreeMap;
 
-import class35.Code01_AVLTreeMap.AVLTreeMap;
-import class36.Code01_SizeBalancedTreeMap.SizeBalancedTreeMap;
-import class36.Code02_SkipListMap.SkipListMap;
+import com.zaqbest.study.foundation.alg.zcy.s20_basic2020.class35.Code01_AVLTreeMap.AVLTreeMap;
+import com.zaqbest.study.foundation.alg.zcy.s20_basic2020.class36.Code01_SizeBalancedTreeMap.SizeBalancedTreeMap;
+import com.zaqbest.study.foundation.alg.zcy.s20_basic2020.class36.Code02_SkipListMap.SkipListMap;
 
 // 本文件为avl、sbt、skiplist三种结构的测试文件
 public class Compare {

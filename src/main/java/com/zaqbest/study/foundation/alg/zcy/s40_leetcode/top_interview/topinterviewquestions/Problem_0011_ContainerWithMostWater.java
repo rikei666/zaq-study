@@ -1,13 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
-import com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.study.Problem_0042_Trap;
 
 /**
  * 11.盛水最多的容器
  * https://leetcode-cn.com/problems/container-with-most-water/
  *
  * @see
- * {@link Problem_0042_Trap}
+ * {@link Problem_0042_TrappingRainWater}
  */
 public class Problem_0011_ContainerWithMostWater {
 
