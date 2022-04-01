@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * 拓扑排序，输出结果
+ */
 public class Problem_0210_CourseScheduleII {
 
 	public static class Node {

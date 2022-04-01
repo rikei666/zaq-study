@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * 有向图的拓扑排序
+ */
 public class Problem_0207_CourseSchedule {
 
 	// 一个node，就是一个课程

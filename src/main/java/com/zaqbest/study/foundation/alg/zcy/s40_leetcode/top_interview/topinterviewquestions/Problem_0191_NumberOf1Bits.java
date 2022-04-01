@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 一个整数中有多少个为1的bit位
+ */
 public class Problem_0191_NumberOf1Bits {
     
 	
