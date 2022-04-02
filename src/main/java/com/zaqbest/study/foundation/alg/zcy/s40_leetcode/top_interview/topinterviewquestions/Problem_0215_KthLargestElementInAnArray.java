@@ -1,5 +1,13 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 第K大的数
+ *
+ * 思路
+ * 随机快排改写
+ * bfprt算法
+ * 时间复杂度O(N)
+ */
 public class Problem_0215_KthLargestElementInAnArray {
 
 	public int findKthLargest(int[] nums, int k) {

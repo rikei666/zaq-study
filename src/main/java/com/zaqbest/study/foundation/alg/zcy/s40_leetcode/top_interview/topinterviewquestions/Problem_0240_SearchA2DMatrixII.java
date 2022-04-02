@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 有序的二维矩阵搜索问题
+ *
+ * 思路
+ * 坐下或者右上开始搜索
+ */
 public class Problem_0240_SearchA2DMatrixII {
 
 	public static boolean searchMatrix(int[][] m, int target) {

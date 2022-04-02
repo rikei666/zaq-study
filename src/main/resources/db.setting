@@ -1,5 +1,5 @@
 ## db.setting文件
-url = jdbc:mysql://my.zaqbest.com:3306/zaqdb
+url = jdbc:mysql://node.zaqbest.com:3306/zaqdb
 user = admin
 pass = rikei@1234
 ## 可选配置

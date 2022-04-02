@@ -21,9 +21,11 @@ public class Problem_0212_WordSearchII {
 
 	public static List<String> findWords(char[][] board, String[] words) {
 		TrieNode head = new TrieNode(); // 前缀树最顶端的头
+		//set用于单词的去重
 		HashSet<String> set = new HashSet<>();
 		for (String word : words) {
 			if (!set.contains(word)) {
+				//对每一个单词构造前缀树
 				fillWord(head, word);
 				set.add(word);
 			}

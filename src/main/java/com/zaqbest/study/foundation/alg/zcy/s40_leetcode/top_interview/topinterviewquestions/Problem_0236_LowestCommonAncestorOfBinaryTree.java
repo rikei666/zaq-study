@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 最低公共祖先
+ *
+ * 思路
+ * - 二叉树的递归套路
+ */
 public class Problem_0236_LowestCommonAncestorOfBinaryTree {
 
 	public static class TreeNode {

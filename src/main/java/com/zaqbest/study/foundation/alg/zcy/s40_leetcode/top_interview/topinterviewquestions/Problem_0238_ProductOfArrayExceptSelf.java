@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 除了自己外，所有数字的乘积
+ */
 public class Problem_0238_ProductOfArrayExceptSelf {
 
 	public int[] productExceptSelf(int[] nums) {

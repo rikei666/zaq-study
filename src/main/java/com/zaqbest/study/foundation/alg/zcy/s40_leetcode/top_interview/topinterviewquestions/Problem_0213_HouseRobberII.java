@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 抢劫犯  不能连续抢劫两家，可以抢到的最大值
+ */
 public class Problem_0213_HouseRobberII {
 
 	public static int rob(int[] nums) {

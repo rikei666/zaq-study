@@ -3,11 +3,17 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinter
 import java.util.*;
 import java.util.Map.Entry;
 
+/**
+ * 摩天大楼轮廓线
+ *
+ * 思路
+ * - 有序表
+ */
 public class Problem_0218_TheSkylineProblem {
 
 	public static class Node {
 		public int x;
-		public boolean isAdd;
+		public boolean isAdd; //isAdd=true,在x的位置增加一个高度h; 否则是减少一个高度h
 		public int h;
 
 		public Node(int x, boolean isAdd, int h) {
@@ -20,9 +26,11 @@ public class Problem_0218_TheSkylineProblem {
 	public static class NodeComparator implements Comparator<Node> {
 		@Override
 		public int compare(Node o1, Node o2) {
+			//发生位置升序
 			if (o1.x != o2.x) {
 				return o1.x - o2.x;
 			}
+			//增加，减少
 			if (o1.isAdd != o2.isAdd) {
 				return o1.isAdd ? -1 : 1;
 			}
@@ -58,9 +66,11 @@ public class Problem_0218_TheSkylineProblem {
 			if (mapHeightTimes.isEmpty()) {
 				xMaxHeight.put(nodes[i].x, 0);
 			} else {
+				//最大值
 				xMaxHeight.put(nodes[i].x, mapHeightTimes.lastKey());
 			}
 		}
+		//生成轮廓线
 		List<List<Integer>> ans = new ArrayList<>();
 		for (Entry<Integer, Integer> entry : xMaxHeight.entrySet()) {
 			int curX = entry.getKey();

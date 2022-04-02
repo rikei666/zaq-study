@@ -1,5 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 思路
+ * 中序遍历
+ * morris遍历
+ */
 public class Problem_0230_KthSmallestElementInBST {
 
 	public static class TreeNode {

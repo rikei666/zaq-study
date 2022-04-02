@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 判断一个链表是不是回文
+ */
 public class Problem_0234_PalindromeLinkedList {
 
 	public static class ListNode {

@@ -2,6 +2,12 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinter
 
 import java.util.LinkedList;
 
+/**
+ * 简单的计算器 +-* /，没有加小括号
+ *
+ * 增加小括号的版本
+ * {@link Problem_0772_BasicCalculatorIII}」
+ */
 public class Problem_0227_BasicCalculatorII {
 
 	public static int calculate(String s) {
