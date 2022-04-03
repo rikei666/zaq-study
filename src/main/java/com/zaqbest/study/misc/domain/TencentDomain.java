@@ -2,6 +2,7 @@ package com.zaqbest.study.misc.domain;
 
 import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.core.util.SystemPropsUtil;
 import com.alibaba.fastjson.JSON;
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
@@ -104,7 +105,7 @@ public class TencentDomain {
     private static boolean checkDomain(String domain) {
         // 密钥可前往https://console.cloud.tencent.com/cam/capi网站进行获取
         //final Credential cred = new Credential(PropUtil.getValue("tencentSecretId"), PropUtil.getValue("tencentSecretKey"));
-        Credential cred = new Credential("AKIDzpJWifHxOZpoHnjWhGsEqCHH1VpvbTu5", "ECuWnohJeYN2dqngIgofFgwxpRn50fTu");
+        Credential cred = new Credential(SystemPropsUtil.get("zaq_study_tencent_cloud_secretId"), SystemPropsUtil.get("zaq_study_tencent_cloud_secretKey"));
         try{
             // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey,此处还需注意密钥对的保密
             // 实例化一个http选项，可选的，没有特殊需求可以跳过
