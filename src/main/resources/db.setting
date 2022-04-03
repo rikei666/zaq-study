@@ -1,7 +1,7 @@
 ## db.setting文件
-url = jdbc:mysql://node.zaqbest.com:3306/zaqdb
-user = admin
-pass = rikei@1234
+url =  ${zaq_study.database.url}
+user = ${zaq_study.database.username}
+pass = ${zaq_study.database.password}
 ## 可选配置
 # 是否在日志中显示执行的SQL
 showSql = true

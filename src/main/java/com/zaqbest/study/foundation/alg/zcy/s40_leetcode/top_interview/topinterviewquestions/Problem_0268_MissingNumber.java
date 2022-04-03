@@ -1,5 +1,16 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 查找缺少的第一个正整数
+ *
+ * 思路
+ * - 双指针移动，l,r  无用的数字，都移动到垃圾区
+ *
+ * 分为3种情况：
+ * 1, [l] < l ;
+ * 2, [l] >= r
+ * 3, [l] == [[l]]
+ */
 public class Problem_0268_MissingNumber {
 
 	public static int missingNumber(int[] arr) {
