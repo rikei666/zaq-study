@@ -1,5 +1,6 @@
 package com.zaqbest.study.workflow;
 
+import cn.hutool.core.util.SystemPropsUtil;
 import com.zaqbest.workflow.config.ActivitiConfig;
 import com.zaqbest.study.BaseTest;
 import org.activiti.engine.*;
@@ -49,10 +50,9 @@ public class QingJiaProcessInstanceTest extends BaseTest {
 				createStandaloneProcessEngineConfiguration();
 		//设置数据库连接属性
 		engineConfiguration.setJdbcDriver("com.mysql.jdbc.Driver");
-		engineConfiguration.setJdbcUrl("jdbc:mysql://node.zaqbest.com:3306/zaqdb?createDatabaseIfNotExist=true"
-				+ "&useUnicode=true&characterEncoding=utf8");
-		engineConfiguration.setJdbcUsername("zaqdb");
-		engineConfiguration.setJdbcPassword("GF2fMX6czaB2NSwG");
+		engineConfiguration.setJdbcUrl(SystemPropsUtil.get("zaq_study.database.url"));
+		engineConfiguration.setJdbcUsername(SystemPropsUtil.get("zaq_study.database.username"));
+		engineConfiguration.setJdbcPassword(SystemPropsUtil.get("zaq_study.database.password"));
 
 
 		// 设置创建表的策略 （当没有表时，自动创建表）
