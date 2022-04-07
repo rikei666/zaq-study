@@ -4,6 +4,13 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/**
+ * 会议安排问题
+ *
+ * 思路：
+ * - 贪心
+ * - 堆排序
+ */
 public class Problem_0253_MeetingRoomsII {
 
 	public static int minMeetingRooms(int[][] m) {

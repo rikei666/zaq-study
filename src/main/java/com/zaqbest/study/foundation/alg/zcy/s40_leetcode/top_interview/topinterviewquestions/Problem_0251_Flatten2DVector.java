@@ -1,5 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 二维数组转换为迭代器
+ *
+ * 迭代器的经典实现
+ */
 public class Problem_0251_Flatten2DVector {
 
 	public static class Vector2D {

@@ -1,5 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 中序遍历的下一个节点
+ *
+ * morris遍历
+ */
 public class Problem_0285_InorderSuccessorInBST {
 
 	public static class TreeNode {

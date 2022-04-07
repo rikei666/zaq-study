@@ -3,6 +3,15 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinter
 import java.util.ArrayList;
 import java.util.TreeMap;
 
+/**
+ * 最长递增子序列的个数
+ *
+ * 超级难问题
+ *
+ * 思路
+ * - 二分
+ * - 有序表
+ */
 public class Problem_0673_NumberOfLongestIncreasingSubsequence {
 
 	public static int findNumberOfLIS(int[] nums) {
@@ -26,6 +35,7 @@ public class Problem_0673_NumberOfLongestIncreasingSubsequence {
 				}
 			}
 			int num = 1;
+
 			int index = find == -1 ? dp.size() : find;
 			if (index > 0) {
 				TreeMap<Integer, Integer> lastMap = dp.get(index - 1);
@@ -46,6 +56,12 @@ public class Problem_0673_NumberOfLongestIncreasingSubsequence {
 		return dp.get(dp.size() - 1).firstEntry().getValue();
 	}
 
+	/**
+	 * 分解之后的方法，更容易理解些
+	 *
+	 * @param nums
+	 * @return
+	 */
 	public static int findNumberOfLIS2(int[] nums) {
 		if (nums == null || nums.length == 0) {
 			return 0;
@@ -55,6 +71,7 @@ public class Problem_0673_NumberOfLongestIncreasingSubsequence {
 			int L = 0;
 			int R = dp.size() - 1;
 			int find = -1;
+			//大与等于[i]的最左位置在哪里
 			while (L <= R) {
 				int mid = (L + R) / 2;
 				if (dp.get(mid).firstKey() >= nums[i]) {
@@ -64,18 +81,24 @@ public class Problem_0673_NumberOfLongestIncreasingSubsequence {
 					L = mid + 1;
 				}
 			}
+			//如果没找到，就扩充新的dp
 			if (find == -1) {
 				dp.add(new TreeMap<>());
+				//新增加的index
 				int index = dp.size() - 1;
 				TreeMap<Integer, Integer> cur = dp.get(index);
 				int size = 1;
+				//如果有前面有值
 				if (index > 0) {
 					TreeMap<Integer, Integer> pre = dp.get(index - 1);
+					//第一个值
 					size = pre.get(pre.firstKey());
 					if (pre.ceilingKey(nums[i]) != null) {
+						//减去不符合条件的部分
 						size -= pre.get(pre.ceilingKey(nums[i]));
 					}
 				}
+				//设置当前值
 				cur.put(nums[i], size);
 			} else {
 				int newAdd = 1;

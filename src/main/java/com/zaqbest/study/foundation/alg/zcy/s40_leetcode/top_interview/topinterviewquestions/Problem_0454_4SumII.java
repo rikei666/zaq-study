@@ -2,6 +2,12 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinter
 
 import java.util.HashMap;
 
+/**
+ * 4个数组中，每个数组都出一个数，4个数的sum为0
+ *
+ * AB一组，CD一组
+ * 时间复杂度O(N^2)
+ */
 public class Problem_0454_4SumII {
 
 	public static int fourSumCount(int[] A, int[] B, int[] C, int[] D) {

@@ -34,6 +34,7 @@ public class Problem_0322_CoinChange {
 			return -1;
 		}
 		int N = coins.length;
+		//dp[i][j]指的是使用0..i的硬币，搞定j的最小个数
 		int[][] dp = new int[N][aim + 1];
 		// dp[i][0] = 0 0列不需要填
 		// dp[0][1...] = arr[0]的整数倍，有张数，倍数，其他的格子-1（表示无方案）
@@ -48,6 +49,7 @@ public class Problem_0322_CoinChange {
 		for (int i = 1; i < N; i++) {
 			for (int j = 1; j <= aim; j++) {
 				dp[i][j] = Integer.MAX_VALUE;
+				//使用0个arr[i]的硬币
 				if (dp[i - 1][j] != -1) {
 					dp[i][j] = dp[i - 1][j];
 				}
@@ -62,4 +64,40 @@ public class Problem_0322_CoinChange {
 		return dp[N - 1][aim];
 	}
 
+
+	public static int coinChange_study1(int[] coins, int amount) {
+		int[][] dp = new int[coins.length+1][amount+1];
+		for (int i = 0; i < coins.length+1;i++){
+			for (int j = 0; j < amount+1; j++){
+				dp[i][j] = -2;
+			}
+		}
+		return process(coins, 0, amount, dp);
+	}
+
+	private static int process(int[] coins, int index, int left, int[][] dp){
+		if (dp[index][left] != -2){
+			return dp[index][left];
+		}
+		if (index == coins.length){
+			dp[index][left] = (left == 0 ? 0 : -1);
+			return dp[index][left];
+		}
+
+		int ans = Integer.MAX_VALUE;
+		for (int i = 0; i * coins[index] <= left; i++){
+			int p1 = process(coins, index+1, left - i * coins[index], dp);
+
+			if (p1 != -1){
+				ans = Math.min(ans, p1 + i);
+			}
+		}
+		dp[index][left] = (ans == Integer.MAX_VALUE ? -1 : ans);
+		return dp[index][left];
+	}
+
+	public static void main(String[] args) {
+		int res = coinChange_study1(new int[]{1,2,5}, 11);
+		System.out.println(res);
+	}
 }

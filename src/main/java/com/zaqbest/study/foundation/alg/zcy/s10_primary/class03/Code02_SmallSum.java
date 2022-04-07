@@ -9,6 +9,8 @@ package com.zaqbest.study.foundation.alg.zcy.s10_primary.class03;
  * 2左边比2小的数：1
  * 5左边比5小的数：1、3、4、 2
  * 所以数组的小和为1+1+3+1+1+3+4+2=16
+ *
+ * {@link com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions.Problem_0315_CountOfSmallerNumbersAfterSelf}
  */
 public class Code02_SmallSum {
 

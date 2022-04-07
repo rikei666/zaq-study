@@ -1,6 +1,9 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
 // 提交时把类名和构造函数名从Problem_0308_RangeSumQuery2DMutable改成NumMatrix
+/**
+ * 二维indextree 树状数组
+ */
 public class Problem_0308_RangeSumQuery2DMutable {
 	private int[][] tree;
 	private int[][] nums;

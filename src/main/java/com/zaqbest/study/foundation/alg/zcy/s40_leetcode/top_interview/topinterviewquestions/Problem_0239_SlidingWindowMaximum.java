@@ -2,6 +2,9 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinter
 
 import java.util.LinkedList;
 
+/**
+ * 滑动窗口最大值
+ */
 public class Problem_0239_SlidingWindowMaximum {
 
 	public static int[] maxSlidingWindow(int[] arr, int w) {

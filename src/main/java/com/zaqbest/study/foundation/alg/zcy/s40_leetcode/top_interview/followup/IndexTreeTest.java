@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.followup;
 
+/**
+ * indextree 树状数组
+ */
 public class IndexTreeTest {
 
 	public static class IndexTree {

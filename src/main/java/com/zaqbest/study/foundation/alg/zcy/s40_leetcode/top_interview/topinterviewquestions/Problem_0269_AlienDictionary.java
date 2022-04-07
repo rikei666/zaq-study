@@ -5,6 +5,12 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * 字典序
+ *
+ * 思路
+ * - 拓扑排序
+ */
 public class Problem_0269_AlienDictionary {
 
 	public static String alienOrder(String[] words) {
@@ -22,13 +28,16 @@ public class Problem_0269_AlienDictionary {
 		for (int i = 0; i < N - 1; i++) {
 			char[] cur = words[i].toCharArray();
 			char[] nex = words[i + 1].toCharArray();
+			//考虑最短的一个
 			int len = Math.min(cur.length, nex.length);
 			int j = 0;
 			for (; j < len; j++) {
+				//只要有一个不同，就不需要后面在比较了
 				if (cur[j] != nex[j]) {
 					if (!graph.containsKey(cur[j])) {
 						graph.put(cur[j], new HashSet<>());
 					}
+					//新发现的字符，to字符入度增加1
 					if (!graph.get(cur[j]).contains(nex[j])) {
 						graph.get(cur[j]).add(nex[j]);
 						indegree.put(nex[j], indegree.get(nex[j]) + 1);
@@ -36,6 +45,7 @@ public class Problem_0269_AlienDictionary {
 					break;
 				}
 			}
+			//第一个比第二个长的情况，那么就不存在字典序
 			if (j < cur.length && j == nex.length) {
 				return "";
 			}

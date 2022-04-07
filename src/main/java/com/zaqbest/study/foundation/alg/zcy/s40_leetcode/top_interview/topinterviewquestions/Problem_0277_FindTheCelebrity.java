@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 如何在人群中找到明星
+ *
+ * 思路
+ * - 想法很奇妙
+ */
 public class Problem_0277_FindTheCelebrity {
 
 	// 提交时不要提交这个函数，只提交下面的方法

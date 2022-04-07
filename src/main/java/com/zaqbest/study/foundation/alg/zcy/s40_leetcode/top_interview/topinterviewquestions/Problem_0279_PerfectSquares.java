@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 打表找规律
+ */
 public class Problem_0279_PerfectSquares {
 
 	// 暴力解

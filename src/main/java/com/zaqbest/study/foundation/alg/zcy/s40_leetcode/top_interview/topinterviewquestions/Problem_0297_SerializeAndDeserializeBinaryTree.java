@@ -3,6 +3,12 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinter
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * 二叉树的序列话和反序列化
+ *
+ * 思路
+ * - 宽度优先遍历
+ */
 public class Problem_0297_SerializeAndDeserializeBinaryTree {
 
 	// 提交代码时不要提交TreeNode类
@@ -40,6 +46,7 @@ public class Problem_0297_SerializeAndDeserializeBinaryTree {
 				}
 			}
 		}
+		//移除尾端的所有null
 		while (!ans.isEmpty() && ans.peekLast() == null) {
 			ans.pollLast();
 		}

@@ -3,6 +3,14 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinter
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 给定数组arr, 计算每个位置i右边比【i】小的个数
+ *
+ * 思路
+ * - 改写归并排序
+ *
+ * {@link com.zaqbest.study.foundation.alg.zcy.s10_primary.class03.Code02_SmallSum}
+ */
 public class Problem_0315_CountOfSmallerNumbersAfterSelf {
 
 	public static class Node {
