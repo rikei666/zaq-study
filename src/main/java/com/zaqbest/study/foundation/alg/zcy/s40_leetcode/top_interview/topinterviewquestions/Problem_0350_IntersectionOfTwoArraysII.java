@@ -3,6 +3,12 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinter
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * 两个数组的重合部分
+ * 例如arr1=[1,2,2,3],arr2=[2,2,4],返回[2,2]
+ *
+ * 侮辱智商的题目
+ */
 public class Problem_0350_IntersectionOfTwoArraysII {
 
 	public static int[] intersect(int[] nums1, int[] nums2) {

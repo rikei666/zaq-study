@@ -4,6 +4,12 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
+/**
+ * 最高k个频率最高的数字
+ *
+ * 思路
+ * - map+heap
+ */
 public class Problem_0347_TopKFrequentElements {
 
 	public static class Node {

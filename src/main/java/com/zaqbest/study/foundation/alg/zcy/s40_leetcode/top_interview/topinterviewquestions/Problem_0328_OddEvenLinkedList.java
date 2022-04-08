@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 奇数节点，偶数节点分离
+ */
 public class Problem_0328_OddEvenLinkedList {
 
 	// 提交时不要提交这个类

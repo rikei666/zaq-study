@@ -1,5 +1,13 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 最多包含k个不同的字符，求最大的长度
+ *
+ * 思路
+ * - 滑动窗口+记账本
+ *
+ * 往右扩不动，就收缩窗口
+ */
 public class Problem_0340_LongestSubstringWithAtMostKDistinctCharacters {
 
 	public static int lengthOfLongestSubstringKDistinct(String s, int k) {
@@ -8,7 +16,7 @@ public class Problem_0340_LongestSubstringWithAtMostKDistinctCharacters {
 		}
 		char[] str = s.toCharArray();
 		int N = str.length;
-		int[] count = new int[256];
+		int[] count = new int[256]; //记账本功能
 		int diff = 0;
 		int R = 0;
 		int ans = 0;

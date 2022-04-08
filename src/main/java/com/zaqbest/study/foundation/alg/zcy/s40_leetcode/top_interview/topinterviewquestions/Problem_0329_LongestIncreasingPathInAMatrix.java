@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 最长递增链
+ */
 public class Problem_0329_LongestIncreasingPathInAMatrix {
 
 	public static int longest(int[][] matrix) {

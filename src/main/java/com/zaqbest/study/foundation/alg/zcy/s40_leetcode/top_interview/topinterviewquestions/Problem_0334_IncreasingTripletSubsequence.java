@@ -1,5 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ *
+ * 思路
+ * - 最长递增子序列，如果超过3返回true
+ */
 public class Problem_0334_IncreasingTripletSubsequence {
 
 	public static boolean increasingTriplet(int[] arr) {

@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 第一个没有重复的字符
+ *
+ * 思路
+ * - 两次遍历+记账本
+ */
 public class Problem_0387_FirstUniqueCharacterInString {
 
 	public int firstUniqChar(String s) {

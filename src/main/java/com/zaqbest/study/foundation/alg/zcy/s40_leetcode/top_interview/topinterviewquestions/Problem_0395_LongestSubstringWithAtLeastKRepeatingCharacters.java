@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 每一种字符，都必须重复至少k次，返回最大长度
+ *
+ * 思路
+ * - 滑动窗口
+ */
 public class Problem_0395_LongestSubstringWithAtLeastKRepeatingCharacters {
 
 	public static int longestSubstring1(String s, int k) {
@@ -26,6 +32,13 @@ public class Problem_0395_LongestSubstringWithAtLeastKRepeatingCharacters {
 		return max;
 	}
 
+	/**
+	 * 滑动窗口解法
+	 *
+	 * @param s
+	 * @param k
+	 * @return
+	 */
 	public static int longestSubstring2(String s, int k) {
 		char[] str = s.toCharArray();
 		int N = str.length;

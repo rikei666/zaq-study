@@ -2,6 +2,13 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinter
 
 import java.util.HashMap;
 
+/**
+ * 添加/删除/随机查询时间复杂度是O(1)
+ *
+ * 思路
+ * - 哈希表
+ * - 删除的时候，把最后一个元素填补到坑里
+ */
 public class Problem_0380_InsertDeleteGetRandom {
 
 	public class RandomizedSet {

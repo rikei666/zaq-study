@@ -3,6 +3,12 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinter
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/**
+ * 一个行也有序，列也有序的矩阵中，返回最小的K个数
+ *
+ * 思路
+ * - 小根堆+set
+ */
 public class Problem_0378_KthSmallestElementInSortedMatrix {
 
 	public static class Node {

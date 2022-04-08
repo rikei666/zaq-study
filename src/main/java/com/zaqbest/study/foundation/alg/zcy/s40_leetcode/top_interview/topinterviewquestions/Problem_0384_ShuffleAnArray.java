@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions;
 
+/**
+ * 随机洗牌
+ */
 public class Problem_0384_ShuffleAnArray {
 
 	class Solution {
