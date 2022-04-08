@@ -55,8 +55,10 @@ public class Problem_0395_LongestSubstringWithAtLeastKRepeatingCharacters {
 			int R = -1;
 			for (int L = 0; L < N; L++) { // L要尝试每一个窗口的最左位置
 				// [L..R]  R+1
+				//如果再加入一个字符，就超过require了，那就不要再扩了
 				while (R + 1 < N && !(collect == require && count[str[R + 1] - 'a'] == 0)) {
 					R++;
+					//字符加入处理
 					if (count[str[R] - 'a'] == 0) {
 						collect++;
 					}
@@ -69,6 +71,7 @@ public class Problem_0395_LongestSubstringWithAtLeastKRepeatingCharacters {
 				if (satisfy == require) {
 					max = Math.max(max, R - L + 1);
 				}
+				//字符移除处理
 				// L++
 				if (count[str[L] - 'a'] == 1) {
 					collect--;
