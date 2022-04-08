@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.followup;
 
+/**
+ * 携程笔试题
+ */
 public class Code01_Cola {
 	/*
 	 * 买饮料 时间限制： 3000MS 内存限制： 589824KB 题目描述：
@@ -40,16 +43,23 @@ public class Code01_Cola {
 		if (first == -1) {
 			return -1;
 		}
+		//最大面值的硬币能够买一瓶可乐
 		if (qian[first] >= rest) {
+			//最大面值张数减1
 			zhang[first]--;
+			//获得找钱
 			giveRest(qian, zhang, first + 1, qian[first] - rest, 1);
 			return 1;
+		//最大面值不够买一瓶可乐
 		} else {
+			//最大面值个数减1
 			zhang[first]--;
+			//等价于=>用剩下的钱，购买rest-qian[first]售价的可乐，需要多少次投币
 			int next = buy(qian, zhang, rest - qian[first]);
 			if (next == -1) {
 				return -1;
 			}
+			//记得结果要+1
 			return 1 + next;
 		}
 	}
