@@ -2,6 +2,9 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.followup
 
 /**
  * 携程笔试题
+ *
+ * 要求O(1), 超级难
+ * 考察逻辑分析能力，可太难了
  */
 public class Code01_Cola {
 	/*

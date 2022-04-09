@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.followup;
 
+/**
+ * 查找数组赋值最先报错的是哪一行
+ */
 public class Code03_Array {
 
 	public static int findError(String[] contents) {

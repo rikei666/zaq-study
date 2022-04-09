@@ -1,6 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.followup;
 
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 /*
  * 一张扑克有3个属性，每种属性有3种值（A、B、C）
@@ -15,6 +17,11 @@ import java.util.LinkedList;
  * 第一张第三个属性为"C"、第二张第三个属性为"C"、第三张第三个属性为"C"，全一样
  * 每种属性都满足在三张扑克中全一样，或全不一样，所以这三张扑克达标
  * 返回在cards[]中任意挑选三张扑克，达标的方法数
+ *
+ * 纸牌数量巨大无比
+ *
+ * 思路
+ * - 纸牌的花色是有限的26^3
  * */
 public class Code05_CardsProblem {
 
@@ -51,20 +58,22 @@ public class Code05_CardsProblem {
 	}
 
 	public static int ways2(String[] cards) {
-		int[] counts = new int[27];
+		int[] counts = new int[27]; //记账表
 		for (String s : cards) {
 			char[] str = s.toCharArray();
 			counts[(str[0] - 'A') * 9 + (str[1] - 'A') * 3 + (str[2] - 'A') * 1]++;
 		}
 		int ways = 0;
+		//所有同花色有多少种组合
 		for (int status = 0; status < 27; status++) {
 			int n = counts[status];
 			if (n > 2) {
-				ways += n == 3 ? 1 : (n * (n - 1) * (n - 2) / 6);
+				ways += n == 3 ? 1 : (n * (n - 1) * (n - 2) / 6); //组合数C_N_3
 			}
 		}
 		// 依次选出 第一个状态  第二个状态  第三个状态 
 		//           15         6         21
+		//深度优先遍历
 		LinkedList<Integer> path = new LinkedList<>();
 		for (int i = 0; i < 27; i++) {
 			if (counts[i] != 0) {
@@ -113,6 +122,50 @@ public class Code05_CardsProblem {
 		return counts[num1] * counts[num2] * counts[num3];
 	}
 
+
+	/**
+	 * 自己写的方法，时间复杂度O(N^2)
+	 *
+	 * @param cards
+	 * @return
+	 */
+	public static int ways_study1(String[] cards) {
+		int N = cards.length;
+		if (N < 3){
+			return 0;
+		}
+		int ans = 0;
+		Map<String, Integer> map = new HashMap<>();
+		for (int i = 2; i < N; i++){
+			map.clear();
+			map.put(cards[0], 1);
+
+			for (int j = 1; j < i; j++){
+				ans += map.getOrDefault(getCand(cards[i], cards[j]), 0);
+
+				if (!map.containsKey(cards[j])){
+					map.put(cards[j], 0);
+				}
+				map.put(cards[j], map.get(cards[j])+1);
+			}
+		}
+
+		return ans;
+	}
+
+	private static String getCand(String s1, String s2){
+		StringBuilder sb = new StringBuilder();
+
+		for (int i =0; i < 3; i++){
+			if (s1.charAt(i) == s2.charAt(i)){
+				sb.append(s1.charAt(i));
+			} else {
+				sb.append((char)(3-(s1.charAt(i)-'A')-(s2.charAt(i)-'A') + 'A'));
+			}
+		}
+
+		return sb.toString();
+	}
 	// for test
 	public static String[] generateCards(int size) {
 		int n = (int) (Math.random() * size) + 3;
@@ -135,6 +188,7 @@ public class Code05_CardsProblem {
 			String[] arr = generateCards(size);
 			int ans1 = ways1(arr);
 			int ans2 = ways2(arr);
+			int ans3 = ways_study1(arr);
 			if (ans1 != ans2) {
 				for (String str : arr) {
 					System.out.println(str);
@@ -143,18 +197,30 @@ public class Code05_CardsProblem {
 				System.out.println(ans2);
 				break;
 			}
+
+			if (ans1 != ans3) {
+				for (String str : arr) {
+					System.out.println(str);
+				}
+				System.out.println(ans1);
+				System.out.println(ans3);
+				break;
+			}
 		}
 		System.out.println("test finish");
 
-		long start = 0;
-		long end = 0;
-		String[] arr = generateCards(10000000);
-		System.out.println("arr size : " + arr.length + " runtime test begin");
-		start = System.currentTimeMillis();
-		ways2(arr);
-		end = System.currentTimeMillis();
-		System.out.println("run time : " + (end - start) + " ms");
-		System.out.println("runtime test end");
+//		long start = 0;
+//		long end = 0;
+//		String[] arr = generateCards(10000000);
+//		System.out.println("arr size : " + arr.length + " runtime test begin");
+//		start = System.currentTimeMillis();
+//		ways2(arr);
+//		end = System.currentTimeMillis();
+//		System.out.println("run time : " + (end - start) + " ms");
+//		System.out.println("runtime test end");
+
+//		int s = ways_study1(new String[]{"ABB","CCB","CCB","BCC"});
+//		System.out.println(s);
 	}
 
 }

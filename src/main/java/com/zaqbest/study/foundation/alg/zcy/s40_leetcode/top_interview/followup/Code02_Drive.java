@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.followup;
 
+/**
+ * 司机调度问题
+ *
+ * easy难度
+ * 从左往右的尝试模型+剪枝
+ */
 public class Code02_Drive {
 
 	/*
@@ -67,10 +73,64 @@ public class Code02_Drive {
 		return Math.max(goToA, goToB);
 	}
 
+
+	public static int maxMoney_study1(int[][] matrix) {
+		int N = matrix.length;
+		//奇数直接返回-1
+		if (N % 2 == 1){
+			return -1;
+		}
+		return process_study1(matrix, 0, N/2, N/2);
+	}
+
+	/**
+	 *
+	 * @param matrix
+	 * @param index 第i个司机怎么选择
+	 * @param restA A区域还能再放几个司机
+	 * @return 此时的最大收益
+	 */
+	private static int process_study1(int[][] matrix, int index, int restA, int restB){
+		if (index == matrix.length){
+			return 0;
+		}
+
+		int ret = 0;
+		int p1=0,p2=0;
+
+		if (restA >= 0 && restB >= 0) {
+			if (restA > 0) {
+				//方案1：选择A区域
+				p1 = matrix[index][0] + process_study1(matrix, index + 1, restA - 1, restB);
+			}
+
+			if (restB > 0) {
+				//方案2：选择B区
+				p2 = matrix[index][1] + process_study1(matrix, index + 1, restA, restB-1);
+			}
+		}
+
+		ret = Math.max(p1, p2);
+
+		return ret;
+	}
+
 	public static void main(String[] args) {
-		int[][] matrix = { { 10, 20 }, { 20, 40 } };
+//		int[][] matrix = { { 10, 20 }, { 20, 40 } };
+		int[][] matrix = {
+				{ 10, 20},
+				{ 20, 40},
+				{ 50, 20},
+				{ 10, 40},
+				{ 20, 100},
+				{ 20, 100},
+				{ 500, 100},
+				{ 30, 100},
+		};
 
 		System.out.println(maxMoney(matrix));
+
+		System.out.println(maxMoney_study1(matrix));
 	}
 
 }

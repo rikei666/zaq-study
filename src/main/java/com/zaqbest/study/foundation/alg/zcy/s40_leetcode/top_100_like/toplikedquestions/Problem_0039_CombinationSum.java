@@ -2,6 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.toplikedq
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Problem_0039_CombinationSum {
@@ -96,4 +97,43 @@ public class Problem_0039_CombinationSum {
 		return ans;
 	}
 
+
+	public static List<List<Integer>> combinationSum_study1(int[] candidates, int target) {
+		return process_study1(candidates, 0, target);
+	}
+
+	private static List<List<Integer>> process_study1(int[] candidates, int index, int target){
+		List<List<Integer>> ans = new LinkedList<>();
+
+		//啥都不用放
+		if (target == 0){
+			ans.add(new LinkedList<>());
+			return ans;
+		}
+
+		if (index == candidates.length){
+			return ans;
+		}
+
+		for (int i =0; i <= target / candidates[index]; i++){
+			List<List<Integer>> next = process_study1(candidates, index+1, target - candidates[index] * i);
+
+			for (List<Integer> eachNextItem: next){
+				for (int k = 0; k < i; k++) {
+					eachNextItem.add(candidates[index]);
+				}
+			}
+			ans.addAll(next);
+		}
+
+		return ans;
+	}
+
+	public static void main(String[] args) {
+		int[] candidates= {2,3,6,7};
+		int target = 7;
+
+		List<List<Integer>> ans = combinationSum_study1(candidates, target);
+		System.out.println(ans);
+	}
 }
