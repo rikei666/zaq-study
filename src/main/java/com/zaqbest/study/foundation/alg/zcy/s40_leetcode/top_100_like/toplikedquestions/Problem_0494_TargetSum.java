@@ -2,8 +2,22 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.toplikedq
 
 import java.util.HashMap;
 
+/**
+ * 给定非负数组arr和target, 每个字符[i]可以添加符号+/-;
+ * 总共有多少种方法
+ *
+ * 思路
+ * - 从左往右的尝试模型
+ */
 public class Problem_0494_TargetSum {
 
+	/**
+	 * 暴力尝试模型
+	 *
+	 * @param arr
+	 * @param s
+	 * @return
+	 */
 	public static int findTargetSumWays1(int[] arr, int s) {
 		return process1(arr, 0, s);
 	}
@@ -12,9 +26,17 @@ public class Problem_0494_TargetSum {
 		if (index == arr.length) {
 			return rest == 0 ? 1 : 0;
 		}
-		return process1(arr, index + 1, rest - arr[index]) + process1(arr, index + 1, rest + arr[index]);
+		return process1(arr, index + 1, rest - arr[index])  // 前面是+
+				+ process1(arr, index + 1, rest + arr[index]); //前面为-
 	}
 
+	/**
+	 * 比方法1增加了dp缓存
+	 *
+	 * @param arr
+	 * @param s
+	 * @return
+	 */
 	public static int findTargetSumWays2(int[] arr, int s) {
 		return process2(arr, 0, s, new HashMap<>());
 	}
@@ -84,4 +106,56 @@ public class Problem_0494_TargetSum {
 		return dp[s];
 	}
 
+
+	/**
+	 * 该方法有问题  当s为负数的时候，就不对了（这里就不改了）
+	 * @param arr
+	 * @param s
+	 * @return
+	 */
+	public static int findTargetSumWays_dp_study1(int[] arr, int s) {
+		if (arr == null || arr.length == 0){
+			return s == 0 ? 1 : 0;
+		}
+		int N = arr.length;
+		int sum = 0;
+		for (int i  = 0; i < N; i++){
+			sum += arr[i];
+		}
+
+		//所有数字都变成负数，也不够
+		if (sum < s){
+			return 0;
+		}
+
+		//假设s是5，sum=10, 则rest的范围是-5~15
+		// f(index, rest) => dp[index][rest]
+		int[][] dp = new int[N+1][s+sum+1+sum]; //整体向右偏移了sum
+
+		//f(N, 0) = 1 => dp[N][0+sum] = 1
+		dp[N][0+sum] = 1;
+		for (int index = N -1; index >=0; index--){ //index : N-1 -> 0
+			for (int rest = -sum; rest <= sum; rest++) { // rest: -sum~sum(全是负数~全是正数）
+				// f(index, rest) = f(index+1, rest+ arr[index]) + f(index+1, rest-arr[index])
+				dp[index][sum+rest] = 0;
+				if (sum + rest + arr[index] <= sum + sum){
+					dp[index][sum + rest] += dp[index+1][sum + rest + arr[index]];
+				}
+				if (sum + rest - arr[index] >= 0){
+					dp[index][sum + rest] += dp[index+1][sum + rest - arr[index]];
+				}
+			}
+		}
+		return dp[0][sum + s];
+	}
+
+	public static void main(String[] args) {
+		int[] arr={1000};
+		int s = -1000;
+		int r1 = findTargetSumWays_dp_study1(arr, s);
+		int r2 = findTargetSumWays1(arr, s);
+
+		System.out.println(r1);
+		System.out.println(r2);
+	}
 }

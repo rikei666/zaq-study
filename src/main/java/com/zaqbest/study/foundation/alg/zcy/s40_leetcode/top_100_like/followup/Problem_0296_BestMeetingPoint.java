@@ -1,5 +1,15 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.followup;
 
+/**
+ * 开会问题
+ * 问题描述
+ * https://cdn.zaqbest.com/2022/04/13/50394a2112113399fd2b2beb3dbd362a.png
+ *
+ * 这是一个性感的问题
+ * 思路
+ * - 本质是一个贪心
+ * - 先考虑整行的移动，再考虑整列的移动
+ */
 public class Problem_0296_BestMeetingPoint {
 
 	public static int minTotalDistance(int[][] grid) {

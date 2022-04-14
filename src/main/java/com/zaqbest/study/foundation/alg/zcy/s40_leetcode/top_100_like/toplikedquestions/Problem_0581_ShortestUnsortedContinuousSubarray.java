@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.toplikedquestions;
 
+/**
+ * 反转一个最小的子数组，是整体有序
+ */
 public class Problem_0581_ShortestUnsortedContinuousSubarray {
 
 	public static int findUnsortedSubarray(int[] nums) {

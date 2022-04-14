@@ -1,5 +1,16 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.toplikedquestions;
 
+/**
+ * 二叉树的最大直径长度
+ *
+ * 思路
+ * - 二叉树的递归套路
+ *
+ * 可能性
+ * x为头结点
+ * 	1，与x有关，x.left的高度+x.right的高度+1
+ * 	2，与x无关，max(x.left的直径, x.right的直径)
+ */
 public class Problem_0543_DiameterOfBinaryTree {
 
 	public static class TreeNode {

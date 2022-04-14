@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * 每日温度，过多少天会变暖和些
+ *
+ * - 思路
+ * 单调栈
+ */
 public class Problem_0739_DailyTemperatures {
 
 	public static int[] dailyTemperatures(int[] arr) {

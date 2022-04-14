@@ -3,6 +3,12 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.toplikedq
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 找到所有消失的数字
+ *
+ * 思路
+ * - 下标循环怼
+ */
 public class Problem_0448_FindAllNumbersDisappearedInAnArray {
 
 	public static List<Integer> findDisappearedNumbers(int[] nums) {

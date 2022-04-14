@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.toplikedquestions;
 
+/**
+ * 合并两个二叉树
+ *
+ * 思路
+ * - 递归处理
+ */
 public class Problem_0617_MergeTwoBinaryTrees {
 
 	public static class TreeNode {

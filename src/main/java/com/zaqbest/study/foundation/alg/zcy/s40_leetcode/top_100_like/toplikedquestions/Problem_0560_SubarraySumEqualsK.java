@@ -2,6 +2,16 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.toplikedq
 
 import java.util.HashMap;
 
+/**
+ * 给定数组arr, 连续子数组的和为K, 求子数值最长多长
+ *
+ * 思路
+ * - 前缀和
+ * - 哈希表
+ *
+ * 升级问题
+ * {@link Problem_0437_PathSumIII}
+ */
 public class Problem_0560_SubarraySumEqualsK {
 
 	public static int subarraySum(int[] nums, int k) {

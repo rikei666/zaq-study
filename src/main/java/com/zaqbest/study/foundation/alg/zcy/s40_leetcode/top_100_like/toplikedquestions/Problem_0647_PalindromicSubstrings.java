@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.toplikedquestions;
 
+/**
+ * 回文子串
+ *
+ * 思路
+ * - 马拉车算法
+ */
 public class Problem_0647_PalindromicSubstrings {
 
 	public static int countSubstrings(String s) {

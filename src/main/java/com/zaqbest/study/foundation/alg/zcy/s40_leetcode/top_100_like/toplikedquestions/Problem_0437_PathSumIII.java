@@ -2,6 +2,12 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.toplikedq
 
 import java.util.HashMap;
 
+/**
+ * 路径和等于k有多少种方法
+ *
+ * 先看一个简单问题
+ * {@link Problem_0560_SubarraySumEqualsK}
+ */
 public class Problem_0437_PathSumIII {
 
 	public class TreeNode {
