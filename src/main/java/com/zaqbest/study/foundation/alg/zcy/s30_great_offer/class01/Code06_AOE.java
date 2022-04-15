@@ -12,6 +12,9 @@ import java.util.Arrays;
  * 返回要把所有怪兽血量清空，至少需要释放多少次aoe技能？
  * 三个参数：int[] x, int[] hp, int range
  * 返回：int 次数
+ *
+ * 思路
+ * - 贪心策略（从边缘处考虑），实现优化（线段树）
  * */
 public class Code06_AOE {
 

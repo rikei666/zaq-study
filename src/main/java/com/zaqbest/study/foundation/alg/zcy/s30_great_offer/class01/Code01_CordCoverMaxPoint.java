@@ -2,8 +2,23 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class01;
 
 import java.util.Arrays;
 
+/**
+ * 给定一个有序数组arr，代表坐落在X轴上的点，给定一个正数K，代表绳子的长度，返回绳子最多压中几个点？
+ * 即使绳子边缘处盖住点也算盖住
+ *
+ * 思路
+ * - 滑动窗口
+ */
 public class Code01_CordCoverMaxPoint {
 
+	/**
+	 * 方法1（二分）
+	 * 时间复杂度O(N*logN)
+	 *
+	 * @param arr
+	 * @param L
+	 * @return
+	 */
 	public static int maxPoint1(int[] arr, int L) {
 		int res = 1;
 		for (int i = 0; i < arr.length; i++) {
@@ -28,6 +43,14 @@ public class Code01_CordCoverMaxPoint {
 		return index;
 	}
 
+	/**
+	 * 滑动窗口
+	 * 时间复杂度 O(N)
+	 *
+	 * @param arr
+	 * @param L
+	 * @return
+	 */
 	public static int maxPoint2(int[] arr, int L) {
 		int left = 0;
 		int right = 0;

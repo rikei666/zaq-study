@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s10_primary.class03;
 
+/**
+ * 荷兰国旗问题及随机快排
+ *
+ * 时间复杂度O(N*logN)
+ * 空间复杂度O(1)
+ */
 public class Code03_PartitionAndQuickSort {
 
 	public static void swap(int[] arr, int i, int j) {
@@ -101,6 +107,7 @@ public class Code03_PartitionAndQuickSort {
 		if (L >= R) {
 			return;
 		}
+		//随机选一个数，与[R]位置的数字进行交换
 		swap(arr, L + (int) (Math.random() * (R - L + 1)), R);
 		int[] equalArea = netherlandsFlag(arr, L, R);
 		process3(arr, L, equalArea[0] - 1);

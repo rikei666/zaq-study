@@ -102,6 +102,51 @@ public class Code02_IsPalindromeList {
 		return res;
 	}
 
+	/**
+	 * 只写了实现思路，剩下的就是纯编码了（实现了反转和查找上中位节点的核心算法）
+	 *
+	 * @param head
+	 * @return
+	 */
+	public static boolean isPalindrome_study1(Node head) {
+		// 找到上中位节点
+		//找到下半截链表的头结点
+		//反转下半截链表
+		//比对验证
+		//还原下半截链表
+
+		return true;
+	}
+
+	private static Node midOrUpNode(Node head){
+		if (head == null || head.next == null || head.next.next == null){
+			return head;
+		}
+		Node slow = head.next;
+		Node fast = head.next.next;
+
+		while (head.next != null && head.next.next != null){
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+
+		return slow;
+	}
+	private static Node reverse(Node head){
+		Node prev = null;
+		Node next = null;
+
+		while (head != null){
+			next = head.next;
+			head.next = prev;
+			prev = head;
+			head = next;
+		}
+
+		return prev;
+	}
+
+
 	public static void printLinkedList(Node node) {
 		System.out.print("Linked List: ");
 		while (node != null) {

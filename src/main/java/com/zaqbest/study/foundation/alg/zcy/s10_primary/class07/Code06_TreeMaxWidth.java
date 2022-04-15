@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * 最大宽度
+ * 最大宽度（TODO: 记得后面又更好的方法）
  */
 public class Code06_TreeMaxWidth {
 

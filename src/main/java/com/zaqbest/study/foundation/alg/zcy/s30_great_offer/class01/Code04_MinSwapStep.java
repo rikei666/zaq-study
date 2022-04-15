@@ -1,5 +1,16 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class01;
 
+/**
+ * 一个数组中只有两种字符'G'和'B'，
+ * 可以让所有的G都放在左侧，所有的B都放在右侧
+ * 或者可以让所有的G都放在右侧，所有的B都放在左侧，
+ * 但是只能在相邻字符之间进行交换操作，返回至少需要交换几次
+ *
+ * 思路
+ * - 贪心
+ *
+ * 人比人气死人
+ */
 public class Code04_MinSwapStep {
 
 	// 一个数组中只有两种字符'G'和'B'，

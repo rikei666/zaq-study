@@ -2,6 +2,14 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class02;
 
 import java.util.HashMap;
 
+/**
+ * 哈希表增加setAll功能，复杂度O(1)
+ *
+ * 思路
+ * - 时间戳
+ *
+ * 我咋想不到呢！！！气~~~
+ */
 public class Code05_SetAll {
 
 	public static class MyValue<V> {

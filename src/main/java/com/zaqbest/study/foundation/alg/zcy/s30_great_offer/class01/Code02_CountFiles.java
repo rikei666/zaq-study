@@ -3,6 +3,14 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class01;
 import java.io.File;
 import java.util.Stack;
 
+/**
+ * 给定一个文件目录的路径，写一个函数统计这个目录下所有的文件数量并返回，隐藏文件也算，但是文件夹不算
+ *
+ * 高频题
+ *
+ * 思路
+ * - 读写文件IO
+ */
 public class Code02_CountFiles {
 
 	// 注意这个函数也会统计隐藏文件
@@ -33,7 +41,7 @@ public class Code02_CountFiles {
 
 	public static void main(String[] args) {
 		// 你可以自己更改目录
-		String path = "/Users/zuochengyun/Desktop/";
+		String path = "/Users/lipan/IdeaProjects";
 		System.out.println(getFileNumber(path));
 	}
 

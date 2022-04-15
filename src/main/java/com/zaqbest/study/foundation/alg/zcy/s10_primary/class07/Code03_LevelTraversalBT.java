@@ -18,7 +18,12 @@ public class Code03_LevelTraversalBT {
 		}
 	}
 
-	//层序遍历
+	/**
+	 * 层序遍历
+	 *
+	 * 简化版的宽度优先遍历
+	 */
+
 	public static void level(Node head) {
 		if (head == null) {
 			return;

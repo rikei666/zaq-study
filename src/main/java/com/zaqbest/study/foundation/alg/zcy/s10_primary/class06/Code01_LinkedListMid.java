@@ -5,6 +5,14 @@ import java.util.ArrayList;
 /**
  * 1,1->2->3->4->5->NULL
  * 2,1->2->3->4->NULL
+ *
+ * 一，初始化指向
+ * 2,3 上中位节点
+ * 2,2 下中位节点
+ * 1,3 上中位prev
+ * 1,2 下中位prev
+ *
+ * 二，0,1,2节点特殊考虑
  */
 public class Code01_LinkedListMid {
 

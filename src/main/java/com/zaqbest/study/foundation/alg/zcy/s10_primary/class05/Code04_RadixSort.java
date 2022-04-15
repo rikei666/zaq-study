@@ -17,9 +17,11 @@ public class Code04_RadixSort {
 
 	public static int maxbits(int[] arr) {
 		int max = Integer.MIN_VALUE;
+		//获取最大值
 		for (int i = 0; i < arr.length; i++) {
 			max = Math.max(max, arr[i]);
 		}
+		//最大值总共有多少位
 		int res = 0;
 		while (max != 0) {
 			res++;

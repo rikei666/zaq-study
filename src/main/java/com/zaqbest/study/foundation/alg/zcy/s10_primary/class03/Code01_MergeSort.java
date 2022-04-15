@@ -2,6 +2,10 @@ package com.zaqbest.study.foundation.alg.zcy.s10_primary.class03;
 
 /**
  * 归并排序
+ *
+ * 时间复杂度O(N*logN)
+ * 空间复杂度（O(N)）,合并数组需要申请临时空间
+ * 稳定的排序
  */
 public class Code01_MergeSort {
 

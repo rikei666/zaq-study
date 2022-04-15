@@ -6,6 +6,9 @@ import java.util.Stack;
 
 /**
  * 双端队列实现栈和队列
+ *
+ * 思路
+ * - 双向链表
  */
 public class Code03_DoubleEndsQueueToStackAndQueue {
 

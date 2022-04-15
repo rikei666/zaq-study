@@ -2,6 +2,9 @@ package com.zaqbest.study.foundation.alg.zcy.s10_primary.class01;
 
 import java.util.Arrays;
 
+/**
+ * 插入排序
+ */
 public class Code03_InsertionSort {
 
 	public static void insertionSort(int[] arr) {
