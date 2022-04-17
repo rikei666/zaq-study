@@ -7,6 +7,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * 给定三个参数：
+ * 二叉树的头节点head，树上某个节点target， 正数K
+ * 从target开始，可以向上走或者向下走
+ * 返回与target的距离是K的所有节点
+ *
+ * 思路
+ * - 树的宽度优先遍历
+ * - 父节点map
+ */
 public class Code08_DistanceKNodes {
 
 	public static class Node {

@@ -2,6 +2,11 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class02;
 
 import java.util.Arrays;
 
+/**
+ * 现有司机N*2人，调度中心会将所有司机平分给A、B两区域，i号司机去A可得收入为income[i][0]，
+ * 去B可得收入为income[i][1]
+ * 返回能使所有司机总收入最高的方案是多少钱?
+ */
 public class Code04_Drive {
 
 	// 课上的现场版本
@@ -24,7 +29,7 @@ public class Code04_Drive {
 		if (index == income.length) {
 			return 0;
 		}
-		// 还剩下司机！
+		// 还剩下司机！(B已经满了，必须分配到A区域）
 		if (income.length - index == rest) {
 			return income[index][0] + process1(income, index + 1, rest - 1);
 		}

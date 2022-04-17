@@ -3,6 +3,12 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class04;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * 数据结构设计提
+ *
+ * 思路
+ * - 预处理结构（有序表）
+ */
 public class Code01_QueryHobby {
 
 	/*

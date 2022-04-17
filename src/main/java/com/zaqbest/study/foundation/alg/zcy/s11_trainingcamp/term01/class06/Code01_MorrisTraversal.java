@@ -16,6 +16,50 @@ public class Code01_MorrisTraversal {
 		}
 	}
 
+	/**
+	 * morris更容易理解的版本
+	 *
+	 * 先序： 有左树的情况，打印第1次访问；
+	 * 中序： 有左树的情况，打印第2次访问
+	 *
+	 * @param head
+	 */
+	public static void morris(Node head) {
+		if (head == null) {
+			return;
+		}
+		Node cur = head;
+		Node mostRight;
+		while (cur != null) {
+			mostRight = cur.left;
+			//有左树（节点会被访问两次）
+			if (mostRight != null) {
+				//左树上，真实的最右节点
+				while (mostRight.right != null && mostRight.right != cur) {
+					mostRight = mostRight.right;
+				}
+				if (mostRight.right == null) {
+					mostRight.right = cur;
+					// 第2次访问
+					//System.out.println("1:" + cur.value);
+					cur = cur.left;
+					continue;
+				} else {
+					mostRight.right = null;
+					//第2次访问
+					System.out.println("2:" + cur.value);
+					cur = cur.right;
+					continue;
+				}
+			} else {
+				//没有左树（节点只会被访问1次）
+				System.out.println("3:" + cur.value);
+				cur = cur.right;
+			}
+		}
+		System.out.println();
+	}
+
 	public static void morrisIn(Node head) {
 		if (head == null) {
 			return;
@@ -161,12 +205,12 @@ public class Code01_MorrisTraversal {
 		head.left.right = new Node(3);
 		head.right.left = new Node(5);
 		head.right.right = new Node(7);
-		printTree(head);
-		morrisIn(head);
-		morrisPre(head);
-		morrisPos(head);
-		printTree(head);
-
+//		printTree(head);
+//		morrisIn(head);
+//		morrisPre(head);
+//		morrisPos(head);
+//		printTree(head);
+//		morris(head);
 	}
 
 }

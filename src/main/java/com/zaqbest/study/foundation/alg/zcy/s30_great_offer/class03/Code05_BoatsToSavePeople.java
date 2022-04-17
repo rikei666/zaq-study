@@ -1,5 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class03;
 
+import com.zaqbest.study.foundation.alg.utils.ArrayUtil;
+
 import java.util.Arrays;
 
 // 给定一个正数数组arr，代表若干人的体重
@@ -16,9 +18,11 @@ public class Code05_BoatsToSavePeople {
 		}
 		int N = arr.length;
 		Arrays.sort(arr);
+		//如果有超过船重量的人，无法满足
 		if (arr[N - 1] > limit) {
 			return -1;
 		}
+		//找到<= limit/2的最右位置
 		int lessR = -1;
 		for (int i = N - 1; i >= 0; i--) {
 			if (arr[i] <= (limit / 2)) {
@@ -26,6 +30,7 @@ public class Code05_BoatsToSavePeople {
 				break;
 			}
 		}
+		//如果每个人都大于limit/2, 每个人都要一条船
 		if (lessR == -1) {
 			return N;
 		}
@@ -71,4 +76,21 @@ public class Code05_BoatsToSavePeople {
 		return ans;
 	}
 
+	public static void main(String[] args) {
+
+		System.out.println("test begin!");
+		for (int i =0; i < 100000; i++){
+			int[] people = ArrayUtil.generateRandomArray(1000, 10);
+			int limit = 10;
+
+			int r1 = numRescueBoats1(people, limit);
+			int r2 = numRescueBoats2(people, limit);
+			if (r1 != r2){
+				System.out.println("oops!");
+				break;
+			}
+		}
+		System.out.println("test end!");
+
+	}
 }

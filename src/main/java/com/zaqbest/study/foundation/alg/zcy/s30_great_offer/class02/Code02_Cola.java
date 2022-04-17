@@ -1,5 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class02;
 
+/**
+ * 携程笔试题
+ *
+ * 买可乐问题
+ */
 public class Code02_Cola {
 	/*
 	 * 买饮料 时间限制： 3000MS 内存限制： 589824KB 题目描述：
