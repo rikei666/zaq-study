@@ -1,6 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class04;
 
-// 本题测试链接 : https://leetcode.com/problems/maximum-subarray/
+/**
+ * 返回一个数组中子数组最大累加和
+ *
+ * 本题测试链接 : https://leetcode.com/problems/maximum-subarray/
+ */
 public class Code02_SubArrayMaxSum {
 
 	public static int maxSubArray(int[] arr) {

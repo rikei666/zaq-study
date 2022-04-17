@@ -1,5 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class04;
 
+/**
+ * 美团面试题
+ *
+ * 返回一个数组中所选数字不能相邻的情况下最大子序列累加和
+ */
 public class Code04_SubArrayMaxSumFollowUp {
 
 	public static int subSqeMaxSumNoNext(int[] arr) {
@@ -14,8 +19,8 @@ public class Code04_SubArrayMaxSumFollowUp {
 		dp[0] = arr[0];
 		dp[1] = Math.max(arr[0], arr[1]);
 		for (int i = 2; i < arr.length; i++) {
-			int p1 = dp[i - 1];
-			int p2 = arr[i] + Math.max(dp[i - 2], 0);
+			int p1 = dp[i - 1]; //p1: [i]不参与
+			int p2 = arr[i] + Math.max(dp[i - 2], 0); //p2: [i]参与
 			dp[i] = Math.max(p1, p2);
 		}
 		return dp[arr.length - 1];
