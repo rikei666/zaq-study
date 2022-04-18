@@ -1,5 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class04;
 
+/**
+ * 	生成长度为size的达标数组
+ * 	达标：对于任意的 i<k<j，满足 [i] + [j] != [k] * 2
+ *
+ * 生成规则
+ * 2n  2n+1
+ */
 public class Code06_MakeNo {
 
 	// 生成长度为size的达标数组

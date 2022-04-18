@@ -11,6 +11,8 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class04;
  * 进阶：在原来要求的基础上，增加一个要求，相邻的孩子间如果分数一样，分的糖果数必须一样，返回至少需要准备多少颗糖果
  *
  * 测试链接 : https://leetcode.com/problems/candy/
+ *
+ * 空间复杂度为O(1)的方法，选看，较为复杂
  */
 public class Code05_CandyProblem {
 
