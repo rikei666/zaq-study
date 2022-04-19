@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class05;
 
+/**
+ * 编辑距离问题（经典题目）
+ *
+ * 思路
+ * - 动态规划
+ */
 public class Code03_EditCost {
 
 	public static int minCost1(String s1, String s2, int ic, int dc, int rc) {
@@ -10,6 +16,7 @@ public class Code03_EditCost {
 		char[] str2 = s2.toCharArray();
 		int N = str1.length + 1;
 		int M = str2.length + 1;
+		//dp[i][j] str1前缀i个，str2前缀取j个，最小代价
 		int[][] dp = new int[N][M];
 		// dp[0][0] = 0
 		for (int i = 1; i < N; i++) {

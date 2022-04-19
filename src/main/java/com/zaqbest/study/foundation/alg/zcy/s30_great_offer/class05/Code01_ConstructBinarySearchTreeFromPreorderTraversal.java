@@ -2,7 +2,15 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class05;
 
 import java.util.Stack;
 
-// 本题测试链接 : https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
+/**
+ * 根据先序遍历结果生成BST
+ *
+ * 本题测试链接 : https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
+ *
+ * 思路
+ * - 递归处理
+ * - 单调栈优化
+ */
 public class Code01_ConstructBinarySearchTreeFromPreorderTraversal {
 
 	// 不用提交这个类
