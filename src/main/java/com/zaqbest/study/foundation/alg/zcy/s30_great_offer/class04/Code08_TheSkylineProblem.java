@@ -7,7 +7,15 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
-// 本题测试链接 : https://leetcode.com/problems/the-skyline-problem/
+/**
+ * 生成大楼轮廓线问题
+ *
+ * 本题测试链接 : https://leetcode.com/problems/the-skyline-problem/
+ *
+ * 思路
+ * - 数据结构描述业务
+ * - 有序表
+ */
 public class Code08_TheSkylineProblem {
 
 	public static class Node {
