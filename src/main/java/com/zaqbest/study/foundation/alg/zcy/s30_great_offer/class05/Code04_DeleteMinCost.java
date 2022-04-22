@@ -5,13 +5,13 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * 题目：
+ * 给定两个字符串s1和s2，问s2最少删除多少字符可以成为s1的子串？
+ * 比如 s1 = "abcde"，s2 = "axbc"
+ * 返回 1
+ */
 public class Code04_DeleteMinCost {
-
-	// 题目：
-	// 给定两个字符串s1和s2，问s2最少删除多少字符可以成为s1的子串？
-	// 比如 s1 = "abcde"，s2 = "axbc"
-	// 返回 1
-
 	// 解法一
 	// 求出str2所有的子序列，然后按照长度排序，长度大的排在前面。
 	// 然后考察哪个子序列字符串和s1的某个子串相等(KMP)，答案就出来了。
@@ -60,11 +60,11 @@ public class Code04_DeleteMinCost {
 			dp[i][0] = i;
 		}
 		for (int xlen = 1; xlen <= N; xlen++) {
-			for (int ylen = 1; ylen <= Math.min(M, xlen); ylen++) {
-				if (dp[xlen - 1][ylen] != Integer.MAX_VALUE) {
-					dp[xlen][ylen] = dp[xlen - 1][ylen] + 1;
+			for (int ylen = 1; ylen <= Math.min(M, xlen); ylen++) { //Math.min(M, xlen)只取dp的左下半区
+				if (dp[xlen - 1][ylen] != Integer.MAX_VALUE) { //x[0..xlen-1]就已经可以变成y[0..ylen]了
+					dp[xlen][ylen] = dp[xlen - 1][ylen] + 1; //再多删除一个x[xlen-1]就可以了
 				}
-				if (x[xlen - 1] == y[ylen - 1] && dp[xlen - 1][ylen - 1] != Integer.MAX_VALUE) {
+				if (x[xlen - 1] == y[ylen - 1] && dp[xlen - 1][ylen - 1] != Integer.MAX_VALUE) { //x[xlen-1]和y[xlen-1]相同，x[0..xlen-1]就已经可以变成y[0..ylen-1]了
 					dp[xlen][ylen] = Math.min(dp[xlen][ylen], dp[xlen - 1][ylen - 1]);
 				}
 			}
