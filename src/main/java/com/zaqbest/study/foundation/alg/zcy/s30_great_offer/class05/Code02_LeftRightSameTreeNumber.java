@@ -31,9 +31,11 @@ public class Code02_LeftRightSameTreeNumber {
 	}
 
 	public static boolean same(Node h1, Node h2) {
+		//只有一个为空，coding小技巧
 		if (h1 == null ^ h2 == null) {
 			return false;
 		}
+		//两个都为空
 		if (h1 == null && h2 == null) {
 			return true;
 		}

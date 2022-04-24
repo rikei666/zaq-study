@@ -1,6 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class06;
 
-// 本题测试链接 : https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
+/**
+ * 任意两个数的最大异或值是多少
+ *
+ * 本题测试链接 : https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
+ */
 public class Code02_MaximumXorOfTwoNumbersInAnArray {
 
 	public static class Node {

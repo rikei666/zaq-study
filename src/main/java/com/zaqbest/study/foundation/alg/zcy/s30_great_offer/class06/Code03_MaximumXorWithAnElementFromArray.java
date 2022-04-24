@@ -1,6 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class06;
 
-// 测试链接 : https://leetcode.com/problems/maximum-xor-with-an-element-from-array/
+/**
+ * 这个结构中，已经收集了一票数字
+ * 请返回哪个数字与X异或的结果最大，返回最大结果
+ * 但是，只有<=m的数字，可以被考虑
+ *
+ * 测试链接 : https://leetcode.com/problems/maximum-xor-with-an-element-from-array/
+ */
 public class Code03_MaximumXorWithAnElementFromArray {
 
 	public static int[] maximizeXor(int[] nums, int[][] queries) {
@@ -55,6 +61,7 @@ public class Code03_MaximumXorWithAnElementFromArray {
 				int path = (x >> move) & 1;
 				// 期待遇到的东西
 				int best = (path ^ 1);
+				//如果不能走，退回到path
 				best ^= (cur.nexts[best] == null || cur.nexts[best].min > m) ? 1 : 0;
 				// best变成了实际遇到的
 				ans |= (path ^ best) << move;

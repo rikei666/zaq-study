@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class06;
 
+/**
+ * 子数组的最大异或和
+ *
+ * 思路
+ * - 前缀树
+ */
 public class Code01_MaxXOR {
 
 	// O(N^2)

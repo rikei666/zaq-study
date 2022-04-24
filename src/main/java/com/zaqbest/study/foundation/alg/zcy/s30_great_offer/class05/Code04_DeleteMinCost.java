@@ -10,6 +10,11 @@ import java.util.List;
  * 给定两个字符串s1和s2，问s2最少删除多少字符可以成为s1的子串？
  * 比如 s1 = "abcde"，s2 = "axbc"
  * 返回 1
+ *
+ * 解法1：
+ * - 全排列+KMP 适用于s2较小的情况
+ * 解法2：
+ * - s2删除多少个字符可以变成s2 编辑距离问题
  */
 public class Code04_DeleteMinCost {
 	// 解法一
