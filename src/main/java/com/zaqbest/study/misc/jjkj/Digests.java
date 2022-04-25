@@ -1,7 +1,7 @@
 /*
  * 版权信息: © 聚均科技
  */
-package com.fusionfintrade.utils;
+package com.zaqbest.study.misc.jjkj;
 
 import org.apache.commons.lang3.Validate;
 
@@ -64,7 +64,7 @@ public class Digests {
             }
             return result;
         } catch (GeneralSecurityException e) {
-            throw Exceptions.unchecked(e);
+            throw new RuntimeException(e);
         }
     }
 
@@ -109,7 +109,7 @@ public class Digests {
 
             return messageDigest.digest();
         } catch (GeneralSecurityException e) {
-            throw Exceptions.unchecked(e);
+            throw new RuntimeException(e);
         }
     }
 

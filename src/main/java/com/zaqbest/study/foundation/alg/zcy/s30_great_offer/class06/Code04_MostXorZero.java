@@ -3,6 +3,18 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class06;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * 网易面试题
+ *
+ * 给定数组arr, 最大可以划分成多少个异或和为0的子数组？
+ * 例如[0,1,2,3,0,1,2,3] 可以划分成 0 | 1,2,3 | 0 | 1，2,3
+ * 最多划分成4个，结果返回4
+ *
+ * 思路
+ * - 从左往右的尝试模型
+ * - 划分可能性的方式（思路清奇）
+ * - 假设答案法（超级难）
+ */
 public class Code04_MostXorZero {
 
 	// 暴力方法
@@ -66,11 +78,11 @@ public class Code04_MostXorZero {
 		int xor = 0;
 		for (int i = 0; i < N; i++) {
 			xor ^= arr[i];
-			if (map.containsKey(xor)) { // 可能性2
-				int pre = map.get(xor);
+			if (map.containsKey(xor)) { // 可能性2，最后一个部分异或和为0
+				int pre = map.get(xor); //上一次出现此异或和的位置，如果找不到则为-1
 				dp[i] = pre == -1 ? 1 : (dp[pre] + 1);
 			}
-			if (i > 0) {
+			if (i > 0) { //可能性1：最后一个部分异或和不是0
 				dp[i] = Math.max(dp[i - 1], dp[i]);
 			}
 			map.put(xor, i);

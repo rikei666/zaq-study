@@ -1,6 +1,14 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class07;
 
-// 本题测试链接 : https://leetcode.com/problems/binary-tree-cameras/
+/**
+ * 腾讯面试题
+ * 相机最小覆盖问题
+ *
+ * 本题测试链接 : https://leetcode.com/problems/binary-tree-cameras/
+ *
+ * 整理可能性
+ */
+
 public class Code02_MinCameraCover {
 
 	public static class TreeNode {
