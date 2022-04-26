@@ -1,6 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class08;
 
-// 本题测试链接 : https://leetcode.com/problems/container-with-most-water/
+/**
+ * 装水问题
+ *
+ * 本题测试链接 : https://leetcode.com/problems/container-with-most-water/
+ */
 public class Code02_ContainerWithMostWater {
 
 	public static int maxArea1(int[] h) {
@@ -14,6 +18,14 @@ public class Code02_ContainerWithMostWater {
 		return max;
 	}
 
+	/**
+	 * 双指针法
+	 *
+	 * 时间复杂度 O(N)
+	 *
+	 * @param h
+	 * @return
+	 */
 	public static int maxArea2(int[] h) {
 		int max = 0;
 		int l = 0;

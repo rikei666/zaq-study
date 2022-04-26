@@ -3,7 +3,6 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinter
 /**
  * 42 接雨水问题
  *
- * {@link com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.study.Problem_0042_Trap}
  */
 public class Problem_0042_TrappingRainWater {
 
