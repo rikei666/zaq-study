@@ -2,7 +2,12 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class08;
 
 import java.util.LinkedList;
 
-// 本题测试链接 : https://leetcode.com/problems/basic-calculator-iii/
+/**
+ * 表达式求值（记住这种处理问题的模板）
+ *
+ * 本题测试链接 : https://leetcode.com/problems/basic-calculator-iii/、
+ *
+ */
 public class Code01_ExpressionCompute {
 
 	public static int calculate(String str) {

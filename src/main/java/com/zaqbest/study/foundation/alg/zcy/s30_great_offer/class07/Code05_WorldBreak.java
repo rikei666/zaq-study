@@ -2,13 +2,13 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class07;
 
 import java.util.HashSet;
 
+/**
+ * 假设所有字符都是小写字母. 大字符串是str. arr是去重的单词表, 每个单词都不是空字符串且可以使用任意次.
+ * 使用arr中的单词有多少种拼接str的方式. 返回方法数.
+ *
+ * {@link Code06_SplitStringMaxValue}
+ */
 public class Code05_WorldBreak {
-	/*
-	 * 
-	 * 假设所有字符都是小写字母. 大字符串是str. arr是去重的单词表, 每个单词都不是空字符串且可以使用任意次.
-	 * 使用arr中的单词有多少种拼接str的方式. 返回方法数.
-	 * 
-	 */
 
 	public static int ways(String str, String[] arr) {
 		HashSet<String> set = new HashSet<>();
@@ -134,6 +134,14 @@ public class Code05_WorldBreak {
 		return ways;
 	}
 
+	/**
+	 * 最优解 前缀树方法
+	 * arr的大小为M， 总的时间复杂度O(M)+O（N^2）,其中O(M)为建树的过程
+	 *
+	 * @param s
+	 * @param arr
+	 * @return
+	 */
 	public static int ways4(String s, String[] arr) {
 		if (s == null || s.length() == 0 || arr == null || arr.length == 0) {
 			return 0;
