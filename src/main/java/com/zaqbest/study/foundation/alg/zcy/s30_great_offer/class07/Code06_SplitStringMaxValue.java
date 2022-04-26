@@ -2,6 +2,11 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class07;
 
 import java.util.HashMap;
 
+/**
+ * 单词分解最大得分
+ *
+ * {@link Code05_WorldBreak}
+ */
 public class Code06_SplitStringMaxValue {
 
 	// 暴力解
