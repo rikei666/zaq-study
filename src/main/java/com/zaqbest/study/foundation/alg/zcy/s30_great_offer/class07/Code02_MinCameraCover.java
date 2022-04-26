@@ -7,6 +7,11 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class07;
  * 本题测试链接 : https://leetcode.com/problems/binary-tree-cameras/
  *
  * 整理可能性
+ * 解法1：
+ * - 二叉树的递归套路
+ *
+ * 解法2：
+ * - 贪心（相机尽可能覆盖更多的节点）
  */
 
 public class Code02_MinCameraCover {

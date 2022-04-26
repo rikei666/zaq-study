@@ -3,14 +3,14 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class07;
 import java.util.Arrays;
 import java.util.HashSet;
 
+/**
+ * 面试原题
+ *
+ * 给定一个有序数组arr，其中值可能为正、负、0。 返回arr中每个数都平方之后不同的结果有多少种？
+ * 翻译一下：给定一个数组arr，先递减然后递增，返回arr中有多少个绝对值不同的数字？
+ *
+ */
 public class Code04_Power2Diffs {
-
-	/*
-	 * 给定一个有序数组arr，其中值可能为正、负、0。 返回arr中每个数都平方之后不同的结果有多少种？
-	 * 
-	 * 给定一个数组arr，先递减然后递增，返回arr中有多少个绝对值不同的数字？
-	 * 
-	 */
 
 	// 时间复杂度O(N)，额外空间复杂度O(N)
 	public static int diff1(int[] arr) {
@@ -25,6 +25,7 @@ public class Code04_Power2Diffs {
 	}
 
 	// 时间复杂度O(N)，额外空间复杂度O(1)
+	// 这种写法挺有意思的，记住这种代码逻辑
 	public static int diff2(int[] arr) {
 		int N = arr.length;
 		int L = 0;
