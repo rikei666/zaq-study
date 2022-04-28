@@ -3,7 +3,13 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class09;
 import java.util.Arrays;
 import java.util.Comparator;
 
-// 本题测试链接 : https://leetcode.com/problems/russian-doll-envelopes/
+/**
+ * 俄罗斯套娃问题
+ *
+ * 本题测试链接 : https://leetcode.com/problems/russian-doll-envelopes/
+ *
+ * LIS的应用，想法很奇妙
+ */
 public class Code04_EnvelopesProblem {
 
 	public static int maxEnvelopes(int[][] matrix) {
@@ -41,6 +47,9 @@ public class Code04_EnvelopesProblem {
 		}
 	}
 
+	/**
+	 * 排序规则(l升序，h降序）
+	 */
 	public static class EnvelopeComparator implements Comparator<Envelope> {
 		@Override
 		public int compare(Envelope o1, Envelope o2) {

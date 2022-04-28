@@ -3,7 +3,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class09;
 /*
  * 给定一个数组arr，长度为N，arr中的值不是0就是1
  * arr[i]表示第i栈灯的状态，0代表灭灯，1代表亮灯
- * 每一栈灯都有开关，但是按下i号灯的开关，会同时改变i-1、i、i+2栈灯的状态
+ * 每一栈灯都有开关，但是按下i号灯的开关，会同时改变i-1、i、i+1栈灯的状态
  * 问题一：
  * 如果N栈灯排成一条直线,请问最少按下多少次开关,能让灯都亮起来
  * 排成一条直线说明：
@@ -17,7 +17,8 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class09;
  * i为中间位置时，i号灯的开关能影响i-1、i和i+1
  * 0号灯的开关能影响N-1、0和1位置的灯
  * N-1号灯的开关能影响N-2、N-1和0位置的灯
- * 
+ *
+ * 超级难的问题
  * */
 public class Code01_LightProblem {
 
@@ -39,10 +40,13 @@ public class Code01_LightProblem {
 		if (i == arr.length) {
 			return valid(arr) ? 0 : Integer.MAX_VALUE;
 		}
+		//可能性1: i位置不开灯
 		int p1 = f1(arr, i + 1);
+		//可能性2：i位置开灯
 		change1(arr, i);
 		int p2 = f1(arr, i + 1);
 		change1(arr, i);
+		//2.1 即使开灯了，也不能全部都亮  2.2 如何开灯了，[i+1..N-1]需要开灯p2次，需要再加上当前的一次
 		p2 = (p2 == Integer.MAX_VALUE) ? p2 : (p2 + 1);
 		return Math.min(p1, p2);
 	}

@@ -2,6 +2,16 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class09;
 
 import java.util.HashMap;
 
+/**
+ * 最新面试题
+ *
+ * 定义何为step sum?
+ * 比如680， 680 +68 +6=754， 680的step sum叫754
+ * 给定一个正数num，判断它是不是某个数的step sum
+ *
+ * 思路：
+ * 单调性，二分
+ */
 public class Code05_IsStepSum {
 
 	public static boolean isStepSum(int stepSum) {
