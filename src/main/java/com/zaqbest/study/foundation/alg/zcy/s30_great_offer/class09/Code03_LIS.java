@@ -1,6 +1,13 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class09;
 
-// 本题测试链接 : https://leetcode.com/problems/longest-increasing-subsequence
+/**
+ * 最长递增子序列（LIS），经典问题！！！！
+ *
+ * 本题测试链接 : https://leetcode.com/problems/longest-increasing-subsequence
+ *
+ * 解法
+ * - dp + 二分， 牛逼轰轰的解法
+ */
 public class Code03_LIS {
 
 	public static int lengthOfLIS(int[] arr) {

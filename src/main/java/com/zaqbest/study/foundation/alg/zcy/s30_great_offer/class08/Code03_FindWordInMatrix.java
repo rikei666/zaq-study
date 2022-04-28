@@ -19,7 +19,8 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class08;
  * 比如，word = "zoooz"，是不可以找到的，因为允许走一条路径中已经走过的字符不能重复走
  * 
  * 写出两种设定下的code
- * 
+ *
+ * 注意：这道题不能改成动态规划，因为matrix是会变的
  * */
 public class Code03_FindWordInMatrix {
 
@@ -62,7 +63,7 @@ public class Code03_FindWordInMatrix {
 	// 可以走重复路
 	// 从m[i][j]这个字符出发，能不能找到str[k...]这个后缀串
 	public static boolean canLoop(char[][] m, int i, int j, char[] str, int k) {
-		if (k == str.length) {
+		if (k == str.length) { //说明是空串
 			return true;
 		}
 		if (i == -1 || i == m.length || j == -1 || j == m[0].length || m[i][j] != str[k]) {
@@ -71,8 +72,11 @@ public class Code03_FindWordInMatrix {
 		// 不越界！m[i][j] == str[k] 对的上的！
 		// str[k+1....]
 		boolean ans = false;
-		if (canLoop(m, i + 1, j, str, k + 1) || canLoop(m, i - 1, j, str, k + 1) || canLoop(m, i, j + 1, str, k + 1)
-				|| canLoop(m, i, j - 1, str, k + 1)) {
+		if (canLoop(m, i + 1, j, str, k + 1)
+				|| canLoop(m, i - 1, j, str, k + 1)
+				|| canLoop(m, i, j + 1, str, k + 1)
+				|| canLoop(m, i, j - 1, str, k + 1)
+		) {
 			ans = true;
 		}
 		return ans;
@@ -81,7 +85,7 @@ public class Code03_FindWordInMatrix {
 	// 不能走重复路
 	// 从m[i][j]这个字符出发，能不能找到str[k...]这个后缀串
 	public static boolean noLoop(char[][] m, int i, int j, char[] str, int k) {
-		if (k == str.length) {
+		if (k == str.length) { //说明是空串
 			return true;
 		}
 		if (i == -1 || i == m.length || j == -1 || j == m[0].length || m[i][j] != str[k]) {
@@ -90,8 +94,11 @@ public class Code03_FindWordInMatrix {
 		// 不越界！也不是回头路！m[i][j] == str[k] 也对的上！
 		m[i][j] = 0;
 		boolean ans = false;
-		if (noLoop(m, i + 1, j, str, k + 1) || noLoop(m, i - 1, j, str, k + 1) || noLoop(m, i, j + 1, str, k + 1)
-				|| noLoop(m, i, j - 1, str, k + 1)) {
+		if (noLoop(m, i + 1, j, str, k + 1)
+				|| noLoop(m, i - 1, j, str, k + 1)
+				|| noLoop(m, i, j + 1, str, k + 1)
+				|| noLoop(m, i, j - 1, str, k + 1)
+		) {
 			ans = true;
 		}
 		m[i][j] = str[k];
