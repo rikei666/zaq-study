@@ -1,2 +1,2 @@
 枚举行为
-![](https://cdn.zaqbest.com/2022/03/27/fe35fb56e2cd70bdbe59a7180f5451eb.png)
+![](https://oss.zaqbest.com/i/2022/04/30/626cbaa908d91.png)

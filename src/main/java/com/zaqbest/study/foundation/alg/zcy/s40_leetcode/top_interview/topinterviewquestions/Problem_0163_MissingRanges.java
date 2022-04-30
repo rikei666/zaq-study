@@ -7,7 +7,7 @@ import java.util.List;
  * 查找范围内缺失的区间
  *
  * 问题描述
- * https://cdn.zaqbest.com/2022/03/31/57283c3adc9b4c927a6f43c31e24891b.PNG
+ * https://oss.zaqbest.com/i/2022/04/30/626cbbe7645b8.png
  */
 public class Problem_0163_MissingRanges {
 

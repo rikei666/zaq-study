@@ -6,16 +6,24 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.TreeSet;
 
-// 本题测试链接：https://www.lintcode.com/problem/top-k-frequent-words-ii/
-// 以上的代码不要粘贴, 把以下的代码粘贴进java环境编辑器
-// 把类名和构造方法名改成TopK, 可以直接通过
+/**
+ * 在实时数据流中找到最常使用的k个单词.
+ * 实现TopK类中的三个方法:
+ * TopK(k), 构造方法
+ * add(word), 增加一个新单词
+ * topk(), 得到当前最常使用的k个单词.
+ *
+ * 本题测试链接：https://www.lintcode.com/problem/top-k-frequent-words-ii/
+ *
+ * 这个是个难题！！！
+ */
 public class Code02_TopK {
 
 	private Node[] heap;
-	private int heapSize;
-	// 词频表   key  abc   value  (abc,7)
+	private int heapSize; //堆的实际大小
+	// 词频表   key:  abc   value:  (abc,7)
 	private HashMap<String, Node> strNodeMap;
-	private HashMap<Node, Integer> nodeIndexMap;
+	private HashMap<Node, Integer> nodeIndexMap; //节点在堆里的位置
 	private NodeHeapComp comp;
 	private TreeSet<Node> treeSet;
 	
@@ -29,8 +37,8 @@ public class Code02_TopK {
 	}
 
 	public static class Node {
-		public String str;
-		public int times;
+		public String str; //字符串字面值
+		public int times; //次数
 
 		public Node(String s, int t) {
 			str = s;
@@ -79,6 +87,7 @@ public class Code02_TopK {
 			curNode.times++;
 			preIndex = nodeIndexMap.get(curNode);
 		}
+		//没有在堆上
 		if (preIndex == -1) {
 			if (heapSize == heap.length) {
 				if (comp.compare(heap[0], curNode) < 0) {

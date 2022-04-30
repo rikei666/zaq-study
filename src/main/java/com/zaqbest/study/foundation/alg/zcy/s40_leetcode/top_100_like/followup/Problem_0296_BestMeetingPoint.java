@@ -3,7 +3,7 @@ package com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.followup;
 /**
  * 开会问题
  * 问题描述
- * https://cdn.zaqbest.com/2022/04/13/50394a2112113399fd2b2beb3dbd362a.png
+ * https://oss.zaqbest.com/i/2022/04/30/626cbc0004202.png
  *
  * 这是一个性感的问题
  * 思路

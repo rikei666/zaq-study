@@ -10,17 +10,17 @@ arr2:17个数
 
 例如求第15小
 
-![](https://cdn.zaqbest.com/61770476bfbc925808de8f26c265c2c.jpg)
+![](https://oss.zaqbest.com/i/2022/04/30/626cbbef023b3.jpg)
 
-![](https://cdn.zaqbest.com/b55d82066b5adc7eb3f4c0ea0a9089e.jpg)
+![](https://oss.zaqbest.com/i/2022/04/30/626cbbee2258c.jpg)
 
 3) k > 17 && k <= 27
 
 比如求第23小
 
-![](https://cdn.zaqbest.com/e519024ebb4f62ff119b24a9213219a.jpg)
+![](https://oss.zaqbest.com/i/2022/04/30/626cbbefe38bd.jpg)
 
-![](https://cdn.zaqbest.com/bae03b876fd0be89d6ec03f5b323941.jpg)
+![](https://oss.zaqbest.com/i/2022/04/30/626cbbf0d1053.jpg)
 
 **特殊处理**
 

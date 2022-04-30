@@ -1,1 +1,1 @@
-![](https://cdn.zaqbest.com/2022/04/14/bfa71b3acbd75a3bf408d0793819c6af.jpg)
+![](https://oss.zaqbest.com/i/2022/04/30/626cbc02a1c48.jpg)
