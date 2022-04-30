@@ -12,6 +12,12 @@ import java.util.Arrays;
 // 测试链接 : https://leetcode.com/problems/boats-to-save-people/
 public class Code05_BoatsToSavePeople {
 
+	/**
+	 *
+	 * @param arr
+	 * @param limit
+	 * @return
+	 */
 	public static int numRescueBoats1(int[] arr, int limit) {
 		if (arr == null || arr.length == 0) {
 			return 0;
