@@ -3,7 +3,15 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class11;
 import java.util.ArrayList;
 import java.util.List;
 
-// 本题测试链接 : https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/
+
+/**
+ * 给定一个字符，如何插入最少的字符，使得整体变成回文
+ *
+ * 本题测试链接 : https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/
+ *
+ * 范围尝试模型
+ *
+ */
 public class Code01_MinimumInsertionStepsToMakeAStringPalindrome {
 
 	// 测试链接只测了本题的第一问，直接提交可以通过
@@ -54,13 +62,13 @@ public class Code01_MinimumInsertionStepsToMakeAStringPalindrome {
 		int ansl = 0;
 		int ansr = ans.length - 1;
 		while (L < R) {
-			if (dp[L][R - 1] == dp[L][R] - 1) {
+			if (dp[L][R - 1] + 1 == dp[L][R]) { //来自左边
 				ans[ansl++] = str[R];
 				ans[ansr--] = str[R--];
-			} else if (dp[L + 1][R] == dp[L][R] - 1) {
+			} else if (dp[L + 1][R] + 1 == dp[L][R]) { //来自下边
 				ans[ansl++] = str[L];
 				ans[ansr--] = str[L++];
-			} else {
+			} else { //来自左下角
 				ans[ansl++] = str[L++];
 				ans[ansr--] = str[R--];
 			}
@@ -107,17 +115,22 @@ public class Code01_MinimumInsertionStepsToMakeAStringPalindrome {
 			}
 			ans.add(String.valueOf(path));
 		} else {
-			if (dp[L][R - 1] == dp[L][R] - 1) {
+			if (dp[L][R - 1] + 1== dp[L][R]) { //来自左侧
 				path[pl] = str[R];
 				path[pr] = str[R];
 				process(str, dp, L, R - 1, path, pl + 1, pr - 1, ans);
 			}
-			if (dp[L + 1][R] == dp[L][R] - 1) {
+			if (dp[L + 1][R] + 1== dp[L][R]) { //来自下面
 				path[pl] = str[L];
 				path[pr] = str[L];
 				process(str, dp, L + 1, R, path, pl + 1, pr - 1, ans);
 			}
-			if (str[L] == str[R] && (L == R - 1 || dp[L + 1][R - 1] == dp[L][R])) {
+			if (str[L] == str[R]
+					&& (
+							L == R - 1  //只剩两个字符了
+									|| dp[L + 1][R - 1] == dp[L][R]
+						)
+			) {
 				path[pl] = str[L];
 				path[pr] = str[R];
 				process(str, dp, L + 1, R - 1, path, pl + 1, pr - 1, ans);

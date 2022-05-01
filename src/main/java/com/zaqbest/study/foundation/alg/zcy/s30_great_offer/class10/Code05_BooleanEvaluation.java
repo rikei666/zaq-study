@@ -1,6 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class10;
 
-// 本题测试链接 : https://leetcode-cn.com/problems/boolean-evaluation-lcci/
+/**
+ * 本题测试链接 : https://leetcode-cn.com/problems/boolean-evaluation-lcci/
+ *
+ * 思路：
+ * 典型的范围尝试模型！！！
+ */
+
 public class Code05_BooleanEvaluation {
 
 	public static int countEval0(String express, int desired) {
