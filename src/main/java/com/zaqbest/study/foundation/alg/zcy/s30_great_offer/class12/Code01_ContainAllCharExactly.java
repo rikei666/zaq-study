@@ -2,7 +2,13 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class12;
 
 import java.util.Arrays;
 
-// 本题测试链接 : https://leetcode.com/problems/permutation-in-string/
+/**
+ * 查找变形词
+ *
+ * 本题测试链接 : https://leetcode.com/problems/permutation-in-string/
+ *
+ * 滑动窗口+记账表
+ */
 public class Code01_ContainAllCharExactly {
 
 	public static int containExactly1(String s, String a) {

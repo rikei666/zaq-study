@@ -39,7 +39,8 @@ public class Code04_RegularExpressionMatch {
 		if (ei + 1 == e.length || e[ei + 1] != '*') {
 			// ei + 1 不是*
 			// str[si] 必须和 exp[ei] 能配上！
-			return si != s.length && (e[ei] == s[si] || e[ei] == '.') && process(s, e, si + 1, ei + 1);
+			return si != s.length && (e[ei] == s[si] || e[ei] == '.')
+					&& process(s, e, si + 1, ei + 1);
 		}
 		// exp[ei]还有字符
 		// ei + 1位置的字符，是*!
@@ -69,6 +70,50 @@ public class Code04_RegularExpressionMatch {
 		return isValid(s, e) && process2(s, e, 0, 0, dp);
 	}
 
+	/**
+	 * 记忆化搜索，不加斜率优化的版本
+	 *
+	 * @param s
+	 * @param e
+	 * @param si
+	 * @param ei
+	 * @param dp
+	 * @return
+	 */
+	public static boolean process2_0(char[] s, char[] e, int si, int ei, int[][] dp) {
+		if (dp[si][ei] != 0){
+			return dp[si][ei] == 1;
+		}
+
+		boolean ans = false;
+
+		if (ei == e.length) { // exp 没了 str？
+			ans =  si == s.length;
+		} else {
+			// exp[ei]还有字符
+			// ei + 1位置的字符，不是*
+			if (ei + 1 == e.length || e[ei + 1] != '*') {
+				// ei + 1 不是*
+				// str[si] 必须和 exp[ei] 能配上！
+				ans = si != s.length && (e[ei] == s[si] || e[ei] == '.')
+						&& process2_0(s, e, si + 1, ei + 1, dp);
+			} else {
+				// exp[ei]还有字符
+				// ei + 1位置的字符，是*!
+				while (si != s.length && (e[ei] == s[si] || e[ei] == '.')) {
+					if (process2_0(s, e, si, ei + 2, dp)) {
+						ans = true;
+						break;
+					}
+					si++;
+				}
+				return ans | process(s, e, si, ei + 2);
+			}
+		}
+		dp[si][ei] = ans ? 1: -1;
+		return ans;
+	}
+
 	public static boolean process2(char[] s, char[] e, int si, int ei, int[][] dp) {
 		if (dp[si][ei] != 0) {
 			return dp[si][ei] == 1;
@@ -78,7 +123,8 @@ public class Code04_RegularExpressionMatch {
 			ans = si == s.length;
 		} else {
 			if (ei + 1 == e.length || e[ei + 1] != '*') {
-				ans = si != s.length && (e[ei] == s[si] || e[ei] == '.') && process2(s, e, si + 1, ei + 1, dp);
+				ans = si != s.length && (e[ei] == s[si] || e[ei] == '.')
+						&& process2(s, e, si + 1, ei + 1, dp);
 			} else {
 				if (si == s.length) { // ei ei+1 *
 					ans = process2(s, e, si, ei + 2, dp);
@@ -86,7 +132,8 @@ public class Code04_RegularExpressionMatch {
 					if (s[si] != e[ei] && e[ei] != '.') {
 						ans = process2(s, e, si, ei + 2, dp);
 					} else { // s[si] 可以和 e[ei]配上
-						ans = process2(s, e, si, ei + 2, dp) || process2(s, e, si + 1, ei, dp);
+						ans = process2(s, e, si, ei + 2, dp)
+								|| process2(s, e, si + 1, ei, dp);
 					}
 				}
 			}

@@ -3,10 +3,13 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class12;
 import java.util.HashMap;
 import java.util.HashSet;
 
-// 本题测试链接 : https://leetcode.com/problems/longest-consecutive-sequence/
+/**
+ * 最长连续序列
+ * 本题测试链接 : https://leetcode.com/problems/longest-consecutive-sequence/
+ */
 public class Code03_LongestConsecutive {
 
-	// 课上讲的解法
+	// 课上讲的解法，不好理解
 	public static int longestConsecutive(int[] nums) {
 		HashMap<Integer, Integer> map = new HashMap<>();
 		int len = 0;

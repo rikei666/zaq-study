@@ -3,7 +3,11 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class11;
 import java.util.ArrayList;
 import java.util.List;
 
-// 本题测试链接 : https://leetcode.com/problems/palindrome-partitioning-ii/
+/**
+ * 给定字符串s, 将s划分成若干个部分，使得每个部分都是回文，问至少要切多少刀？
+ *
+ * 本题测试链接 : https://leetcode.com/problems/palindrome-partitioning-ii/
+ */
 public class Code02_PalindromePartitioningII {
 
 	// 测试链接只测了本题的第一问，直接提交可以通过
