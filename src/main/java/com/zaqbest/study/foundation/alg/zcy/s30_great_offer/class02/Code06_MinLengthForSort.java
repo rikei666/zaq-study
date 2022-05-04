@@ -9,7 +9,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class02;
  * 思路
  * - 找规律的题目
  *  解释：对于一个排序后数组，任意位置[i],
- *  总有any([0..i-] < [i]; 如果max{[0..i-1]} > [i], i位置就需要进行翻转，这样就可以找到右边界；左边界同理
+ *  总有any([0..i-1] < [i]; 如果max{[0..i-1]} > [i], i位置就需要进行翻转，这样就可以找到右边界；左边界同理
  */
 public class Code06_MinLengthForSort {
 

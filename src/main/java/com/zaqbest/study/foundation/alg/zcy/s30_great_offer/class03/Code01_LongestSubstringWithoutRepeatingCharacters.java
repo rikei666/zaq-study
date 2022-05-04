@@ -1,12 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class03;
 
-// 本题测试链接 : https://leetcode.com/problems/longest-substring-without-repeating-characters/
-
 /**
  * 求一个字符串中，最长无重复字符子串长度
  *
  * 思路
  * - dp + map位置表
+ *
+ *本题测试链接 : https://leetcode.com/problems/longest-substring-without-repeating-characters/
  */
 public class Code01_LongestSubstringWithoutRepeatingCharacters {
 

@@ -60,7 +60,8 @@ public class Code01_CordCoverMaxPoint {
 			while (right < N && arr[right] - arr[left] <= L) {
 				right++;
 			}
-			max = Math.max(max, right - (left++));
+			max = Math.max(max, right - left);
+			left++;
 		}
 		return max;
 	}

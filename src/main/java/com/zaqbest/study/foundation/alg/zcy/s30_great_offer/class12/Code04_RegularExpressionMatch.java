@@ -132,6 +132,7 @@ public class Code04_RegularExpressionMatch {
 					if (s[si] != e[ei] && e[ei] != '.') {
 						ans = process2(s, e, si, ei + 2, dp);
 					} else { // s[si] 可以和 e[ei]配上
+						//![](http://oss.zaqbest.com/i/2022/05/03/627141fc312ff.jpg)
 						ans = process2(s, e, si, ei + 2, dp)
 								|| process2(s, e, si + 1, ei, dp);
 					}
@@ -179,4 +180,11 @@ public class Code04_RegularExpressionMatch {
 		return dp[0][0];
 	}
 
+	public static void main(String[] args) {
+		String str = "aaabc";
+		String exp = ".*c";
+
+		Boolean res = isMatch1(str, exp);
+		System.out.println(res);
+	}
 }
