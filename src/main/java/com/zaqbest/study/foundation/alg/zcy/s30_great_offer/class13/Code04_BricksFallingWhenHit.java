@@ -1,6 +1,13 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class13;
 
-// 本题测试链接 : https://leetcode.com/problems/bricks-falling-when-hit/
+/**
+ * 砖块掉落问题
+ *
+ * 本题测试链接 : https://leetcode.com/problems/bricks-falling-when-hit/
+ *
+ * 思路：
+ * - 并查集
+ */
 public class Code04_BricksFallingWhenHit {
 
 	public static int[] hitBricks(int[][] grid, int[][] hits) {
@@ -29,8 +36,8 @@ public class Code04_BricksFallingWhenHit {
 		private int[][] grid;
 		// cellingSet[i] = true; i 是头节点，所在的集合是天花板集合
 		private boolean[] cellingSet;
-		private int[] fatherMap;
-		private int[] sizeMap;
+		private int[] fatherMap; //位置转换成的编号，row * M + col;
+		private int[] sizeMap; //位置转换成的编号，row * M + col;
 		private int[] stack;
 
 		public UnionFind(int[][] matrix) {
@@ -99,8 +106,9 @@ public class Code04_BricksFallingWhenHit {
 					if (size1 <= size2) {
 						fatherMap[father1] = father2;
 						sizeMap[father2] = size1 + size2;
-						if (status1 ^ status2) {
+						if (status1 ^ status2) { //一个在天花板上，另外一个不在天花板
 							cellingSet[father2] = true;
+							//天花板数量，把不在天花板的那个集合加上
 							cellingAll += status1 ? size2 : size1;
 						}
 					} else {
@@ -138,9 +146,12 @@ public class Code04_BricksFallingWhenHit {
 			union(row, col, row, col - 1);
 			union(row, col, row, col + 1);
 			int now = cellingAll;
+			//当前位置是在天花板上
 			if (row == 0) {
+				//![](http://oss.zaqbest.com/i/2022/05/12/627caa781ba3b.png)
 				return now - pre;
 			} else {
+				//![](http://oss.zaqbest.com/i/2022/05/12/627caa34abb43.png)
 				return now == pre ? 0 : now - pre - 1;
 			}
 		}

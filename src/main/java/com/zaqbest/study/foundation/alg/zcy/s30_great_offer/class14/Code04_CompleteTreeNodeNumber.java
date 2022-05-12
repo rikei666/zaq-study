@@ -1,5 +1,9 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class14;
 
+/**
+ * 计算一颗完全二叉树的节点个数
+ * 要求时间复杂度O(节点数）
+ */
 public class Code04_CompleteTreeNodeNumber {
 
 	public static class Node {
@@ -22,14 +26,14 @@ public class Code04_CompleteTreeNodeNumber {
 
 	// 当前来到node节点，node节点在level层，总层数是h
 	// 返回node为头的子树(必是完全二叉树)，有多少个节点
-	public static int bs(Node node, int Level, int h) {
-		if (Level == h) {
+	public static int bs(Node node, int curLevel, int allLevel) {
+		if (curLevel == allLevel) {
 			return 1;
 		}
-		if (mostLeftLevel(node.right, Level + 1) == h) {
-			return (1 << (h - Level)) + bs(node.right, Level + 1, h);
+		if (mostLeftLevel(node.right, curLevel + 1) == allLevel) {
+			return (1 << (allLevel - curLevel)) + bs(node.right, curLevel + 1, allLevel);
 		} else {
-			return (1 << (h - Level - 1)) + bs(node.left, Level + 1, h);
+			return (1 << (allLevel - curLevel - 1)) + bs(node.left, curLevel + 1, allLevel);
 		}
 	}
 

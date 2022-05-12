@@ -1,6 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class13;
 
-// 本题测试链接 : https://leetcode.com/problems/scramble-string/
+/**
+ * 旋变字符串
+ *
+ * 本题测试链接 : https://leetcode.com/problems/scramble-string/
+ */
 public class Code03_ScrambleString {
 
 	public static boolean isScramble0(String s1, String s2) {
@@ -21,7 +25,7 @@ public class Code03_ScrambleString {
 		return process0(str1, 0, str1.length - 1, str2, 0, str2.length - 1);
 	}
 
-	// str1[L1...R1] str2[L2...R2] 是否互为玄变串
+	// str1[L1...R1] str2[L2...R2] 是否互为旋变串
 	// 一定保证这两段是等长的！
 	public static boolean process0(char[] str1, int L1, int R1, char[] str2, int L2, int R2) {
 		if (L1 == R1) {

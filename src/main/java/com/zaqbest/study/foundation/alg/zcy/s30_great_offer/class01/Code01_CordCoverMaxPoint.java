@@ -60,6 +60,8 @@ public class Code01_CordCoverMaxPoint {
 			while (right < N && arr[right] - arr[left] <= L) {
 				right++;
 			}
+			// 如果从while里跳出来，说明right = N 或者 [right] - [left] > L
+			// right来到第一个不合法位置
 			max = Math.max(max, right - left);
 			left++;
 		}

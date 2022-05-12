@@ -1,5 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class14;
 
+/**
+ *  s只由(和)组成
+ *  求最长有效括号子串长度
+ *  本题测试链接 : https://leetcode.com/problems/longest-valid-parentheses/
+ */
 public class Code01_Parentheses {
 
 	public static boolean valid(String s) {
@@ -89,6 +94,7 @@ public class Code01_Parentheses {
 					dp[i] = dp[i - 1] + 2 + (pre > 0 ? dp[pre - 1] : 0);
 				}
 			}
+			//推高ans
 			ans = Math.max(ans, dp[i]);
 		}
 		return ans;

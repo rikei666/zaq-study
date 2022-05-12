@@ -1,6 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class13;
 
-// 本题测试链接 : https://leetcode.com/problems/super-washing-machines/
+/**
+ * 阿里高频面试题，每年都考
+ *
+ * 超级洗衣机问题
+ *
+ * 本题测试链接 : https://leetcode.com/problems/super-washing-machines/
+ */
 public class Code02_SuperWashingMachines {
 
 	public static int findMinMoves(int[] arr) {

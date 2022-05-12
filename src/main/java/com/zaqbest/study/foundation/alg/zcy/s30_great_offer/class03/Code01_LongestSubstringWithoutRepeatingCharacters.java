@@ -21,8 +21,8 @@ public class Code01_LongestSubstringWithoutRepeatingCharacters {
 		}
 		map[str[0]] = 0;
 		int N = str.length;
-		int ans = 1;
-		int pre = 1;
+		int ans = 1; //当前字符获得的最大长度
+		int pre = 1; //上一个字符获得的最大长度
 		for (int i = 1; i < N; i++) {
 			pre = Math.min(i - map[str[i]], pre + 1);
 			ans = Math.max(ans, pre);

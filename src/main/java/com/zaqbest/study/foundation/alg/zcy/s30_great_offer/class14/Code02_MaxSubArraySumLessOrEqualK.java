@@ -2,6 +2,9 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class14;
 
 import java.util.TreeSet;
 
+/**
+ * 给定数组arr, 和K, 求小于等于K的子数组的最大值
+ */
 public class Code02_MaxSubArraySumLessOrEqualK {
 
 	// 请返回arr中，求个子数组的累加和，是<=K的，并且是最大的。
