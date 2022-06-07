@@ -2,6 +2,10 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class16;
 
 import java.util.Arrays;
 
+/**
+ * 给定一个已排序的正整数数组 nums，和一个正整数 n 。从 [1, n] 区间内选取任意个数字补充到 nums 中，
+ * 使得 [1, n] 区间内的任何数字都可以用 nums 中某几个数字的和来表示，请输出满足上述要求的最少需要补充的数字个数
+ */
 public class Code03_MinPatches {
 
 	// arr请保证有序，且正数  1~aim
@@ -25,6 +29,7 @@ public class Code03_MinPatches {
 				return patches;
 			}
 		}
+		//数组已经用完了，孤独的增长
 		while (aim >= range + 1) {
 			range += range + 1;
 			patches++;
@@ -32,7 +37,7 @@ public class Code03_MinPatches {
 		return patches;
 	}
 
-	// 嘚瑟
+	// 嘚瑟（range就是Integer, 可看可不看）
 	public static int minPatches2(int[] arr, int K) {
 		int patches = 0; // 缺多少个数字
 		int range = 0; // 已经完成了1 ~ range的目标

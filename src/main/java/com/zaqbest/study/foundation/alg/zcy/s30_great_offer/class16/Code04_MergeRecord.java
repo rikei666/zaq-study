@@ -66,6 +66,14 @@ public class Code04_MergeRecord {
 		return ans;
 	}
 
+	/**
+	 * 改写归并排序，牛逼的方法！！！需要掌握！！！
+	 *
+	 * @param originArr
+	 * @param reverseArr
+	 * @param power
+	 * @return
+	 */
 	public static int[] reversePair2(int[] originArr, int[] reverseArr, int power) {
 		int[] reverse = copyArray(originArr);
 		reversePart(reverse, 0, reverse.length - 1);
@@ -99,7 +107,7 @@ public class Code04_MergeRecord {
 		int mid = L + ((R - L) >> 1);
 		process(originArr, L, mid, power - 1, record);
 		process(originArr, mid + 1, R, power - 1, record);
-		record[power] += merge(originArr, L, mid, R);
+		record[power] += merge(originArr, L, mid, R); //注意，这里是累加关系
 	}
 
 	public static int merge(int[] arr, int L, int m, int r) {

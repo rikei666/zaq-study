@@ -12,7 +12,7 @@
   - 情况1：  
     allLevel == mostLeftLevel + 1，说明右子树是满二叉树
 
-  - 情况2：
+  - 情况2：  
     allLevel == mostLeftLevel， 说明左子树是满二叉树
 
 满二叉树的节点数, 高度为h  

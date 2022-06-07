@@ -1,15 +1,13 @@
 package com.zaqbest.study.misc;
 
-
-import cn.hutool.core.util.StrUtil;
+import cn.hutool.core.lang.Snowflake;
+import cn.hutool.core.util.IdUtil;
 
 public class Temp {
     public static void main(String[] args) {
-        for (int i = 1; i <= 9; i++){
-            for (int j = 1; j <= i; j++){
-                System.out.print(StrUtil.format("{} ^ {} = {} ", i, j, i ^ j));
-            }
-            System.out.println();
+        for (int i = 0; i < 10; i++) {
+            Snowflake snowflake = IdUtil.getSnowflake(1,1);
+            System.out.println("ACCOUNT_" + snowflake.nextIdStr());
         }
     }
 }

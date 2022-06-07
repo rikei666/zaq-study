@@ -48,13 +48,13 @@ public class Code04_BestTimeToBuyAndSellStockIV {
 		// dp[0][...] = arr[0.0] 0
 		for (int j = 1; j <= K; j++) {
 			// dp[1][j]
-			int p1 = dp[0][j];
-			int best = Math.max(dp[1][j - 1] - arr[1], dp[0][j - 1] - arr[0]);
+			int p1 = dp[0][j]; //1位置不参与买卖
+			int best = Math.max(dp[1][j - 1] - arr[1], dp[0][j - 1] - arr[0]); //1位置参与交易
 			dp[1][j] = Math.max(p1, best + arr[1]);
 			// dp[1][j] 准备好一些枚举，接下来准备好的枚举
 			for (int i = 2; i < N; i++) {
-				p1 = dp[i - 1][j];
-				int newP = dp[i][j - 1] - arr[i];
+				p1 = dp[i - 1][j]; //i位置不参与买卖
+				int newP = dp[i][j - 1] - arr[i]; //最后一次交易是j时刻买入, 更新枚举值部分
 				best = Math.max(newP, best);
 				dp[i][j] = Math.max(p1, best + arr[i]);
 			}

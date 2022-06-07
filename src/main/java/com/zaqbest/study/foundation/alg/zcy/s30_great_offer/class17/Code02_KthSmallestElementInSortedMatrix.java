@@ -3,7 +3,15 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class17;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-// 本题测试链接 : https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
+/**
+ * 给你一个n x n矩阵matrix ，其中每行和每列元素均按升序排序，找到矩阵中第 k 小的元素。
+ * 请注意，它是 排序后 的第 k 小元素，而不是第 k 个 不同 的元素。
+ *
+ * 你必须找到一个内存复杂度优于O(n2) 的解决方案。
+ *
+ * 本题测试链接 : https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
+ *
+ */
 public class Code02_KthSmallestElementInSortedMatrix {
 
 	// 堆的方法
@@ -79,8 +87,8 @@ public class Code02_KthSmallestElementInSortedMatrix {
 	}
 
 	public static class Info {
-		public int near;
-		public int num;
+		public int near; //最接近的数是多少
+		public int num; //总共有多少个
 
 		public Info(int n1, int n2) {
 			near = n1;

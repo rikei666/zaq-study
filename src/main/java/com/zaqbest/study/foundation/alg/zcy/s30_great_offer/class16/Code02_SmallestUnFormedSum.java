@@ -3,6 +3,12 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class16;
 import java.util.Arrays;
 import java.util.HashSet;
 
+/**
+ * 给定一个正数数组arr，
+ * 返回arr的子集不能累加出的最小正数
+ * 1）正常怎么做？
+ * 2）如果arr中肯定有1这个值，怎么做？
+ */
 public class Code02_SmallestUnFormedSum {
 
 	public static int unformedSum1(int[] arr) {

@@ -98,4 +98,38 @@ public class Code05_BestTimeToBuyAndSellStockWithCooldown {
 		return sell1;
 	}
 
+	public static int maxProfit_my1(int[] prices) {
+		//dp[i]指的是0..i进行无限次交易，并且最后一次是卖出，可以获得的最大收益
+		int N = prices.length;
+		int[] dp = new int[N];
+		if (N < 2){
+			return 0;
+		}
+		if (N == 2){
+			return Math.max(0, prices[1]-prices[0]);
+		}
+		dp[0] = 0;
+		dp[1] = Math.max(0, prices[1]-prices[0]);
+		dp[2] = Math.max(dp[1], Math.max(prices[2]-prices[1], prices[2]-prices[0]));
+
+		for (int i = 3; i < N; i++){
+			int p1 = dp[i-1];
+			for (int j = 0; j < i - 2; j++){
+				p1 = Math.max(p1, dp[j] - prices[j+2] + prices[i]);
+			}
+			dp[i] = p1;
+		}
+
+		return dp[N-1];
+	}
+
+	public static void main(String[] args) {
+		int[] price = {6,1,3,2,4,7};
+		int res1 = maxProfit2(price);
+		int res2 = maxProfit_my1(price);
+
+		System.out.println(res1);
+		System.out.println(res2);
+	}
+
 }

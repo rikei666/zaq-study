@@ -1,5 +1,6 @@
 package com.zaqbest.study.redis;
 
+import cn.hutool.json.JSONUtil;
 import com.zaqbest.redis.RedisClient;
 import com.zaqbest.study.BaseTest;
 import org.junit.jupiter.api.Test;
@@ -17,9 +18,22 @@ public class RedisTest extends BaseTest {
     @Autowired
     private RedissonClient redissonClient;
 
+    static class MyClass{
+        public Integer a;
+        public String s;
+    }
+
     @Test
     public void setCache(){
         redisClient.set("aa", "a1", "mypre", 86400L);
+
+        MyClass myClass = new MyClass();
+        myClass.a = 1;
+        myClass.s = "hello";
+
+        redisClient.set("bb", myClass, "mypre", 86400L);
+        MyClass myClass2 = (MyClass) redisClient.get("bb", "mypre");
+        System.out.println(JSONUtil.toJsonPrettyStr(myClass2));
     }
 
     /**

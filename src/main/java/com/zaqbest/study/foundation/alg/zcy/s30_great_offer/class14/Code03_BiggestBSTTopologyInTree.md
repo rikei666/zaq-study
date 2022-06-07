@@ -4,3 +4,6 @@
 
 贡献值概念  
 ![](http://oss.zaqbest.com/i/2022/05/12/627d26314b476.png)
+
+贡献值迁移过程  
+![](http://oss.zaqbest.com/i/2022/05/13/627db2052e9fb.png)
