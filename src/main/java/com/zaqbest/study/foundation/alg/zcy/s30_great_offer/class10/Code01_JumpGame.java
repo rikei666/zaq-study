@@ -8,8 +8,8 @@ public class Code01_JumpGame {
 			return 0;
 		}
 		int step = 0;
-		int cur = 0;
-		int next = 0;
+		int cur = 0; //当前step的情况下，可以到达的最大位置
+		int next = 0; //如果多走一步，可以到达的最远位置
 		for (int i = 0; i < arr.length; i++) {
 			if (cur < i) {
 				step++;
@@ -20,4 +20,8 @@ public class Code01_JumpGame {
 		return step;
 	}
 
+	public static void main(String[] args) {
+		int[] arr = {2,3,1,1,4};
+
+	}
 }

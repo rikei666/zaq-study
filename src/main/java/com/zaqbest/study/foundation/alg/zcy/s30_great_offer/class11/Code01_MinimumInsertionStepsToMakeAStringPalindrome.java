@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 给定一个字符，如何插入最少的字符，使得整体变成回文
  *
- * 本题测试链接 : https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/
+ * 本题测试链接 : https://leetcode.cn/problems/minimum-insertion-steps-to-make-a-string-palindrome/
  *
  * 范围尝试模型
  *

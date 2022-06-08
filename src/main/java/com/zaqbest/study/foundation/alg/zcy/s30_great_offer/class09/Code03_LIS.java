@@ -39,4 +39,10 @@ public class Code03_LIS {
 		return max;
 	}
 
+	public static void main(String[] args) {
+		int[] arr = {10,9,2,5,3,7,101,18};
+		int res = lengthOfLIS(arr);
+
+		System.out.println(res);
+	}
 }

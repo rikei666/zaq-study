@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 给定字符串s, 将s划分成若干个部分，使得每个部分都是回文，问至少要切多少刀？
  *
- * 本题测试链接 : https://leetcode.com/problems/palindrome-partitioning-ii/
+ * 本题测试链接 : https://leetcode.cn/problems/palindrome-partitioning-ii/
  */
 public class Code02_PalindromePartitioningII {
 
