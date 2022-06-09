@@ -79,9 +79,8 @@ public class Code03_MinPatches {
 
 	public static void main(String[] args) {
 		int[] test = { 1, 2, 31, 33 };
-		int n = 2147483647;
+		int n = 500;
 		System.out.println(minPatches(test, n));
 
 	}
-
 }
