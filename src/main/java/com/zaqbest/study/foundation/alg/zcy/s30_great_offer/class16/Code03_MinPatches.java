@@ -7,7 +7,6 @@ import java.util.Arrays;
  * 使得 [1, n] 区间内的任何数字都可以用 nums 中某几个数字的和来表示，请输出满足上述要求的最少需要补充的数字个数
  */
 public class Code03_MinPatches {
-
 	// arr请保证有序，且正数  1~aim
 	public static int minPatches(int[] arr, int aim) {
 		int patches = 0; // 缺多少个数字
@@ -17,6 +16,7 @@ public class Code03_MinPatches {
 			// arr[i]
 			// 要求：1 ~ arr[i]-1 范围被搞定！
 			while (arr[i] - 1 > range) { // arr[i] 1 ~ arr[i]-1
+				//System.out.println(range+1);
 				range += range + 1; // range + 1 是缺的数字
 				patches++;
 				if (range >= aim) {
@@ -31,6 +31,7 @@ public class Code03_MinPatches {
 		}
 		//数组已经用完了，孤独的增长
 		while (aim >= range + 1) {
+			//System.out.println(range+1);
 			range += range + 1;
 			patches++;
 		}

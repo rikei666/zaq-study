@@ -17,3 +17,6 @@
 
 满二叉树的节点数, 高度为h  
 $N = 2^h - 1$
+
+### 举个例子
+![WechatIMG122.png](http://pic.zaqbest.com/i/2022/06/09/62a1f6b3901de.png)
