@@ -4,7 +4,7 @@ package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_01_3_week;
 // 给定一个数组arr，其中的值有可能正、负、0
 // 给定一个正数k
 // 返回累加和>=k的所有子数组中，最短的子数组长度
-// 本题测试链接 : https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
+// 本题测试链接 : https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/
 public class Code03_ShortestSubarrayWithSumAtLeastK {
 
 	public static int shortestSubarray1(int[] arr, int k) {

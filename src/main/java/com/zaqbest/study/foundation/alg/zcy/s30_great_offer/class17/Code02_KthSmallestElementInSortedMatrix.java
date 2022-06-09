@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
  *
  * 你必须找到一个内存复杂度优于O(n2) 的解决方案。
  *
- * 本题测试链接 : https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
+ * 本题测试链接 : https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/
  *
  */
 public class Code02_KthSmallestElementInSortedMatrix {

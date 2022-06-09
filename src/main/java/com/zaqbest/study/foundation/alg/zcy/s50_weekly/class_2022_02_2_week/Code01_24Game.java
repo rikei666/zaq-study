@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_02_2_week;
 
-// 测试链接 : https://leetcode.com/problems/24-game/
+// 测试链接 : https://leetcode.cn/problems/24-game/
 public class Code01_24Game {
 
 	public static boolean judgePoint24(int[] cards) {

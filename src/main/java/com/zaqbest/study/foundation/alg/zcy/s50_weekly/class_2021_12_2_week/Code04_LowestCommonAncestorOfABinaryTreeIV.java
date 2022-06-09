@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2021_12_2_week;
 
 import java.util.HashSet;
 
-// 测试链接 : https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/
+// 测试链接 : https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree-iv/
 public class Code04_LowestCommonAncestorOfABinaryTreeIV {
 
 	public static class TreeNode {

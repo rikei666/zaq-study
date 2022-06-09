@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * 根据先序遍历结果生成BST
  *
- * 本题测试链接 : https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
+ * 本题测试链接 : https://leetcode.cn/problems/construct-binary-search-tree-from-preorder-traversal/
  *
  * 思路
  * - 递归处理

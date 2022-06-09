@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-// 链接测试 : https://leetcode.com/problems/find-all-people-with-secret/
+// 链接测试 : https://leetcode.cn/problems/find-all-people-with-secret/
 public class Code01_FindAllPeopleWithSecret {
 
 	public List<Integer> findAllPeople(int n, int[][] meetings, int firstPerson) {

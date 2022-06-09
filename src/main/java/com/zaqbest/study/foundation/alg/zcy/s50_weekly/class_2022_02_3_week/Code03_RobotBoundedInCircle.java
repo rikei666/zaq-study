@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_02_3_week;
 
-// 测试链接 : https://leetcode.com/problems/robot-bounded-in-circle/
+// 测试链接 : https://leetcode.cn/problems/robot-bounded-in-circle/
 public class Code03_RobotBoundedInCircle {
 
 	public static boolean isRobotBounded(String ins) {

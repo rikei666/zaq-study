@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_02_4_week;
 
 import java.util.Arrays;
 
-// 测试链接 : https://leetcode.com/problems/partition-array-for-maximum-sum/
+// 测试链接 : https://leetcode.cn/problems/partition-array-for-maximum-sum/
 public class Code03_PartitionArrayForMaximumSum {
 
 	public static int maxSumAfterPartitioning1(int[] arr, int k) {

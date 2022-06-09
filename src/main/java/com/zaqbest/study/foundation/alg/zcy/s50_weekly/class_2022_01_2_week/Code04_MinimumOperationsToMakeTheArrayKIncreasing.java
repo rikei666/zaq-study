@@ -1,7 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_01_2_week;
 
 // 来自Leetcode周赛第5题
-// 测试链接 : https://leetcode.com/problems/minimum-operations-to-make-the-array-k-increasing/
+// 测试链接 : https://leetcode.cn/problems/minimum-operations-to-make-the-array-k-increasing/
 public class Code04_MinimumOperationsToMakeTheArrayKIncreasing {
 
 	public static int kIncreasing(int[] arr, int k) {

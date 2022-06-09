@@ -1,9 +1,9 @@
 ## 可能有3种情况
 ### 1，一侧多，另外一侧少
-![](http://oss.zaqbest.com/i/2022/05/12/627c6d685e3cb.png)
+![](http://pic.zaqbest.com/i/2022/05/12/627c6d685e3cb.png)
 
 ### 2，两侧都少
-![](http://oss.zaqbest.com/i/2022/05/12/627c6d4e56ffe.png)
+![](http://pic.zaqbest.com/i/2022/05/12/627c6d4e56ffe.png)
 
 ### 3，两侧都多
 处理方式和情况1相同

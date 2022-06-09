@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_02_2_week;
 
-// 测试链接 : https://leetcode.com/problems/reaching-points/
+// 测试链接 : https://leetcode.cn/problems/reaching-points/
 public class Code04_ReachingPoints {
 
 	// 会超时，但是揭示了大思路

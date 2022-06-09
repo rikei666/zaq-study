@@ -3,7 +3,7 @@ package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_04_2_week;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-// 测试链接 : https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/
+// 测试链接 : https://leetcode.cn/problems/most-stones-removed-with-same-row-or-column/
 public class Code01_MostStonesRemovedWithSameRowOrColumn {
 
 	public static int removeStones(int[][] stones) {

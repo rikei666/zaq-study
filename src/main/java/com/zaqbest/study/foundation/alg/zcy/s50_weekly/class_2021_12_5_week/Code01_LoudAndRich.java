@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2021_12_5_week;
 
 import java.util.ArrayList;
 
-// 测试链接 : https://leetcode.com/problems/loud-and-rich/
+// 测试链接 : https://leetcode.cn/problems/loud-and-rich/
 public class Code01_LoudAndRich {
 
 	// richer[i] = {a, b} a比b更有钱  a -> b

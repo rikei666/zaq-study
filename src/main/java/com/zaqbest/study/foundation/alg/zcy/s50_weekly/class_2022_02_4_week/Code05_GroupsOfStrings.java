@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_02_4_week;
 
 import java.util.HashMap;
 
-// 测试链接 : https://leetcode.com/problems/groups-of-strings/
+// 测试链接 : https://leetcode.cn/problems/groups-of-strings/
 public class Code05_GroupsOfStrings {
 
 	// 可能会超时，或者打败比例很低

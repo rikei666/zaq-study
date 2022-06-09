@@ -3,7 +3,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class08;
 /**
  * 装水问题
  *
- * 本题测试链接 : https://leetcode.com/problems/container-with-most-water/
+ * 本题测试链接 : https://leetcode.cn/problems/container-with-most-water/
  */
 public class Code02_ContainerWithMostWater {
 

@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term05.class08;
 
-// 测试链接: https://leetcode.com/problems/create-maximum-number/
+// 测试链接: https://leetcode.cn/problems/create-maximum-number/
 public class Code01_CreateMaximumNumber {
 
 	public static int[] maxNumber1(int[] nums1, int[] nums2, int k) {

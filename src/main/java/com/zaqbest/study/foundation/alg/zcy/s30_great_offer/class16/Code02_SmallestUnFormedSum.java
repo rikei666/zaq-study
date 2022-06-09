@@ -38,6 +38,11 @@ public class Code02_SmallestUnFormedSum {
 		process(arr, i + 1, sum + arr[i], set);
 	}
 
+	/**
+	 *
+	 * @param arr
+	 * @return
+	 */
 	public static int unformedSum2(int[] arr) {
 		if (arr == null || arr.length == 0) {
 			return 1;
@@ -50,6 +55,7 @@ public class Code02_SmallestUnFormedSum {
 		}
 		// boolean[][] dp ...
 		int N = arr.length;
+		//dp[i][j]的含义： arr[0..i]的数字可以自由选择，能不能搞定j的累加和
 		boolean[][] dp = new boolean[N][sum + 1];
 		for (int i = 0; i < N; i++) {// arr[0..i] 0
 			dp[i][0] = true;
@@ -57,10 +63,11 @@ public class Code02_SmallestUnFormedSum {
 		dp[0][arr[0]] = true;
 		for (int i = 1; i < N; i++) {
 			for (int j = 1; j <= sum; j++) {
-				dp[i][j] = dp[i - 1][j] || ((j - arr[i] >= 0) ? dp[i - 1][j - arr[i]] : false);
+				dp[i][j] = dp[i - 1][j] //不使用[i]
+						|| ((j - arr[i] >= 0) ? dp[i - 1][j - arr[i]] : false);
 			}
 		}
-		for (int j = min; j <= sum; j++) {
+ 		for (int j = min; j <= sum; j++) {
 			if (!dp[N - 1][j]) {
 				return j;
 			}
@@ -101,7 +108,14 @@ public class Code02_SmallestUnFormedSum {
 		System.out.println();
 	}
 
+
 	public static void main(String[] args) {
+		int[] arr = {1,2,3,5,13};
+		int res = unformedSum2(arr);
+		System.out.println(res);
+	}
+
+	public static void main1(String[] args) {
 		int len = 27;
 		int max = 30;
 		int[] arr = generateArray(len, max);

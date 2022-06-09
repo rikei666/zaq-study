@@ -1,7 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term05.class01;
 
 /**
- * https://leetcode.com/problems/scramble-string/
+ * https://leetcode.cn/problems/scramble-string/
  *
  * 旋变字符串问题
  *

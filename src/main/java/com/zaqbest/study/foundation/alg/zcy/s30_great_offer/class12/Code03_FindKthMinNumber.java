@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class12;
 
 /**
  * 给定两个有序的数组，查找第K小的数
- * 本题测试链接 : https://leetcode.com/problems/median-of-two-sorted-arrays/
+ * 本题测试链接 : https://leetcode.cn/problems/median-of-two-sorted-arrays/
  *
  * 时间复杂度 O(log min(N, M))
  */

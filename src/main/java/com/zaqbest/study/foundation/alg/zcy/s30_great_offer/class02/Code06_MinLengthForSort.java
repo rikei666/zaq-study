@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class02;
 
-// 本题测试链接 : https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
+// 本题测试链接 : https://leetcode.cn/problems/shortest-unsorted-continuous-subarray/
 
 /**
  * 给定一个数组arr，只能对arr中的一个子数组排序，

@@ -8,7 +8,7 @@ import java.util.HashMap;
 // 对它进行优化使其尽量少调用系统方法 Math.random()
 // 1 <= n <= 1000000000
 // 0 <= blacklist.length < min(100000, N)
-// 测试链接: https://leetcode.com/problems/random-pick-with-blacklist/
+// 测试链接: https://leetcode.cn/problems/random-pick-with-blacklist/
 public class Code03_RandomPickWithBlacklist {
 
 	class Solution {

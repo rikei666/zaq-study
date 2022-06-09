@@ -3,7 +3,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class09;
 /**
  * 最长递增子序列（LIS），经典问题！！！！
  *
- * 本题测试链接 : https://leetcode.com/problems/longest-increasing-subsequence
+ * 本题测试链接 : https://leetcode.cn/problems/longest-increasing-subsequence
  *
  * 解法
  * - dp + 二分， 牛逼轰轰的解法

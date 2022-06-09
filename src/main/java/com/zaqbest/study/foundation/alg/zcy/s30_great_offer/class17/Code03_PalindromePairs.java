@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-// 测试链接 : https://leetcode.com/problems/palindrome-pairs/
+// 测试链接 : https://leetcode.cn/problems/palindrome-pairs/
 public class Code03_PalindromePairs {
 
 	public static List<List<Integer>> palindromePairs(String[] words) {

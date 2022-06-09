@@ -3,7 +3,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class20;
 import java.util.HashMap;
 
 // 本题为leetcode原题
-// 测试链接：https://leetcode.com/problems/largest-component-size-by-common-factor/
+// 测试链接：https://leetcode.cn/problems/largest-component-size-by-common-factor/
 // 方法1会超时，但是方法2直接通过
 public class Code02_LargestComponentSizebyCommonFactor {
 

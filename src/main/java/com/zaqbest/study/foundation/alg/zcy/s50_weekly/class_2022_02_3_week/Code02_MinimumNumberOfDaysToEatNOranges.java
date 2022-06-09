@@ -3,7 +3,7 @@ package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_02_3_week;
 import java.util.HashMap;
 
 // 来自学员看到的腾讯面试
-// 测试链接 : https://leetcode.com/problems/minimum-number-of-days-to-eat-n-oranges/
+// 测试链接 : https://leetcode.cn/problems/minimum-number-of-days-to-eat-n-oranges/
 public class Code02_MinimumNumberOfDaysToEatNOranges {
 
 	// 所有的答案都填在这个表里

@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_01_1_week;
 
-// 测试链接 : https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations/
+// 测试链接 : https://leetcode.cn/problems/maximum-score-from-performing-multiplication-operations/
 public class Code03_MaximumScoreFromPerformingMultiplicationOperations {
 
 	// B数组消耗完之前，A数组不会耗尽，题目输入保证的！

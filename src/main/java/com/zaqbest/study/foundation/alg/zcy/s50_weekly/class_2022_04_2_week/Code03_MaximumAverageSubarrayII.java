@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_04_2_week;
 
-// 测试链接 : https://leetcode.com/problems/maximum-average-subarray-ii/
+// 测试链接 : https://leetcode.cn/problems/maximum-average-subarray-ii/
 public class Code03_MaximumAverageSubarrayII {
 
 	// 时间复杂度O(N * log(MaxValue))

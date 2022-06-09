@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2021_11_4_week;
 
-// 测试链接 : https://leetcode.com/problems/guess-number-higher-or-lower-ii/
+// 测试链接 : https://leetcode.cn/problems/guess-number-higher-or-lower-ii/
 public class Code02_GuessNumberHigherOrLowerII {
 
 	// 正确的数字，在1~n之间

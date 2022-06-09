@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 查找变形词
  *
- * 本题测试链接 : https://leetcode.com/problems/permutation-in-string/
+ * 本题测试链接 : https://leetcode.cn/problems/permutation-in-string/
  *
  * 滑动窗口+记账表
  */
@@ -83,9 +83,11 @@ public class Code01_ContainAllCharExactly {
 			if (all == 0) { // R-1
 				return R - M;
 			}
+			//右侧窗口进一个
 			if (count[str1[R]]-- > 0) {
 				all--;
 			}
+			//左侧窗口吐一个
 			if (count[str1[R - M]]++ >= 0) {
 				all++;
 			}

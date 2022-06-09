@@ -3,7 +3,7 @@ package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_01_1_week;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-// 测试链接 : https://leetcode.com/problems/cat-and-mouse/
+// 测试链接 : https://leetcode.cn/problems/cat-and-mouse/
 public class Code02_CatAndMouse {
 
 	// 不贪心，就递归 + 记忆化搜索

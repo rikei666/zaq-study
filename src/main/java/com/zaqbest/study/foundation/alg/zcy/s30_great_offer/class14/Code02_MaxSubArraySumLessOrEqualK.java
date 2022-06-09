@@ -4,6 +4,9 @@ import java.util.TreeSet;
 
 /**
  * 给定数组arr, 和K, 求小于等于K的子数组的最大值
+ *
+ * 思路：
+ * 	前缀和+有序表
  */
 public class Code02_MaxSubArraySumLessOrEqualK {
 

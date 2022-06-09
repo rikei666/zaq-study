@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_02_3_week;
 
-// 测试链接 : https://leetcode.com/problems/stone-game-ix/
+// 测试链接 : https://leetcode.cn/problems/stone-game-ix/
 public class Code05_StoneGameIX {
 
 	public static boolean stoneGameIX(int[] stones) {

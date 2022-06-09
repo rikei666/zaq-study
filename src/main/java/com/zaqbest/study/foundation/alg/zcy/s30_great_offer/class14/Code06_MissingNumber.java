@@ -5,7 +5,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class14;
  *
  * 查找第一个缺失的数字
  *
- * 测试链接：https://leetcode.com/problems/first-missing-positive/
+ * 测试链接：https://leetcode.cn/problems/first-missing-positive/
  *
  * 关联问题
  * {@link com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_100_like.toplikedquestions.Problem_0448_FindAllNumbersDisappearedInAnArray}

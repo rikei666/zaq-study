@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class12;
 
-// 测试链接 : https://leetcode.com/problems/regular-expression-matching/
+// 测试链接 : https://leetcode.cn/problems/regular-expression-matching/
 public class Code04_RegularExpressionMatch {
 
 	public static boolean isValid(char[] s, char[] e) {
@@ -114,17 +114,32 @@ public class Code04_RegularExpressionMatch {
 		return ans;
 	}
 
+	/**
+	 * 潜台词： ei位置不可能是*， 只可能是普通字符或者.
+	 *
+	 * @param s
+	 * @param e
+	 * @param si
+	 * @param ei
+	 * @param dp
+	 * @return
+	 */
 	public static boolean process2(char[] s, char[] e, int si, int ei, int[][] dp) {
 		if (dp[si][ei] != 0) {
 			return dp[si][ei] == 1;
 		}
 		boolean ans = false;
+		//可能性划分方式
+		//考虑ei： p1, 已经用完了，  p2, 下一个字符不是*, p3，下一个字符是*
+		//考虑si： p1, 已经用完了，  p2, 还没有用完
 		if (ei == e.length) {
 			ans = si == s.length;
 		} else {
+			//下一个字符不是*(如果有下一个字符）
 			if (ei + 1 == e.length || e[ei + 1] != '*') {
 				ans = si != s.length && (e[ei] == s[si] || e[ei] == '.')
 						&& process2(s, e, si + 1, ei + 1, dp);
+			//下一个字符是*
 			} else {
 				if (si == s.length) { // ei ei+1 *
 					ans = process2(s, e, si, ei + 2, dp);
@@ -132,7 +147,7 @@ public class Code04_RegularExpressionMatch {
 					if (s[si] != e[ei] && e[ei] != '.') {
 						ans = process2(s, e, si, ei + 2, dp);
 					} else { // s[si] 可以和 e[ei]配上
-						//![](http://oss.zaqbest.com/i/2022/05/03/627141fc312ff.jpg)
+						//![](http://pic.zaqbest.com/i/2022/05/03/627141fc312ff.jpg)
 						ans = process2(s, e, si, ei + 2, dp)
 								|| process2(s, e, si + 1, ei, dp);
 					}

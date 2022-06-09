@@ -5,7 +5,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class06;
  * 请返回哪个数字与X异或的结果最大，返回最大结果
  * 但是，只有<=m的数字，可以被考虑
  *
- * 测试链接 : https://leetcode.com/problems/maximum-xor-with-an-element-from-array/
+ * 测试链接 : https://leetcode.cn/problems/maximum-xor-with-an-element-from-array/
  */
 public class Code03_MaximumXorWithAnElementFromArray {
 

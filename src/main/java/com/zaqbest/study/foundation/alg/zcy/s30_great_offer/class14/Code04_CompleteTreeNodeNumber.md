@@ -1,5 +1,5 @@
 **计算过程示意图**  
-![](http://oss.zaqbest.com/i/2022/05/12/627ccb9c29002.png)
+![](http://pic.zaqbest.com/i/2022/05/12/627ccb9c29002.png)
 
 计算步骤
 - 获得树的最大高度

@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2021_12_1_week;
 
-// 测试链接 : https://leetcode.com/problems/4-keys-keyboard/
+// 测试链接 : https://leetcode.cn/problems/4-keys-keyboard/
 public class Code02_4KeysKeyboard {
 
 	// 可以证明：

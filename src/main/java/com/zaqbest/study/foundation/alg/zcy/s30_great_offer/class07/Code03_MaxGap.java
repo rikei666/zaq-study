@@ -5,7 +5,7 @@ import com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term04.class03.Code
 /**
  * 最大间隙问题
  *
- * 测试链接 : https://leetcode.com/problems/maximum-gap/
+ * 测试链接 : https://leetcode.cn/problems/maximum-gap/
  *
  * 编码技巧：  min, max hasNum数组
  * 桶排序思想，抽屉思想

@@ -6,7 +6,7 @@ import java.util.Comparator;
 /**
  * 俄罗斯套娃问题
  *
- * 本题测试链接 : https://leetcode.com/problems/russian-doll-envelopes/
+ * 本题测试链接 : https://leetcode.cn/problems/russian-doll-envelopes/
  *
  * LIS的应用，想法很奇妙
  */

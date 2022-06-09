@@ -5,7 +5,7 @@ import java.util.HashSet;
 
 /**
  * 最长连续序列
- * 本题测试链接 : https://leetcode.com/problems/longest-consecutive-sequence/
+ * 本题测试链接 : https://leetcode.cn/problems/longest-consecutive-sequence/
  */
 public class Code03_LongestConsecutive {
 

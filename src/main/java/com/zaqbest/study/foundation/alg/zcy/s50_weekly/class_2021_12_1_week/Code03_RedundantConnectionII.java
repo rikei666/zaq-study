@@ -1,7 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2021_12_1_week;
 
 // 来自微软，真正考的时候阉割了难度
-// 测试链接 : https://leetcode.com/problems/redundant-connection-ii/
+// 测试链接 : https://leetcode.cn/problems/redundant-connection-ii/
 public class Code03_RedundantConnectionII {
 
 	// [

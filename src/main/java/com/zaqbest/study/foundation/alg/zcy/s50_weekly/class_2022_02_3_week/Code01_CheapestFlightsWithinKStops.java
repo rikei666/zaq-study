@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-// 测试链接 : https://leetcode.com/problems/cheapest-flights-within-k-stops/
+// 测试链接 : https://leetcode.cn/problems/cheapest-flights-within-k-stops/
 public class Code01_CheapestFlightsWithinKStops {
 
 	// 类似宽度优先遍历

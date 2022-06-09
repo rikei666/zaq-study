@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_02_2_week;
 
 import java.util.Arrays;
 
-// 测试链接 : https://leetcode.com/problems/recover-the-original-array/
+// 测试链接 : https://leetcode.cn/problems/recover-the-original-array/
 public class Code05_RecoverTheOriginalArray {
 
 	public static int[] recoverArray(int[] nums) {

@@ -12,7 +12,7 @@ import java.util.Queue;
 // 但是来到的位置不能在封锁列表blocked上
 // 同时不允许走出网格
 // 如果从source能到达target返回 true。否则返回false。
-// 测试链接 : https://leetcode.com/problems/escape-a-large-maze/
+// 测试链接 : https://leetcode.cn/problems/escape-a-large-maze/
 // 本题最强的优化是一个剪枝
 public class Code02_EscapeALargeMaze {
 

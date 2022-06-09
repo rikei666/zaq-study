@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-// 测试链接 : https://leetcode.com/problems/cut-off-trees-for-golf-event/
+// 测试链接 : https://leetcode.cn/problems/cut-off-trees-for-golf-event/
 public class Code04_CutOffTreesForGolfEvent {
 
 	public static int cutOffTree(List<List<Integer>> forest) {

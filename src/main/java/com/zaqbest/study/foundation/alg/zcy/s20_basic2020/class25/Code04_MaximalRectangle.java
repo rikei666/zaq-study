@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s20_basic2020.class25;
 
 import java.util.Stack;
 
-// 测试链接：https://leetcode.com/problems/maximal-rectangle/
+// 测试链接：https://leetcode.cn/problems/maximal-rectangle/
 public class Code04_MaximalRectangle {
 
 	public static int maximalRectangle(char[][] map) {

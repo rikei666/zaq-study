@@ -1,6 +1,6 @@
 逆序对的另外一种数组
 
-![](http://oss.zaqbest.com/i/2022/05/23/628af26ac295f.png)
+![](http://pic.zaqbest.com/i/2022/05/23/628af26ac295f.png)
 
 - 2^1  
 6,4

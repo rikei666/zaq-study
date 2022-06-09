@@ -5,7 +5,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class13;
  *
  * 超级洗衣机问题
  *
- * 本题测试链接 : https://leetcode.com/problems/super-washing-machines/
+ * 本题测试链接 : https://leetcode.cn/problems/super-washing-machines/
  */
 public class Code02_SuperWashingMachines {
 

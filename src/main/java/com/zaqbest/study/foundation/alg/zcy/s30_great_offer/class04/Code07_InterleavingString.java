@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class04;
 
 /**
  * 交错组成字符串
- * 本题测试链接 : https://leetcode.com/problems/interleaving-string/
+ * 本题测试链接 : https://leetcode.cn/problems/interleaving-string/
  *
  * 思路
  * - 多样本对应尝试模型

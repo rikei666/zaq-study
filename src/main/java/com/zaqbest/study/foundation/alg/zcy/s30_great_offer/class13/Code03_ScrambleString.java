@@ -3,7 +3,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class13;
 /**
  * 旋变字符串
  *
- * 本题测试链接 : https://leetcode.com/problems/scramble-string/
+ * 本题测试链接 : https://leetcode.cn/problems/scramble-string/
  */
 public class Code03_ScrambleString {
 

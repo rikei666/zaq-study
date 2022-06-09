@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * 表达式求值（记住这种处理问题的模板）
  *
- * 本题测试链接 : https://leetcode.com/problems/basic-calculator-iii/、
+ * 本题测试链接 : https://leetcode.cn/problems/basic-calculator-iii/、
  *
  */
 public class Code01_ExpressionCompute {

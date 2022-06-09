@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_04_2_week;
 
-// 测试链接 : https://leetcode.com/problems/number-of-different-subsequences-gcds/
+// 测试链接 : https://leetcode.cn/problems/number-of-different-subsequences-gcds/
 public class Code02_NumberOfDifferentSubsequencesGCDs {
 
 	// 1 + n/2 + n/3 + n/4 + ... + n/n -> O(N * logN)

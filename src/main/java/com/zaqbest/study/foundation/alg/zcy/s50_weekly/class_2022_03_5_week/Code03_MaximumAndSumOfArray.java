@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_03_5_week;
 
 import java.util.Arrays;
 
-// 测试链接 : https://leetcode.com/problems/maximum-and-sum-of-array/
+// 测试链接 : https://leetcode.cn/problems/maximum-and-sum-of-array/
 public class Code03_MaximumAndSumOfArray {
 
 	public static int maximumANDSum(int[] arr, int m) {

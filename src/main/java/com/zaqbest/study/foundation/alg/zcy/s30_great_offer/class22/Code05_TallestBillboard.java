@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class22;
 
 import java.util.HashMap;
 
-// 本题测试链接 : https://leetcode.com/problems/tallest-billboard/
+// 本题测试链接 : https://leetcode.cn/problems/tallest-billboard/
 public class Code05_TallestBillboard {
 
 	public int tallestBillboard(int[] rods) {

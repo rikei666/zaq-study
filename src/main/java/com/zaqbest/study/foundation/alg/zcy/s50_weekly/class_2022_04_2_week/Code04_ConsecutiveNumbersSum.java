@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_04_2_week;
 
-// 测试链接 : https://leetcode.com/problems/consecutive-numbers-sum/
+// 测试链接 : https://leetcode.cn/problems/consecutive-numbers-sum/
 public class Code04_ConsecutiveNumbersSum {
 
 	// 如果有，N = (x+1) + (x+2) + ... + (x+k)

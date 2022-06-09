@@ -6,7 +6,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class03;
  * 思路
  * - dp + map位置表
  *
- *本题测试链接 : https://leetcode.com/problems/longest-substring-without-repeating-characters/
+ *本题测试链接 : https://leetcode.cn/problems/longest-substring-without-repeating-characters/
  */
 public class Code01_LongestSubstringWithoutRepeatingCharacters {
 

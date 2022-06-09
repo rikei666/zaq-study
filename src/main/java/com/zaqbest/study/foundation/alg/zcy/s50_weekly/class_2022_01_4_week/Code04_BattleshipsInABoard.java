@@ -1,7 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s50_weekly.class_2022_01_4_week;
 
 // 来自米哈游
-// 测试链接 : https://leetcode.com/problems/battleships-in-a-board/
+// 测试链接 : https://leetcode.cn/problems/battleships-in-a-board/
 public class Code04_BattleshipsInABoard {
 
 	public static int countBattleships(char[][] m) {

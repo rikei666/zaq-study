@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class13;
 
 import java.math.BigDecimal;
 
-public class Code01_NCardsABWin {
+public class  Code01_NCardsABWin {
 
 	// 谷歌面试题
 	// 面值为1~10的牌组成一组，
@@ -90,7 +90,8 @@ public class Code01_NCardsABWin {
 		if (cur == a - 1) {
 			return 1.0 * (b - a) / N;
 		}
-		double w = p3(cur + 1, N, a, b) + p3(cur + 1, N, a, b) * N;
+		//![](http://pic.zaqbest.com/i/2022/06/09/62a15f4e34e29.png)
+		double w = p3(cur + 1, N, a, b)  + p3(cur + 1, N, a, b) * N;
 		if (cur + 1 + N < b) {
 			w -= p3(cur + 1 + N, N, a, b);
 		}

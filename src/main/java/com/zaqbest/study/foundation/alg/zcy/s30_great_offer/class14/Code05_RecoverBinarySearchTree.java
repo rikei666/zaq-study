@@ -2,7 +2,7 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class14;
 
 import java.util.Stack;
 
-// 本题测试链接 : https://leetcode.com/problems/recover-binary-search-tree/
+// 本题测试链接 : https://leetcode.cn/problems/recover-binary-search-tree/
 public class Code05_RecoverBinarySearchTree {
 	// 不要提交这个类
 	public static class TreeNode {
@@ -26,6 +26,14 @@ public class Code05_RecoverBinarySearchTree {
 		}
 	}
 
+	/**
+	 * Morris遍历
+	 * e1: 第一次错误的第一个节点
+	 * e2: 最后一次错误的第二个节点
+	 *
+	 * @param head
+	 * @return
+	 */
 	public static TreeNode[] twoErrors(TreeNode head) {
 		TreeNode[] ans = new TreeNode[2];
 		if (head == null) {
