@@ -91,7 +91,15 @@ public class Code01_CordCoverMaxPoint {
 		return ans;
 	}
 
+
 	public static void main(String[] args) {
+		int[] arr = {1,2,5,6,7,11};
+		int L = 3;
+		int res = maxPoint2(arr, L);
+		System.out.println(res);
+	}
+
+	public static void main0(String[] args) {
 		int len = 100;
 		int max = 1000;
 		int testTime = 100000;

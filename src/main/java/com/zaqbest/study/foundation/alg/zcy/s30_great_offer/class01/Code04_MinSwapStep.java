@@ -22,14 +22,14 @@ public class Code04_MinSwapStep {
 			return 0;
 		}
 		char[] str = s.toCharArray();
-		int step1 = 0;
+		int step1 = 0; //把数组处理成G*B*的次数
 		int gi = 0;
 		for (int i = 0; i < str.length; i++) {
 			if (str[i] == 'G') {
 				step1 += i - (gi++);
 			}
 		}
-		int step2 = 0;
+		int step2 = 0;//把数组处理成B*G*的次数
 		int bi = 0;
 		for (int i = 0; i < str.length; i++) {
 			if (str[i] == 'B') {
@@ -69,6 +69,10 @@ public class Code04_MinSwapStep {
 	}
 
 	public static void main(String[] args) {
+		String s = "GGBBGBG";
+		minSteps1(s);
+	}
+	public static void main0(String[] args) {
 		int maxLen = 100;
 		int testTime = 1000000;
 		System.out.println("测试开始");

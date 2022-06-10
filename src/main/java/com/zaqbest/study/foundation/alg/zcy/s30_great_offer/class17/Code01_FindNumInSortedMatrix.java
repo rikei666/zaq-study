@@ -1,5 +1,8 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class17;
 
+/**
+ * 在一个行列都有序的矩阵中，查找数字k
+ */
 public class Code01_FindNumInSortedMatrix {
 
 	public static boolean isContains(int[][] matrix, int K) {

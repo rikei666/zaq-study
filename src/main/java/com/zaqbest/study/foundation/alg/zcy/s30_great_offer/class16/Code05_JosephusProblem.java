@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class16;
 
-// 本题测试链接 : https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/
+// 本题测试链接 : https://leetcode.cn/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/
 public class Code05_JosephusProblem {
 
 	// 提交直接通过

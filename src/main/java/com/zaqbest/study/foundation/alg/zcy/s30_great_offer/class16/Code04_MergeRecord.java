@@ -1,5 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class16;
 
+import cn.hutool.json.JSONUtil;
+
 public class Code04_MergeRecord {
 	
 	/*
@@ -191,6 +193,13 @@ public class Code04_MergeRecord {
 	}
 
 	public static void main(String[] args) {
+		int[] arr = {6,4,2,5,1,3,0,7};
+		int[] reverse = {3};
+		int[] res = reversePair2(arr, reverse, 3);
+		System.out.println(JSONUtil.toJsonPrettyStr(res));
+	}
+
+	public static void main0(String[] args) {
 		int powerMax = 8;
 		int msizeMax = 10;
 		int value = 30;
