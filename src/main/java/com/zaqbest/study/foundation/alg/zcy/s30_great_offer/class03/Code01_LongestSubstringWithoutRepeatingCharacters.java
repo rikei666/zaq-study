@@ -31,4 +31,9 @@ public class Code01_LongestSubstringWithoutRepeatingCharacters {
 		return ans;
 	}
 
+	public static void main(String[] args) {
+		String s = "aabcdaef";
+		int res = lengthOfLongestSubstring(s);
+		System.out.println(res);
+	}
 }

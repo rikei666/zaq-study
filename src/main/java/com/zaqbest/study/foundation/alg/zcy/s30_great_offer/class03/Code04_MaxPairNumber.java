@@ -66,6 +66,9 @@ public class Code04_MaxPairNumber {
 				if (distance == k) {
 					ans++;
 					usedR[R++] = true;
+					//这里需要解释一下：arr[L]也是被使用的数，为什么不需要设置标志
+					//因为L已经处理过了，并且之后再也不会碰到，所以设不设置标志位没有任何影响
+					//usedR[L] = true;
 					L++;
 				} else if (distance < k) {
 					R++;

@@ -27,12 +27,15 @@ public class Code06_ClosestSubsequenceSum {
 		int le = process(nums, 0, nums.length >> 1, 0, 0, l);
 		int re = process(nums, nums.length >> 1, nums.length, 0, 0, r);
 		Arrays.sort(l, 0, le);
-		Arrays.sort(r, 0, re--);
+		Arrays.sort(r, 0, re);
+		//最差情况为abs(goal)
 		int ans = Math.abs(goal);
+		// re作为下标使用，需要减去1
+		re--;
 		for (int i = 0; i < le; i++) {
 			int rest = goal - l[i];
 			while (re > 0 && Math.abs(rest - r[re - 1]) <= Math.abs(rest - r[re])) {
-				re--;
+				re--; //舍弃一些不可能是答案的尝试过程，或者叫剪枝
 			}
 			ans = Math.min(ans, Math.abs(rest - r[re]));
 		}

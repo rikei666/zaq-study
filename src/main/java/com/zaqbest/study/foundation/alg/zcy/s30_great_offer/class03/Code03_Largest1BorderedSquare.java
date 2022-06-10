@@ -1,17 +1,17 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class03;
 
-// 本题测试链接 : https://leetcode.cn/problems/largest-1-bordered-square/
-
 /**
  * 给定一个只有0和1组成的二维数组，返回边框全是1（内部无所谓）的最大正方形面积
  *
  * 思路
  * - 设计数据结构，加速流程
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/largest-1-bordered-square/
  */
 public class Code03_Largest1BorderedSquare {
 
 	public static int largest1BorderedSquare(int[][] m) {
-		int[][] right = new int[m.length][m[0].length];
+		int[][] right = new int[m.length][m[0].length]; //right[i][j]指的是m[i][j]向右右多少个 **连续** 的1
 		int[][] down = new int[m.length][m[0].length];
 		setBorderMap(m, right, down);
 		for (int size = Math.min(m.length, m[0].length); size != 0; size--) {

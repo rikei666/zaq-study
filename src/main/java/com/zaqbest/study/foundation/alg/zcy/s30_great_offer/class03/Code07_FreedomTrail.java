@@ -3,7 +3,11 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class03;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-// 本题测试链接 : https://leetcode.cn/problems/freedom-trail/
+/**
+ * 自由之路
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/freedom-trail/
+ */
 public class Code07_FreedomTrail {
 
 	public static int findRotateSteps(String r, String k) {
