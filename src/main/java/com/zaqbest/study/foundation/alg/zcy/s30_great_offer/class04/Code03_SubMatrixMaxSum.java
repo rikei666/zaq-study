@@ -2,6 +2,9 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class04;
 
 /**
  * 返回一个二维数组中子矩阵最大累加和
+ *
+ * 思路：
+ * 	- 二维矩阵压缩成一维
  */
 public class Code03_SubMatrixMaxSum {
 
