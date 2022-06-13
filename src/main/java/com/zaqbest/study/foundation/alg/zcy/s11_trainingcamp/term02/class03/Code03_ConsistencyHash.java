@@ -1,7 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term02.class03;
 
 import cn.hutool.crypto.digest.DigestUtil;
-import com.alibaba.fastjson.JSON;
+import cn.hutool.json.JSONUtil;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -33,7 +33,7 @@ public class Code03_ConsistencyHash {
         }
 
         //输入结果
-        System.out.println(JSON.toJSONString(count));
+        System.out.println(JSONUtil.toJsonStr(count));
     }
 
     private static String getHashCode(String str){

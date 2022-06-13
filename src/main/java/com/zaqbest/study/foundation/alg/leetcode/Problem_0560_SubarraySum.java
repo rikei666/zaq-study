@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.leetcode;
 
-import com.alibaba.fastjson.JSON;
+import cn.hutool.json.JSONUtil;
 import com.zaqbest.study.foundation.alg.utils.ArrayUtil;
 
 import java.util.HashMap;
@@ -75,7 +75,7 @@ public class Problem_0560_SubarraySum {
 
             if (r1 != r2){
                 System.out.println("oops!");
-                System.out.println(JSON.toJSONString(nums));
+                System.out.println(JSONUtil.toJsonStr(nums));
                 System.out.println(r1);
                 System.out.println(r2);
                 System.out.println(i);

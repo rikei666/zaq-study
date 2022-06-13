@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term05.class08;
 
-import com.alibaba.fastjson.JSON;
+import cn.hutool.json.JSONUtil;
 
 /**
  * DC3算法求后缀数组
@@ -159,7 +159,7 @@ public class DC3 {
 		}
 
 		DC3 dc3 = new DC3(nums, max);
-		System.out.println(JSON.toJSONString(dc3.sa));
-		System.out.println(JSON.toJSONString(dc3.rank));
+		System.out.println(JSONUtil.toJsonStr(dc3.sa));
+		System.out.println(JSONUtil.toJsonStr(dc3.rank));
 	}
 }

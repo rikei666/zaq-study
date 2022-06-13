@@ -1,9 +1,7 @@
 package com.zaqbest.study.misc.domain;
 
-import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.SystemPropsUtil;
-import com.alibaba.fastjson.JSON;
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.profile.ClientProfile;
@@ -11,18 +9,14 @@ import com.tencentcloudapi.common.profile.HttpProfile;
 import com.tencentcloudapi.domain.v20180808.DomainClient;
 import com.tencentcloudapi.domain.v20180808.models.CheckDomainRequest;
 import com.tencentcloudapi.domain.v20180808.models.CheckDomainResponse;
-import com.zaqbest.comm.utils.PropUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class TencentDomain {
@@ -60,7 +54,7 @@ public class TencentDomain {
 
         result = result.stream().filter(s -> s.equals(StrUtil.reverse(s))).collect(Collectors.toList());
 
-//        System.out.println(JSON.toJSONString(result));
+//        System.out.println(JSONUtil.toJsonStr(result));
 //        System.out.println(result.size());
 
         ThreadPoolExecutor threadPool  = new ThreadPoolExecutor(3,

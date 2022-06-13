@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.leetcode;
 
-import com.alibaba.fastjson.JSON;
+import cn.hutool.json.JSONUtil;
 
 import java.util.*;
 
@@ -136,6 +136,6 @@ public class Problem_0301_RemoveInvalidParentheses {
     public static void main(String[] args) {
         Problem_0301_RemoveInvalidParentheses solution = new Problem_0301_RemoveInvalidParentheses();
         List<String> result = solution.removeInvalidParentheses(")(");
-        System.out.println(JSON.toJSONString(result));
+        System.out.println(JSONUtil.toJsonStr(result));
     }
 }

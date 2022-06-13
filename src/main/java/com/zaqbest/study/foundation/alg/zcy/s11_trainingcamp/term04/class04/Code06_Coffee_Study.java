@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term04.class04;
 
-import com.alibaba.fastjson.JSON;
+import cn.hutool.json.JSONUtil;
 
 import java.util.PriorityQueue;
 
@@ -36,8 +36,8 @@ public class Code06_Coffee_Study {
 
     public static void main(String[] args) {
         int[] ans = bestChoices(new int[]{1,3,5}, 10);
-        System.out.println(JSON.toJSONString(ans));
-        System.out.println(JSON.toJSONString(Code06_Coffee.bestChoices(new int[]{1,3,5}, 10)));
+        System.out.println(JSONUtil.toJsonStr(ans));
+        System.out.println(JSONUtil.toJsonStr(Code06_Coffee.bestChoices(new int[]{1,3,5}, 10)));
     }
 
 }
