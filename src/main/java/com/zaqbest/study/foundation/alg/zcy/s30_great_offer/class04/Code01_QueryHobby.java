@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * 数据结构设计提
+ * 数据结构设计题
  *
  * 思路
  * - 预处理结构（有序表）

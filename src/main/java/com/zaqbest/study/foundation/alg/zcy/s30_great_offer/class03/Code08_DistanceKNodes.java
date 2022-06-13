@@ -41,6 +41,10 @@ public class Code08_DistanceKNodes {
 		List<Node> ans = new ArrayList<>();
 		while (!queue.isEmpty()) {
 			int size = queue.size();
+			//先处理target节点
+			//处理所有level为1的节点
+			//处理所有level为2的节点
+			//如果level=k, 收集答案； 如果超过k,跳出循环，处理结束
 			while (size-- > 0) {
 				Node cur = queue.poll();
 				if (curLevel == K) {
