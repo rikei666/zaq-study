@@ -1,7 +1,7 @@
 package com.zaqbest.study.redis;
 
 import cn.hutool.json.JSONUtil;
-import com.zaqbest.redis.RedisClient;
+import com.zaqbest.comm.service.RedisService;
 import com.zaqbest.study.BaseTest;
 import org.junit.jupiter.api.Test;
 import org.redisson.api.RLock;
@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class RedisTest extends BaseTest {
 
     @Autowired
-    private RedisClient redisClient;
+    private RedisService redisService;
 
     @Autowired
     private RedissonClient redissonClient;
@@ -25,14 +25,14 @@ public class RedisTest extends BaseTest {
 
     @Test
     public void setCache(){
-        redisClient.set("aa", "a1", "mypre", 86400L);
+        redisService.set("aa", 86400L);
 
         MyClass myClass = new MyClass();
         myClass.a = 1;
         myClass.s = "hello";
 
-        redisClient.set("bb", myClass, "mypre", 86400L);
-        MyClass myClass2 = (MyClass) redisClient.get("bb", "mypre");
+        redisService.set("bb", myClass, 86400L);
+        MyClass myClass2 = (MyClass) redisService.get("bb");
         System.out.println(JSONUtil.toJsonPrettyStr(myClass2));
     }
 

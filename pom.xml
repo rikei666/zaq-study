@@ -18,8 +18,24 @@
     <dependencies>
         <dependency>
             <groupId>com.zaqbest</groupId>
+            <artifactId>zaq-comm</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zaqbest</groupId>
             <artifactId>zaq-dao</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.zaqbest</groupId>
+            <artifactId>zaq-mq</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zaqbest</groupId>
+            <artifactId>zaq-workflow</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -31,13 +47,12 @@
         </dependency>
 
         <dependency>
-            <groupId>com.zaqbest</groupId>
-            <artifactId>zaq-mq</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>com.zaqbest</groupId>
-            <artifactId>zaq-workflow</artifactId>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
