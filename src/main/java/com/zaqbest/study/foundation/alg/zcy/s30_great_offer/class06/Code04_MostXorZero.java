@@ -110,8 +110,13 @@ public class Code04_MostXorZero {
 		System.out.println();
 	}
 
-	// for test
 	public static void main(String[] args) {
+		int[] arr = {0,1,2,3,0,1,2,3};
+		mostXor(arr);
+	}
+
+	// for test
+	public static void main0(String[] args) {
 		int testTime = 150000;
 		int maxSize = 12;
 		int maxValue = 5;

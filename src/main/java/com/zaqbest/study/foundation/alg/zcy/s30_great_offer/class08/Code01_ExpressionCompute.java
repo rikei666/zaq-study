@@ -28,7 +28,7 @@ public class Code01_ExpressionCompute {
 				cur = cur * 10 + str[i++] - '0';
 			} else if (str[i] != '(') { // 遇到的是运算符号
 				addNum(que, cur);
-				que.addLast(String.valueOf(str[i++]));
+				que.addLast(String.valueOf(str[i++])); //添加运算符
 				cur = 0;
 			} else { // 遇到左括号了
 				bra = f(str, i + 1);
