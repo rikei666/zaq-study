@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class09;
 
-/*
+/**
  * 给定一个数组arr，长度为N，arr中的值不是0就是1
  * arr[i]表示第i栈灯的状态，0代表灭灯，1代表亮灯
  * 每一栈灯都有开关，但是按下i号灯的开关，会同时改变i-1、i、i+1栈灯的状态

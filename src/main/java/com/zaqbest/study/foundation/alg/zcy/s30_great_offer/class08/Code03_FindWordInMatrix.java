@@ -1,6 +1,6 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class08;
 
-/*
+/**
  * 给定一个char[][] matrix，也就是char类型的二维数组，再给定一个字符串word，
  * 可以从任何一个某个位置出发，可以走上下左右，能不能找到word？
  * 比如：
