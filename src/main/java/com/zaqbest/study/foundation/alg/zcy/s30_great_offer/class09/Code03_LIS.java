@@ -16,7 +16,7 @@ public class Code03_LIS {
 		}
 		int[] ends = new int[arr.length];
 		ends[0] = arr[0];
-		int right = 0;
+		int right = 0;//ends数组的有效区域为0..right
 		int l = 0;
 		int r = 0;
 		int m = 0;
