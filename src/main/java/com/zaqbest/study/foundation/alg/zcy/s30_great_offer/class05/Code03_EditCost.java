@@ -27,9 +27,9 @@ public class Code03_EditCost {
 		}
 		for (int i = 1; i < N; i++) {
 			for (int j = 1; j < M; j++) {
-				dp[i][j] = dp[i - 1][j - 1] + (str1[i - 1] == str2[j - 1] ? 0 : rc);
-				dp[i][j] = Math.min(dp[i][j], dp[i][j - 1] + ic);
-				dp[i][j] = Math.min(dp[i][j], dp[i - 1][j] + dc);
+				dp[i][j] = dp[i - 1][j - 1] + (str1[i - 1] == str2[j - 1] ? 0 : rc); //换一个字符
+				dp[i][j] = Math.min(dp[i][j], dp[i][j - 1] + ic); //增加一个字符
+				dp[i][j] = Math.min(dp[i][j], dp[i - 1][j] + dc); //删除一个字符
 			}
 		}
 		return dp[N - 1][M - 1];

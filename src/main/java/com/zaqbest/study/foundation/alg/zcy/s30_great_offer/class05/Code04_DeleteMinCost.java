@@ -14,7 +14,7 @@ import java.util.List;
  * 解法1：
  * - 全排列+KMP 适用于s2较小的情况
  * 解法2：
- * - s2删除多少个字符可以变成s2 编辑距离问题
+ * - s1删除多少个字符可以变成s2 编辑距离问题
  */
 public class Code04_DeleteMinCost {
 	// 解法一

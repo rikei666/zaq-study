@@ -6,6 +6,9 @@ import java.util.HashSet;
  * 假设所有字符都是小写字母. 大字符串是str. arr是去重的单词表, 每个单词都不是空字符串且可以使用任意次.
  * 使用arr中的单词有多少种拼接str的方式. 返回方法数.
  *
+ * 思路
+ * 前缀树+dp
+ *
  * {@link Code06_SplitStringMaxValue}
  */
 public class Code05_WorldBreak {
@@ -91,10 +94,19 @@ public class Code05_WorldBreak {
 		}
 	}
 
+	/**
+	 * 前缀树解法
+	 *
+	 * @param str
+	 * @param arr
+	 * @return
+	 */
 	public static int ways3(String str, String[] arr) {
 		if (str == null || str.length() == 0 || arr == null || arr.length == 0) {
 			return 0;
 		}
+
+		//构建TireTree
 		Node root = new Node();
 		for (String s : arr) {
 			char[] chs = s.toCharArray();
@@ -135,7 +147,7 @@ public class Code05_WorldBreak {
 	}
 
 	/**
-	 * 最优解 前缀树方法
+	 * 最优解 前缀树方法 + dp
 	 * arr的大小为M， 总的时间复杂度O(M)+O（N^2）,其中O(M)为建树的过程
 	 *
 	 * @param s
