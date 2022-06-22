@@ -6,6 +6,8 @@ import java.util.Stack;
 
 /**
  * 单调栈
+ *
+ * 查找左右两边比自己小的位置
  */
 public class Code03_MonotonousStack {
 
