@@ -20,9 +20,9 @@ public class Code01_Manacher {
 			// i位置扩出来的答案，i位置扩的区域，至少是多大。
 			pArr[i] = R > i ? Math.min(pArr[2 * C - i], R - i) : 1;
 			while (i + pArr[i] < str.length && i - pArr[i] > -1) {
-				if (str[i + pArr[i]] == str[i - pArr[i]])
+				if (str[i + pArr[i]] == str[i - pArr[i]]) {
 					pArr[i]++;
-				else {
+				} else {
 					break;
 				}
 			}
@@ -74,6 +74,10 @@ public class Code01_Manacher {
 	}
 
 	public static void main(String[] args) {
+		String s = "aabaac";
+		int r = manacher(s);
+	}
+	public static void main0(String[] args) {
 		int possibilities = 5;
 		int strSize = 20;
 		int testTimes = 5000000;

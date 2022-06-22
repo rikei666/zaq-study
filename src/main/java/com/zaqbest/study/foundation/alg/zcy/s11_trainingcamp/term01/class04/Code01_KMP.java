@@ -16,19 +16,24 @@ public class Code01_KMP {
 		int y = 0;
 		int[] next = getNextArray(match);
 		while (x < str1.length && y < match.length) {
+			//情况1：可以匹配上，则x++,y++
 			if (str1[x] == match[y]) {
 				x++;
 				y++;
+			//情况2.1，没有匹配上，并且y是第0个字符（也就解释了这里为什么没有y=0, 这就是next数组的规定）
 			} else if (next[y] == -1) {
 				x++;
+			//情况2.2, 没有匹配上，m回退到适当的位置（使用next加速，利用已经匹配过的数据，x不用回退）
 			} else {
 				y = next[y];
 			}
 		}
+
+		//退出while有两种情况，x用完了， y用完了， 只有y用完的情况才是匹配成功的
 		return y == match.length ? x - y : -1;
 	}
 
-	public static int[] getNextArray(char[] ms) {
+	private static int[] getNextArray(char[] ms) {
 		if (ms.length == 1) {
 			return new int[] { -1 };
 		}
@@ -60,6 +65,13 @@ public class Code01_KMP {
 	}
 
 	public static void main(String[] args) {
+		String s = "ccabaxababcff";
+		String m = "abaxababc";
+
+		int res = getIndexOf(s, m);
+		System.out.println(res);
+	}
+	public static void main0(String[] args) {
 		int possibilities = 5;
 		int strSize = 20;
 		int matchSize = 5;

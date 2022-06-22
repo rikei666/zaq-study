@@ -21,6 +21,7 @@ public class Code02_ReservoirSampling {
 			count = 0;
 		}
 
+		//等概率产生一个1~max的数
 		private int rand(int max) {
 			return (int) (Math.random() * max) + 1;
 		}
@@ -30,7 +31,10 @@ public class Code02_ReservoirSampling {
 			if (count <= N) {
 				bag[count - 1] = num;
 			} else {
+				//如果roll到的值不超过N，才处理； 概率为N/count
 				if (rand(count) <= N) {
+					//被替换的概率，1/N
+					//总的被抽中的概率为N/count * (1/N) = 1/count
 					bag[rand(N) - 1] = num;
 				}
 			}
