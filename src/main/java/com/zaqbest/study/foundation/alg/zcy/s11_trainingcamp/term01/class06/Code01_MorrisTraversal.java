@@ -40,7 +40,7 @@ public class Code01_MorrisTraversal {
 				}
 				if (mostRight.right == null) {
 					mostRight.right = cur;
-					// 第2次访问
+					// 第1次访问
 					//System.out.println("1:" + cur.value);
 					cur = cur.left;
 					continue;
