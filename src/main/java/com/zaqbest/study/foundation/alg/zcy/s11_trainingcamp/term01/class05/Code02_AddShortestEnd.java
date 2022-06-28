@@ -17,9 +17,9 @@ public class Code02_AddShortestEnd {
 		for (int i = 0; i != charArr.length; i++) {
 			pArr[i] = pR > i ? Math.min(pArr[2 * index - i], pR - i) : 1;
 			while (i + pArr[i] < charArr.length && i - pArr[i] > -1) {
-				if (charArr[i + pArr[i]] == charArr[i - pArr[i]])
+				if (charArr[i + pArr[i]] == charArr[i - pArr[i]]) {
 					pArr[i]++;
-				else {
+				} else {
 					break;
 				}
 			}

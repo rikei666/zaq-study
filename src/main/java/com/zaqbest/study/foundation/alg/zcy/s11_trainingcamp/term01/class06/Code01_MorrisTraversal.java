@@ -208,7 +208,7 @@ public class Code01_MorrisTraversal {
 //		printTree(head);
 //		morrisIn(head);
 //		morrisPre(head);
-//		morrisPos(head);
+		morrisPos(head);
 //		printTree(head);
 //		morris(head);
 	}
