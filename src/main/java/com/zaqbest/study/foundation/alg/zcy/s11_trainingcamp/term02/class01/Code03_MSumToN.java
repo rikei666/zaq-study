@@ -8,6 +8,9 @@ package com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term02.class01;
  * 1不是这样的数，因为要求数量大于1个、连续正数和
  * 2 = 1 + 1，2也不是，因为等号右边不是连续正数
  * 给定一个参数N，返回是不是可以表示成若干连续正数和的数
+ *
+ * 思路
+ * - 打表法
  */
 public class Code03_MSumToN {
 
@@ -31,7 +34,8 @@ public class Code03_MSumToN {
 		if (num < 3) {
 			return false;
 		}
-		return (num & (num - 1)) != 0; //(num & (num - 1)) == 0 表示只有一个bit是1，该数字是2的N次方
+		//(num & (num - 1)) == 0 表示只有一个bit是1，该数字是2的N次方
+		return (num & (num - 1)) != 0;
 	}
 
 	public static void main(String[] args) {

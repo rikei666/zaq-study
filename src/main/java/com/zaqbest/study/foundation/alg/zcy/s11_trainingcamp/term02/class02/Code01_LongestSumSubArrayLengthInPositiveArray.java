@@ -1,9 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term02.class02;
 
 /**
- * 给定一个正整数组成的无序数组arr，给定一个正整数值K
+ * 给定一个【正整数】组成的无序数组arr，给定一个正整数值K
  * 找到arr的所有子数组里，哪个子数组的累加和等于K，并且是长度最大的
  * 返回其长度
+ *
+ * 思路
+ * - 题目给的是正整数，具有单调性；可以使用双指针
  */
 public class Code01_LongestSumSubArrayLengthInPositiveArray {
 
