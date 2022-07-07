@@ -6,13 +6,14 @@ import java.util.HashSet;
  * 327. 区间和的个数
  * https://leetcode-cn.com/problems/count-of-range-sum/
  */
-public class Code01_CountofRangeSum {
+public class Code01_CountOfRangeSum {
 
 	public static int countRangeSum1(int[] nums, int lower, int upper) {
 		int n = nums.length;
 		long[] sums = new long[n + 1];
-		for (int i = 0; i < n; ++i)
+		for (int i = 0; i < n; ++i) {
 			sums[i + 1] = sums[i] + nums[i];
+		}
 		return countWhileMergeSort(sums, 0, n + 1, lower, upper);
 	}
 
@@ -25,12 +26,15 @@ public class Code01_CountofRangeSum {
 		int j = mid, k = mid, t = mid;
 		long[] cache = new long[end - start];
 		for (int i = start, r = 0; i < mid; ++i, ++r) {
-			while (k < end && sums[k] - sums[i] < lower)
+			while (k < end && sums[k] - sums[i] < lower) {
 				k++;
-			while (j < end && sums[j] - sums[i] <= upper)
+			}
+			while (j < end && sums[j] - sums[i] <= upper) {
 				j++;
-			while (t < end && sums[t] < sums[i])
+			}
+			while (t < end && sums[t] < sums[i]) {
 				cache[r++] = sums[t++];
+			}
 			cache[r] = sums[i];
 			count += j - k;
 		}
@@ -198,7 +202,17 @@ public class Code01_CountofRangeSum {
 		return arr;
 	}
 
+
 	public static void main(String[] args) {
+		int[] nums = {-2,5,-1};
+		int lower = -2;
+		int upper = 2;
+
+		int res = countRangeSum1(nums, lower, upper);
+		System.out.println(res);
+	}
+
+	public static void main0(String[] args) {
 		int len = 200;
 		int varible = 50;
 		for (int i = 0; i < 10000; i++) {
