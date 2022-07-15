@@ -1,11 +1,5 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class18;
 
-// 牛客的测试链接：
-// https://www.nowcoder.com/questionTerminal/8ecfe02124674e908b2aae65aad4efdf
-// 把如下的全部代码拷贝进java编辑器
-// 把文件大类名字改成Main，可以直接通过
-
-
 /**
  * 最大路径和
  *
