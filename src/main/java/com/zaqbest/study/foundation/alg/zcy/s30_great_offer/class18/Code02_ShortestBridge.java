@@ -1,6 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class18;
 
-// 本题测试链接 : https://leetcode.cn/problems/shortest-bridge/
+/**
+ * 在给定的二维二进制数组A中，存在两座岛。（岛是由四面相连的 1 形成的一个最大组。）
+ * 现在，我们可以将0变为1，以使两座岛连接起来，变成一座岛。
+ * 返回必须翻转的0 的最小数目。（可以保证答案至少是 1 。）
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/shortest-bridge/
+ */
 public class Code02_ShortestBridge {
 
 	public static int shortestBridge(int[][] m) {
