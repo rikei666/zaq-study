@@ -1,16 +1,25 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class19;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.TreeSet;
+import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.util.ArrayUtil;
+import cn.hutool.json.JSONUtil;
 
-// 本题测试链接 : https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/
+import java.util.*;
+
+/**
+ * 最小区间
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/
+ *
+ * 思路
+ * - 有序表（TreeSet), 最小值向左滑动
+ */
 public class Code04_SmallestRangeCoveringElementsfromKLists {
 
 	public static class Node {
-		public int value;
-		public int arrid;
-		public int index;
+		public int value; //数值
+		public int arrid; //数组的id
+		public int index; //数组内的index
 
 		public Node(int v, int ai, int i) {
 			value = v;
@@ -55,4 +64,13 @@ public class Code04_SmallestRangeCoveringElementsfromKLists {
 		return new int[] { a, b };
 	}
 
+	public static void main(String[] args) {
+		List<List<Integer>> nums = new ArrayList();
+		nums.add(new ArrayList<>(Arrays.asList(4,10,15,24,26)));
+		nums.add(new ArrayList<>(Arrays.asList(0,9,12,20)));
+		nums.add(new ArrayList<>(Arrays.asList(5,18,22,30)));
+
+		int[] res = smallestRange(nums);
+		System.out.println(JSONUtil.toJsonStr(res));
+	}
 }

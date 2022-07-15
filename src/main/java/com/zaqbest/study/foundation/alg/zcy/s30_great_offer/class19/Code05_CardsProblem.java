@@ -2,7 +2,9 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class19;
 
 import java.util.LinkedList;
 
-/*
+/**
+ * 扑克牌组合问题
+ *
  * 一张扑克有3个属性，每种属性有3种值（A、B、C）
  * 比如"AAA"，第一个属性值A，第二个属性值A，第三个属性值A
  * 比如"BCA"，第一个属性值B，第二个属性值C，第三个属性值A
@@ -15,6 +17,9 @@ import java.util.LinkedList;
  * 第一张第三个属性为"C"、第二张第三个属性为"C"、第三张第三个属性为"C"，全一样
  * 每种属性都满足在三张扑克中全一样，或全不一样，所以这三张扑克达标
  * 返回在cards[]中任意挑选三张扑克，达标的方法数
+ *
+ * 参考实现
+ * {@link com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.followup.Code05_CardsProblem#ways2(java.lang.String[])}
  * 
  * */
 public class Code05_CardsProblem {

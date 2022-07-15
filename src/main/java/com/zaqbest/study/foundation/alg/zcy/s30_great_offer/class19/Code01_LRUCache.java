@@ -2,8 +2,15 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class19;
 
 import java.util.HashMap;
 
-// 本题测试链接 : https://leetcode.cn/problems/lru-cache/
-// 提交时把类名和构造方法名改成 : LRUCache
+/**
+ * LRU经典实现
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/lru-cache/
+ *
+ * 实现思路
+ * - 双向链表
+ * - Map<值，Node> 根据值查找节点
+ */
 public class Code01_LRUCache {
 
 	public Code01_LRUCache(int capacity) {

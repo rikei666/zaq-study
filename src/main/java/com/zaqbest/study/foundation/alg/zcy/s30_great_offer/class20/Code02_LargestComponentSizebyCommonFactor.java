@@ -2,9 +2,18 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class20;
 
 import java.util.HashMap;
 
-// 本题为leetcode原题
-// 测试链接：https://leetcode.cn/problems/largest-component-size-by-common-factor/
-// 方法1会超时，但是方法2直接通过
+/**
+ * 按公因数计算最大组件大小
+ *
+ * 给定一个由不同正整数的组成的非空数组nums ，考虑下面的图：
+ *
+ * 有nums.length个节点，按从nums[0]到nums[nums.length - 1]标记；
+ * 只有当nums[i]和nums[j]共用一个大于 1 的公因数时，nums[i]和nums[j]之间才有一条边。
+ * 返回 图中最大连通组件的大小 。
+ * 
+ * 测试链接：https://leetcode.cn/problems/largest-component-size-by-common-factor/
+ * 方法1会超时，但是方法2直接通过
+ */
 public class Code02_LargestComponentSizebyCommonFactor {
 
 	public static int largestComponentSize1(int[] arr) {

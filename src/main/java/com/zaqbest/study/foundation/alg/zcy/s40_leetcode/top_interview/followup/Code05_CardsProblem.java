@@ -111,6 +111,7 @@ public class Code05_CardsProblem {
 			num1 %= i;
 			num2 %= i;
 			num3 %= i;
+			//只要有一个属性不满足，就返回0
 			if ((cur1 != cur2 && cur1 != cur3 && cur2 != cur3) || (cur1 == cur2 && cur1 == cur3)) {
 				continue;
 			}
@@ -119,6 +120,7 @@ public class Code05_CardsProblem {
 		num1 = path.get(0);
 		num2 = path.get(1);
 		num3 = path.get(2);
+		// 3种属性都满足条件，返回总的组合数
 		return counts[num1] * counts[num2] * counts[num3];
 	}
 

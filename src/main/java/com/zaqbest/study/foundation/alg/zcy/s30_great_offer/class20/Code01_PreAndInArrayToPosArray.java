@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+/**
+ * 根据二叉树的先序和中序遍历结果， 返回后续遍历结果
+ *
+ * 思路
+ * - 经典递归实现
+ */
 public class Code01_PreAndInArrayToPosArray {
 
 	public static int[] zuo(int[] pre, int[] in) {
@@ -11,6 +17,7 @@ public class Code01_PreAndInArrayToPosArray {
 			return null;
 		}
 		int N = pre.length;
+		//小trick, 快速查询值对应的节点
 		HashMap<Integer, Integer> inMap = new HashMap<>();
 		for (int i = 0; i < N; i++) {
 			inMap.put(in[i], i);
