@@ -21,7 +21,7 @@ public class WordBreak {
             for (int cur  = 0; cur < line.length(); cur++){
                 //如果是字母
                 if ((
-                        line.charAt(cur) == '\''
+                        (line.charAt(cur) == '\'' || line.charAt(cur) == '-')
                                 && (cur > 0 && CharUtil.isLetter(line.charAt(cur-1)))
                                 && (cur < line.length() - 1 && CharUtil.isLetter(line.charAt(cur+1)))
                         )

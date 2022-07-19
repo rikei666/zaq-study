@@ -1,5 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term04.class06;
 
+import cn.hutool.json.JSONUtil;
+
 import java.util.Arrays;
 
 /**
@@ -155,7 +157,9 @@ public class Code04_ShuffleProblem {
 //				break;
 //			}
 //		}
-		shuffle(new int[]{1,2,3,4,5,6,7,8,9,10});
+		int[] arr= {1,2,3,4,5,6,7,8,9,10};
+		shuffle(arr);
+		System.out.println(JSONUtil.toJsonStr(arr));
 	}
 
 }
