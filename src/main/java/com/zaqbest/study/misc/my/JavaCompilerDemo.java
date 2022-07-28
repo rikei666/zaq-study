@@ -1,5 +1,6 @@
 package com.zaqbest.study.misc.my;
 
+import cn.hutool.core.codec.Base64;
 import cn.hutool.core.compiler.JavaSourceCompiler;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.lang.JarClassLoader;
@@ -25,8 +26,15 @@ public class JavaCompilerDemo {
         String jarPath="myfile/other/Customer.jar";
         JarClassLoader jarClassLoader =
                 JarClassLoader.loadJar(FileUtil.file(jarPath));
-        Class<?> myClass = jarClassLoader.loadClass("com.fusionfintrade.brms.engine.facade.Customer");
+        JarClassLoader jarClassLoader2 =
+                JarClassLoader.loadJar(FileUtil.file(jarPath));
+        Class<?> myClass1 = jarClassLoader.loadClass("com.fusionfintrade.brms.engine.facade.Customer");
+        Class<?> myClass2 = jarClassLoader.loadClass("com.fusionfintrade.brms.engine.facade.Customer");
+        Class<?> myClass4 = jarClassLoader.loadClass("com.fusionfintrade.brms.engine.facade.Customer");
+        Class<?> myClass3 = jarClassLoader.loadClass("com.fusionfintrade.brms.engine.facade.Customer");
 
-        System.out.println(myClass.getName());
+        String jarBytes = Base64.encode(FileUtil.file(jarPath));
+
+        System.out.println(myClass1.getName());
     }
 }
