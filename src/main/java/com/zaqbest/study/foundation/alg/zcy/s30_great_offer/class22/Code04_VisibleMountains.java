@@ -3,6 +3,9 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class22;
 import java.util.HashSet;
 import java.util.Stack;
 
+/**
+ * 可见山峰对问题
+ */
 public class Code04_VisibleMountains {
 
 	// 栈中放的记录，

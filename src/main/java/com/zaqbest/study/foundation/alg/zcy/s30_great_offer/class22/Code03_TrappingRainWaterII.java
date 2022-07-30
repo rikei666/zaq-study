@@ -2,7 +2,11 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class22;
 
 import java.util.PriorityQueue;
 
-// 本题测试链接 : https://leetcode.cn/problems/trapping-rain-water-ii/
+/**
+ * 接雨水问题升级版（三维）
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/trapping-rain-water-ii/
+ */
 public class Code03_TrappingRainWaterII {
 
 	public static class Node {

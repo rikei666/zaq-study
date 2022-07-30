@@ -2,10 +2,14 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class22;
 
 import java.util.HashMap;
 
-// 本题测试链接 : https://leetcode.cn/problems/tallest-billboard/
+/**
+ * 956. 最高的广告牌
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/tallest-billboard/
+ */
 public class Code05_TallestBillboard {
 
-	public int tallestBillboard(int[] rods) {
+	public static int tallestBillboard(int[] rods) {
 		// key 集合对的某个差
 		// value 满足差值为key的集合对中，最好的一对，较小集合的累加和
 		// 较大 -> value + key
@@ -35,4 +39,9 @@ public class Code05_TallestBillboard {
 		return dp.get(0);
 	}
 
+	public static void main(String[] args) {
+		int[] rods = {1,2,3,6};
+		int res = tallestBillboard(rods);
+		System.out.println(res);
+	}
 }

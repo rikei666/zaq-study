@@ -1,6 +1,13 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class22;
 
-// 本题测试链接 : https://leetcode.cn/problems/trapping-rain-water/
+/**
+ * 接雨水问题
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/trapping-rain-water/
+ *
+ * 思路：
+ * - 左右指针，矮的一侧先结算
+ */
 public class Code02_TrappingRainWater {
 
 	public static int trap(int[] arr) {

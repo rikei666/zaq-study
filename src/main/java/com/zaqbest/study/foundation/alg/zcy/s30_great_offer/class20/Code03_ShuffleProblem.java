@@ -2,6 +2,9 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class20;
 
 import java.util.Arrays;
 
+/**
+ * 完美洗牌问题
+ */
 public class Code03_ShuffleProblem {
 
 	// 数组的长度为len，调整前的位置是i，返回调整之后的位置
