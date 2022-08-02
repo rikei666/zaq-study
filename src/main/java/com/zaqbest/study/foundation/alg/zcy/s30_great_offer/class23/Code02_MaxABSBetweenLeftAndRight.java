@@ -1,5 +1,12 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class23;
 
+import com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term03.class02.Code03_MaxABSBetweenLeftAndRight;
+
+/**
+ * 把arr分成两个部分，绝对值差值的最大值
+ *
+ * {@link Code03_MaxABSBetweenLeftAndRight}
+ */
 public class Code02_MaxABSBetweenLeftAndRight {
 
 	public static int maxABS1(int[] arr) {
@@ -38,6 +45,13 @@ public class Code02_MaxABSBetweenLeftAndRight {
 		return max;
 	}
 
+	/**
+	 * 鸡贼方法
+	 * 全局max-min(arr[0],arr[N-1])
+	 *
+	 * @param arr
+	 * @return
+	 */
 	public static int maxABS3(int[] arr) {
 		int max = Integer.MIN_VALUE;
 		for (int i = 0; i < arr.length; i++) {

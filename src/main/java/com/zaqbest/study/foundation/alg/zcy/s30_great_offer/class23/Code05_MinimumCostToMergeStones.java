@@ -1,6 +1,13 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class23;
 
-// 本题测试链接 : https://leetcode.cn/problems/minimum-cost-to-merge-stones/
+/**
+ * 1000.合并石头的最小成本
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/minimum-cost-to-merge-stones/
+ *
+ * 思路
+ * - 范围尝试模型
+ */
 public class Code05_MinimumCostToMergeStones {
 
 //	// arr[L...R]一定要整出P份，合并的最小代价，返回！
@@ -140,6 +147,14 @@ public class Code05_MinimumCostToMergeStones {
 	}
 
 	public static void main(String[] args) {
+		int[] arr={3,5,1,2,6};
+		int K = 3;
+
+		int res = mergeStones1(arr, K);
+		System.out.println(res);
+
+	}
+	public static void main0(String[] args) {
 		int maxSize = 12;
 		int maxValue = 100;
 		System.out.println("Test begin");

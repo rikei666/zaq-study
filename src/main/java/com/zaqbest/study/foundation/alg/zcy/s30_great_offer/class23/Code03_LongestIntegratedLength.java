@@ -3,6 +3,14 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class23;
 import java.util.Arrays;
 import java.util.HashSet;
 
+/**
+ * 可整合数组的最大长度
+ *
+ * {@link com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term03.class08.Code05_LongestIntegratedLength}
+ *
+ * 思路
+ * - 定义转换：可整合数组=数字不重复+(max-min=R-L)
+ */
 public class Code03_LongestIntegratedLength {
 
 	public static int maxLen(int[] arr) {
