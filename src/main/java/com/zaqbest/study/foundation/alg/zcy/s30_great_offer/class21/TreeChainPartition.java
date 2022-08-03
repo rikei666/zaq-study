@@ -2,6 +2,9 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class21;
 
 import java.util.HashMap;
 
+/**
+ * 树链剖分
+ */
 public class TreeChainPartition {
 
 	public static class TreeChain {
