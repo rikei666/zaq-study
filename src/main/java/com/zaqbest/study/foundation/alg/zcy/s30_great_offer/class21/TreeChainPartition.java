@@ -67,10 +67,13 @@ public class TreeChainPartition {
 			top = new int[n];
 			dfn = new int[n];
 			tnw = new int[n--];
+
 			int[] cnum = new int[n];
+			//平移value数组
 			for (int i = 0; i < n; i++) {
 				val[i + 1] = values[i];
 			}
+			//统计每个节点（加上自己）有多少个节点
 			for (int i = 0; i < n; i++) {
 				if (father[i] == i) {
 					h = i + 1;
@@ -79,9 +82,11 @@ public class TreeChainPartition {
 				}
 			}
 			tree[0] = new int[0];
+			//创建空间
 			for (int i = 0; i < n; i++) {
 				tree[i + 1] = new int[cnum[i]];
 			}
+			//构造朴素树
 			for (int i = 0; i < n; i++) {
 				if (i + 1 != h) {
 					tree[father[i] + 1][--cnum[father[i]]] = i + 1;
@@ -89,25 +94,36 @@ public class TreeChainPartition {
 			}
 		}
 
-		// u 当前节点
-		// f u的父节点
+		/**
+		 * 主要功能
+		 * 		- 构造父节点信息fa，深度信息dep, 节点大小siz, 重儿子信息son
+		 * @param u 当前节点
+		 * @param f u的父节点
+		 */
 		private void dfs1(int u, int f) {
-			fa[u] = f;
-			dep[u] = dep[f] + 1;
-			siz[u] = 1;
+			fa[u] = f; //父节点信息
+			dep[u] = dep[f] + 1; //深度信息
+			siz[u] = 1; //初始化只有自己，所以是1
 			int maxSize = -1;
 			for (int v : tree[u]) { // 遍历u节点，所有的直接孩子
 				dfs1(v, u);
-				siz[u] += siz[v];
-				if (siz[v] > maxSize) {
+				siz[u] += siz[v]; //依次累加每一个孩子的节点个数
+				if (siz[v] > maxSize) { //发现及更新重儿子节点
 					maxSize = siz[v];
 					son[u] = v;
 				}
 			}
 		}
 
-		// u当前节点
-		// t是u所在重链的头部
+		/**
+		 * 主要功能
+		 * - 生成dfs序号，序号从1开始
+		 * - 记录重链的头节点top
+		 * - 记录节点的权重信息tnw
+		 *
+		 * @param u 当前节点
+		 * @param t t是u所在重链的头部
+		 */
 		private void dfs2(int u, int t) {
 			dfn[u] = ++tim;
 			top[u] = t;
