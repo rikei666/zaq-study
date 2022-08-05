@@ -152,10 +152,10 @@ public class Code04_BricksFallingWhenHit {
 			int now = cellingAll;
 			//当前位置是在天花板上
 			if (row == 0) {
-				//![](http://pic.zaqbest.com/i/2022/05/12/627caa781ba3b.png)
+				//![](https://pic.zaqbest.com/i/2022/05/12/627caa781ba3b.png)
 				return now - pre;
 			} else {
-				//![](http://pic.zaqbest.com/i/2022/05/12/627caa34abb43.png)
+				//![](https://pic.zaqbest.com/i/2022/05/12/627caa34abb43.png)
 				return now == pre ? 0 : now - pre - 1;
 			}
 		}

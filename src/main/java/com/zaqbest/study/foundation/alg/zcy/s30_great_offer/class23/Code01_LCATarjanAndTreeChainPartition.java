@@ -11,7 +11,6 @@ public class Code01_LCATarjanAndTreeChainPartition {
 	// [3,7], 表示想查询3和7之间的最低公共祖先
 	// tree和queries里面的所有值，都一定在0~N-1之间
 	// 返回一个数组ans，大小为M，ans[i]表示第i条查询的答案
-
 	// 暴力方法
 	public static int[] query1(int[] father, int[][] queries) {
 		int M = queries.length;
