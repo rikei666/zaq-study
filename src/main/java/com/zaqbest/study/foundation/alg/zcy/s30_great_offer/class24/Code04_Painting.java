@@ -3,12 +3,19 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class24;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * N * M的棋盘
+ * 每种颜色的格子数必须相同的
+ * 相邻格子染的颜色必须不同
+ * 所有格子必须染色
+ * 返回至少多少种颜色可以完成任务
+ *
+ * 思路：
+ * - 打表法
+ * - N*M最小的质数因子，原因不明，也不重要
+ */
 public class Code04_Painting {
-	// N * M的棋盘
-	// 每种颜色的格子数必须相同的
-	// 相邻格子染的颜色必须不同
-	// 所有格子必须染色
-	// 返回至少多少种颜色可以完成任务
+
 
 	public static int minColors(int N, int M) {
 		// 颜色数量是i

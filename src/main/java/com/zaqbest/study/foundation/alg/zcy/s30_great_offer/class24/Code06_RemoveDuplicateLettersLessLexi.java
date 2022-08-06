@@ -1,6 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class24;
 
-// 本题测试链接 : https://leetcode.cn/problems/remove-duplicate-letters/
+/**
+ * 316. 去除重复字母
+ * 给你一个字符串 s ，请你去除字符串中重复的字母，使得每个字母只出现一次。需保证 返回结果的字典序最小（要求不能打乱其他字符的相对位置）。
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/remove-duplicate-letters/
+ */
 public class Code06_RemoveDuplicateLettersLessLexi {
 
 	// 在str中，每种字符都要保留一个，让最后的结果，字典序最小 ，并返回
@@ -71,4 +76,9 @@ public class Code06_RemoveDuplicateLettersLessLexi {
 		return String.valueOf(res, 0, index);
 	}
 
+	public static void main(String[] args) {
+		String s = "cbacdcbc";
+		String res = removeDuplicateLetters2(s);
+		System.out.println(res);
+	}
 }

@@ -1,6 +1,20 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class24;
 
-// 里程表不能含有4，给定一个数num，返回他是里程表里的第几个
+/**
+ * 正常的里程表会依次显示自然数表示里程
+ * 吉祥的里程表会忽略含有4的数字而跳到下一个完全不含有4的数
+ * 正常：1 2 3 4 5 6 7 8  9 10 11 12 13 14 15
+ * 吉祥：1 2 3 5 6 7 8 9 10 11 12 13 15 16 17 ... 38 39 50 51 52 53 55
+ * 给定一个吉祥里程表的数字num(当然这个数字中不含有4)
+ * 返回这个数字代表的真实里程
+ *
+ * 思路
+ *	- 数位dp问题
+ *
+ * 类似问题
+ * {@link com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class19.Code03_OneNumber}
+ * {@link com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term03.class08.Code03_OneNumber}
+ */
 public class Code03_NotContains4 {
 
 	// num中一定没有4这个数字
