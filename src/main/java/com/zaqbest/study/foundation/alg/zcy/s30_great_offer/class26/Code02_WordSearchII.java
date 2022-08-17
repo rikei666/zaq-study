@@ -5,7 +5,18 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
-// 本题测试链接 : https://leetcode.cn/problems/word-search-ii/
+/**
+ * matrix中查找单词问题
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/word-search-ii/
+ *
+ * 思路：
+ * 	- dfs + tire
+ *
+ * 	相关问题
+ * 	{@link com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions.Problem_0212_WordSearchII}
+ * 	{@link com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term04.class01.Code04_WordSearch}
+ */
 public class Code02_WordSearchII {
 
 	public static class TrieNode {

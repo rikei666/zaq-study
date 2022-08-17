@@ -5,11 +5,17 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.TreeSet;
 
+/**
+ * 本题为求最小包含区间
+ * 测试链接 : https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/
+ *
+ * 思路：
+ * 	- 有序表
+ * 	- 类推（超过2个数组或者列表，都可以使用有序表进行处理）
+ */
 public class Code01_MinRange {
 
-	// 本题为求最小包含区间
-	// 测试链接 :
-	// https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/
+
 	public static class Node {
 		public int val;
 		public int arr;
