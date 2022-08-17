@@ -1,9 +1,15 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class25;
 
+import com.zaqbest.study.foundation.alg.zcy.s40_leetcode.top_interview.topinterviewquestions.Problem_0149_MaxPointsOnALine;
+
 import java.util.HashMap;
 import java.util.Map;
 
-// 本题测试链接: https://leetcode.cn/problems/max-points-on-a-line/
+/**
+ * 本题测试链接: https://leetcode.cn/problems/max-points-on-a-line/
+ *
+ * {@link Problem_0149_MaxPointsOnALine}
+ */
 public class Code03_MaxPointsOnALine {
 
 	// [

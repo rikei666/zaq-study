@@ -1,10 +1,16 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class25;
 
-// 本题测试链接 : https://leetcode.cn/problems/gas-station/
-// 注意本题的实现比leetcode上的问法更加通用
-// leetcode只让返回其中一个良好出发点的位置
-// 本题是返回结果数组，每一个出发点是否是良好出发点都求出来了
-// 得到结果数组的过程，时间复杂度O(N)，额外空间复杂度O(1)
+import com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term05.class01.Problem04_GasStations;
+
+/**
+ * 本题测试链接 : https://leetcode.cn/problems/gas-station/
+ * 注意本题的实现比leetcode上的问法更加通用
+ * leetcode只让返回其中一个良好出发点的位置
+ * 本题是返回结果数组，每一个出发点是否是良好出发点都求出来了
+ * 得到结果数组的过程，时间复杂度O(N)，额外空间复杂度O(1)
+ *
+ * {@link Problem04_GasStations}
+ */
 public class Code04_GasStation {
 
 	public static int canCompleteCircuit(int[] gas, int[] cost) {
