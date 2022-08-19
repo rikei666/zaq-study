@@ -1,13 +1,22 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class26;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import cn.hutool.json.JSONUtil;
 
-// 本题测试链接 : https://leetcode.cn/problems/word-ladder-ii/
+import java.util.*;
+
+/**
+ * 126:单词接龙 II
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/word-ladder-ii/
+ *
+ * 思路：
+ * - 生成nexts表的过程：哈希表 或者 单词变形 => 根据数据量选择合适的策略
+ * - bfs生成distance表
+ * - dfs生成生成最短路径
+ *
+ * 	经典问题！！！！
+ * 	递归设计能力
+ */
 public class Code04_WordLadderII {
 
 	public static List<List<String>> findLadders(String start, String end, List<String> list) {
@@ -55,6 +64,7 @@ public class Code04_WordLadderII {
 		distances.put(start, 0);
 		Queue<String> queue = new LinkedList<>();
 		queue.add(start);
+		//不走重复路
 		HashSet<String> set = new HashSet<>();
 		set.add(start);
 		while (!queue.isEmpty()) {
@@ -89,6 +99,14 @@ public class Code04_WordLadderII {
 			}
 		}
 		path.pollLast();
+	}
+
+	public static void main(String[] args) {
+		String start = "hit";
+		String end = "cog";
+		List<String> wordList = new ArrayList<>(Arrays.asList("hot","dot","dog","lot","log","cog"));
+		List<List<String>>  res= findLadders(start, end, wordList);
+		System.out.println(JSONUtil.toJsonStr(res));
 	}
 
 }

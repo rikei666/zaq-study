@@ -1,9 +1,15 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class26;
 
+import cn.hutool.json.JSONUtil;
+
 import java.util.LinkedList;
 import java.util.List;
 
-// 本题测试链接 : https://leetcode.cn/problems/expression-add-operators/
+/**
+ * 282. 给表达式添加运算符
+ *
+ * 本题测试链接 : https://leetcode.cn/problems/expression-add-operators/
+ */
 public class Code03_ExpressionAddOperators {
 
 	public static List<String> addOperators(String num, int target) {
@@ -36,8 +42,9 @@ public class Code03_ExpressionAddOperators {
 	// 默认 left + cur ...
 	public static void dfs(List<String> res, char[] path, int len, 
 			long left, long cur, 
-			char[] num, int index, int aim) {
+			char[] num, int index, final int aim) {
 		if (index == num.length) {
+			System.out.println(new String(path, 0, len));
 			if (left + cur == aim) {
 				res.add(new String(path, 0, len));
 			}
@@ -62,4 +69,12 @@ public class Code03_ExpressionAddOperators {
 		}
 	}
 
+	public static void main(String[] args) {
+		String num = "1234";
+		int aim = 46;
+
+		List<String> res = addOperators(num, aim);
+		System.out.println("=========================");
+		System.out.println(JSONUtil.toJsonStr(res));
+	}
 }
