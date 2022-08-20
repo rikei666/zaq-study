@@ -2,17 +2,19 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class27;
 
 import java.util.Arrays;
 
+/**
+ * 每一个项目都有三个数，[a,b,c]表示这个项目a和b乐队参演，花费为c
+ * 每一个乐队可能在多个项目里都出现了，但是只能挑一次
+ * nums是可以挑选的项目数量，所以一定会有nums*2只乐队被挑选出来
+ * 乐队的全部数量一定是nums*2，且标号一定是0 ~ nums*2-1
+ * 返回一共挑nums轮(也就意味着一定请到所有的乐队)，最少花费是多少？
+ */
 public class Code01_PickBands {
-
-	// 每一个项目都有三个数，[a,b,c]表示这个项目a和b乐队参演，花费为c
-	// 每一个乐队可能在多个项目里都出现了，但是只能挑一次
-	// nums是可以挑选的项目数量，所以一定会有nums*2只乐队被挑选出来
-	// 乐队的全部数量一定是nums*2，且标号一定是0 ~ nums*2-1
-	// 返回一共挑nums轮(也就意味着一定请到所有的乐队)，最少花费是多少？
 	public static int minCost(int[][] programs, int nums) {
 		if (nums == 0 || programs == null || programs.length == 0) {
 			return 0;
 		}
+		//洗数据，a>b>c升序排序，a/b相同情况下，只保留最小的c
 		int size = clean(programs);
 		int[] map1 = init(1 << (nums << 1));
 		int[] map2 = null;
