@@ -71,7 +71,7 @@ public class Code01_IndexTree {
 		indexTree.add(4,4);
 		indexTree.add(5,5);
 
-		int res = indexTree.sum(5);
+		int res = indexTree.sum(3);
 		System.out.println(res);
 	}
 
