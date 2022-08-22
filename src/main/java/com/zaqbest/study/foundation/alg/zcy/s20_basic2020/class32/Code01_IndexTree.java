@@ -1,5 +1,10 @@
 package com.zaqbest.study.foundation.alg.zcy.s20_basic2020.class32;
 
+/**
+ *
+ * https://husterxsp.github.io/2017/06/06/binary-indexed-tree
+ * https://zh.wikipedia.org/wiki/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84
+ */
 public class Code01_IndexTree {
 
 	// 下标从1开始！
@@ -59,6 +64,18 @@ public class Code01_IndexTree {
 	}
 
 	public static void main(String[] args) {
+		IndexTree indexTree = new IndexTree(5);
+		indexTree.add(1,1);
+		indexTree.add(2,2);
+		indexTree.add(3,3);
+		indexTree.add(4,4);
+		indexTree.add(5,5);
+
+		int res = indexTree.sum(5);
+		System.out.println(res);
+	}
+
+	public static void main0(String[] args) {
 		int N = 100;
 		int V = 100;
 		int testTime = 2000000;
