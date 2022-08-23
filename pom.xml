@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>zaq-base</artifactId>
+        <artifactId>zaq-parent</artifactId>
         <groupId>com.zaqbest</groupId>
         <version>1.2.0-SNAPSHOT</version>
     </parent>
     <groupId>com.zaqbest</groupId>
     <artifactId>zaq-study</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.2.0-SNAPSHOT</version>
     <name>zaq-study</name>
     <description>zaq-study</description>
     <properties>
@@ -20,18 +20,6 @@
             <groupId>com.zaqbest</groupId>
             <artifactId>zaq-base-comm</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>itextpdf</artifactId>
-            <version>5.5.13</version>
-        </dependency>
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>itext-asian</artifactId>
-            <version>5.2.0</version>
-        </dependency>
-
     </dependencies>
 
     <build>
