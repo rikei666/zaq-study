@@ -3,14 +3,16 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class35;
 import java.util.ArrayList;
 import java.util.List;
 
-// 给定一个长度len，表示一共有几位
-// 所有字符都是小写(a~z)，可以生成长度为1，长度为2，
-// 长度为3...长度为len的所有字符串
-// 如果把所有字符串根据字典序排序，每个字符串都有所在的位置。
-// 给定一个字符串str，给定len，请返回str是总序列中的第几个
-// 比如len = 4，字典序的前几个字符串为:
-// a aa aaa aaaa aaab ... aaaz ... azzz b ba baa baaa ... bzzz c ...
-// a是这个序列中的第1个，bzzz是这个序列中的第36558个
+/**
+ * 给定一个长度len，表示一共有几位
+ * 所有字符都是小写(a~z)，可以生成长度为1，长度为2，
+ * 长度为3...长度为len的所有字符串
+ * 如果把所有字符串根据字典序排序，每个字符串都有所在的位置。
+ * 给定一个字符串str，给定len，请返回str是总序列中的第几个
+ * 比如len = 4，字典序的前几个字符串为:
+ * a aa aaa aaaa aaab ... aaaz ... azzz b ba baa baaa ... bzzz c ...
+ * a是这个序列中的第1个，bzzz是这个序列中的第36558个
+ */
 public class Code01_StringKth {
 	// 思路：
 	// cdb，总共长度为7，请问cdb是第几个？
@@ -78,13 +80,13 @@ public class Code01_StringKth {
 	}
 
 	public static void main(String[] args) {
-		int len = 4;
+		int len = 2;
 		// 暴力方法得到所有字符串
 		List<String> ans = all(len);
 		// 根据字典序排序，所有字符串都在其中
 		ans.sort((a, b) -> a.compareTo(b));
 
-		String test = "bzzz";
+		String test = "cc";
 		// 根据我们的方法算出test是第几个？
 		// 注意我们算出的第几个，是从1开始的
 		// 而下标是从0开始的，所以变成index，还需要-1

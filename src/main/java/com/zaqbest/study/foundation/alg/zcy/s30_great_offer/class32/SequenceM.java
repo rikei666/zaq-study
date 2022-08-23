@@ -2,9 +2,13 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class32;
 
 import java.util.Arrays;
 
-// 给定一个数组arr，arr[i] = j，表示第i号试题的难度为j。给定一个非负数M
-// 想出一张卷子，对于任何相邻的两道题目，前一题的难度不能超过后一题的难度+M
-// 返回所有可能的卷子种数
+/**
+ * 快手笔试题
+ *
+ * 给定一个数组arr，arr[i] = j，表示第i号试题的难度为j。给定一个非负数M
+ * 想出一张卷子，对于任何相邻的两道题目，前一题的难度不能超过后一题的难度+M
+ * 返回所有可能的卷子种数
+ */
 public class SequenceM {
 
 	// 纯暴力方法，生成所有排列，一个一个验证
