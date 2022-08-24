@@ -21,6 +21,7 @@ public class Code02_MagicStone {
 		int red = 0;
 		int blue = 0;
 		int cost = 0;
+		//统计每种石头的颜色
 		for (int i = 0; i < n; i++) {
 			if (stones[i][0] == 0) {
 				zero++;
@@ -31,9 +32,13 @@ public class Code02_MagicStone {
 				blue++;
 			}
 		}
+		//如果红色石头或者蓝色石头超过一半， 返回不可能-1
 		if (red > (n >> 1) || blue > (n >> 1)) {
 			return -1;
 		}
+
+		//上一步得到的cost是把所有的石头都变成红色的成本
+		//这里要选择把其中一部分改成蓝色（需要怎么样做才能成本最低）
 		blue = zero - ((n >> 1) - red);
 		for (int i = 0; i < blue; i++) {
 			cost += stones[i][2] - stones[i][1];

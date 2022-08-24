@@ -52,13 +52,26 @@ public class Code03_WatchMovieMaxTime {
 		return process2(movies, 0, 0, 3);
 	}
 
+	/**
+	 *
+	 * @param movies
+	 * @param index 当前来到第index号电影
+	 * @param time 当前来到的时间节点
+	 * @param rest 还剩余多少场电影要选择
+	 * @return
+	 */
 	public static int process2(int[][] movies, int index, int time, int rest) {
 		if (index == movies.length) {
 			return rest == 0 ? 0 : -1;
 		}
+		//可能性1，不选择当前电影
 		int p1 = process2(movies, index + 1, time, rest);
+		// 可能性2，a,当前电影可以选择,时间上不冲突 b,还有电影的名额
+		// next的含义：在选择了index位置的电影后，后续movies[index+1...N-1]可以获得的最大时间
 		int next = movies[index][0] >= time && rest > 0 ? process2(movies, index + 1, movies[index][1], rest - 1) : -1;
+		//如有存在可能性2，那么累加上movies[index]的时间
 		int p2 = next != -1 ? (movies[index][1] - movies[index][0] + next) : -1;
+		//p1和p2进行pk, 选取最优方案
 		return Math.max(p1, p2);
 	}
 
