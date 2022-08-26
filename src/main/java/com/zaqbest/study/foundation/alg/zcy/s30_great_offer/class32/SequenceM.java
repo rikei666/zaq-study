@@ -8,6 +8,13 @@ import java.util.Arrays;
  * 给定一个数组arr，arr[i] = j，表示第i号试题的难度为j。给定一个非负数M
  * 想出一张卷子，对于任何相邻的两道题目，前一题的难度不能超过后一题的难度+M
  * 返回所有可能的卷子种数
+ *
+ * 思路
+ *
+ * 提高：
+ * 	- 树状数组
+ *
+ * {@link com.zaqbest.study.foundation.alg.zcy.s20_basic2020.class32.Code01_IndexTree.IndexTree}
  */
 public class SequenceM {
 

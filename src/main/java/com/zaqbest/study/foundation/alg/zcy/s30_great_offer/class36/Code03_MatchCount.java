@@ -1,8 +1,13 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class36;
 
-// 来自美团
-// 给定两个字符串s1和s2
-// 返回在s1中有多少个子串等于s2
+/**
+ * 来自美团
+ * 给定两个字符串s1和s2
+ * 返回在s1中有多少个子串等于s2
+ *
+ * 思路
+ * - 改写kmp算法，多计算1位
+ */
 public class Code03_MatchCount {
 
 	public static int sa(String s1, String s2) {

@@ -1,7 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s20_basic2020.class32;
 
 /**
- *
+ *	树状数组/二插索引树
  * https://husterxsp.github.io/2017/06/06/binary-indexed-tree
  * https://zh.wikipedia.org/wiki/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84
  */
