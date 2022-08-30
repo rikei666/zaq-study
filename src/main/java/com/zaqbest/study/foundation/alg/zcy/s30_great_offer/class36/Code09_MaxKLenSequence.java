@@ -2,9 +2,15 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class36;
 
 import java.util.TreeSet;
 
-// 来自腾讯
-// 给定一个字符串str，和一个正数k
-// 返回长度为k的所有子序列中，字典序最大的子序列
+/**
+ * 来自腾讯
+ * 给定一个字符串str，和一个正数k
+ * 返回长度为k的所有子序列中，字典序最大的子序列
+ *
+ * 思路
+ * - 单调栈
+ * - 长度不足的情况需要特殊考虑
+ */
 public class Code09_MaxKLenSequence {
 
 	public static String maxString(String s, int k) {

@@ -2,14 +2,21 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class36;
 
 import java.util.Arrays;
 
-// 来自腾讯
-// 给定一个正数数组arr，代表每个人的体重。给定一个正数limit代表船的载重，所有船都是同样的载重量
-// 每个人的体重都一定不大于船的载重
-// 要求：
-// 1, 可以1个人单独一搜船
-// 2, 一艘船如果坐2人，两个人的体重相加需要是偶数，且总体重不能超过船的载重
-// 3, 一艘船最多坐2人
-// 返回如果想所有人同时坐船，船的最小数量
+/**
+ *来自腾讯
+ * 给定一个正数数组arr，代表每个人的体重。给定一个正数limit代表船的载重，所有船都是同样的载重量
+ * 每个人的体重都一定不大于船的载重
+ * 要求：
+ * 1, 可以1个人单独一搜船
+ * 2, 一艘船如果坐2人，两个人的体重相加需要是偶数，且总体重不能超过船的载重
+ * 3, 一艘船最多坐2人
+ * 返回如果想所有人同时坐船，船的最小数量
+ *
+ * 相对于原问题，这里需要奇偶人数分别考虑
+ *
+ * 参考问题
+ * {@link com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term04.class04.Code05_MinBoat}
+ */
 public class Code08_MinBoatEvenNumbers {
 
 	public static int minBoat(int[] arr, int limit) {

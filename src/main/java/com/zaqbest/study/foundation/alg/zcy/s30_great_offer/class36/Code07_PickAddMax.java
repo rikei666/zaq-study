@@ -2,14 +2,20 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class36;
 
 import java.util.Arrays;
 
-// 来自腾讯
-// 给定一个数组arr，当拿走某个数a的时候，其他所有的数都+a
-// 请返回最终所有数都拿走的最大分数
-// 比如: [2,3,1]
-// 当拿走3时，获得3分，数组变成[5,4]
-// 当拿走5时，获得5分，数组变成[9]
-// 当拿走9时，获得9分，数组变成[]
-// 这是最大的拿取方式，返回总分17
+/**
+ * 来自腾讯
+ * 给定一个数组arr，当拿走某个数a的时候，其他所有的数都+a
+ * 请返回最终所有数都拿走的最大分数
+ * 比如: [2,3,1]
+ * 当拿走3时，获得3分，数组变成[5,4]
+ * 当拿走5时，获得5分，数组变成[9]
+ * 当拿走9时，获得9分，数组变成[]
+ * 这是最大的拿取方式，返回总分17
+ *
+ * 思路
+ * - 小样本观察找规律
+ *
+ */
 public class Code07_PickAddMax {
 
 	// 最优解
@@ -57,8 +63,14 @@ public class Code07_PickAddMax {
 		return arr;
 	}
 
-	// 为了测试
 	public static void main(String[] args) {
+		int arr[] ={4,3,2,1};
+		int res= pick(arr);
+		System.out.println(res);
+	}
+
+	// 为了测试
+	public static void main0(String[] args) {
 		int N = 7;
 		int V = 10;
 		int testTime = 10000;

@@ -17,6 +17,8 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class36;
  * queryAim(2, 4) -> 50
  * queryMax(1, 4) -> 3
  *
+ * 思路：
+ * - 线段
  * 参考
  * {@link com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term01.class07.Code01_SegmentTree}
  */
