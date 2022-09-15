@@ -1,6 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class37;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -25,10 +26,11 @@ public class Code01_ArrangeProject {
 			int cur = head.poll();
 			countDay[cur] += days[cur];
 			for (int j = 0; j < nums[cur].size(); j++) {
-				headCount[nums[cur].get(j)]--;
-				if (headCount[nums[cur].get(j)] == 0) {
+				headCount[nums[cur].get(j)]--; //后续节点，入度减1
+				if (headCount[nums[cur].get(j)] == 0) { //入度为0，放入队列
 					head.offer(nums[cur].get(j));
 				}
+				//nums[cur].get(j) 最少要多少时间可以完成
 				countDay[nums[cur].get(j)] = Math.max(countDay[nums[cur].get(j)], countDay[cur]);
 			}
 		}
@@ -47,4 +49,17 @@ public class Code01_ArrangeProject {
 		return queue;
 	}
 
+	public static void main(String[] args) {
+		ArrayList<Integer>[] nums = new ArrayList[4];
+		nums[0] = new ArrayList<>(Arrays.asList(1,2,3));
+		nums[1] = new ArrayList<>(Arrays.asList(2,3));
+		nums[2] = new ArrayList<>();
+		nums[3] = new ArrayList<>();
+
+		int[] days = {7,3,2,5};
+		int[] headCount = {0,1,2,2};
+
+		int res = dayCount(nums, days, headCount);
+		System.out.println(res);
+	}
 }
