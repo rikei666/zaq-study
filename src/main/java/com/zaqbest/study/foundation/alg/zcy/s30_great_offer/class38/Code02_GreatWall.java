@@ -38,11 +38,11 @@ public class Code02_GreatWall {
 
 	public static int maxForce(int[] wall, int m, int x, int k) {
 		long L = 0;
-		long R = 0;
+		long R = 0; //未放置将军时的最大战斗力
 		for (int num : wall) {
 			R = Math.max(R, num);
 		}
-		R += m * k;
+		R += m * k; //把所有将军都放到最大战斗力烽火台上，所获得的最大战斗力
 		long ans = 0;
 		while (L <= R) {
 			long M = (L + R) / 2;
