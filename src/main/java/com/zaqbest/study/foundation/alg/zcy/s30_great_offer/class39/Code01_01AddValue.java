@@ -26,8 +26,8 @@ public class Code01_01AddValue {
 	// 并且lastNum所带的价值，已经拉高到baseValue
 	// 返回在str[index...]上做选择，最终获得的最大价值
 	// index -> 0 ~ 4999
-	// lastNum -> 0 or 1
-	// baseValue -> 1 ~ 5000
+	// lastNum -> 0 or 1, 表示上一个未被删除的数字是什么
+	// baseValue -> 1 ~ 5000，上一个获取的最大价值
 	// 5000 * 2 * 5000 -> 5 * 10^7(过!)
 	public static int process1(int[] arr, int index, int lastNum, int baseValue) {
 		if (index == arr.length) {

@@ -36,6 +36,14 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class38;
  */
 public class Code02_GreatWall {
 
+	/**
+	 *
+	 * @param wall
+	 * @param m 总共有m个将军
+	 * @param x 将军的影响范围为x
+	 * @param k 每个将军增加k的buff
+	 * @return 整体能达到的最大战斗力
+	 */
 	public static int maxForce(int[] wall, int m, int x, int k) {
 		long L = 0;
 		long R = 0; //未放置将军时的最大战斗力

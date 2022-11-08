@@ -55,6 +55,12 @@ public class Code01_FillGapMinStep {
 		return begin;
 	}
 
+	/**
+	 * 获取大于等于s2的最小i
+	 *
+	 * @param s2
+	 * @return
+	 */
 	public static int best(int s2) {
 		int L = 0;
 		int R = 1;
