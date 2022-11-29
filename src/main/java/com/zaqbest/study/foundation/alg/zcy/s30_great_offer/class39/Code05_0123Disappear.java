@@ -72,8 +72,8 @@ public class Code05_0123Disappear {
 	}
 
 	public static void main(String[] args) {
-		String str1 = "010101";
-		System.out.println(maxDisappear(str1));
+//		String str1 = "010101";
+//		System.out.println(maxDisappear(str1));
 
 		String str2 = "021331";
 		System.out.println(maxDisappear(str2));
