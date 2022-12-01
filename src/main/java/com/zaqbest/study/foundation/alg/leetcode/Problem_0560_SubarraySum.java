@@ -42,7 +42,7 @@ public class Problem_0560_SubarraySum {
 
         int ans = 0;
         int sum = 0;
-        Map<Integer, Integer> sumMap = new HashMap();
+        Map<Integer, Integer> sumMap = new HashMap<>();
         sumMap.put(0, 1);
         for (int i = 0; i < N;i++){
             if (sumMap.containsKey(sums[i] - k)){
