@@ -2,14 +2,20 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class43;
 
 import java.util.Arrays;
 
-// 来自360笔试
-// 给定一个正数数组arr，长度为n，下标0~n-1
-// arr中的0、n-1位置不需要达标，它们分别是最左、最右的位置
-// 中间位置i需要达标，达标的条件是 : arr[i-1] > arr[i] 或者 arr[i+1] > arr[i]哪个都可以
-// 你每一步可以进行如下操作：对任何位置的数让其-1
-// 你的目的是让arr[1~n-2]都达标，这时arr称之为yeah！数组
-// 返回至少要多少步可以让arr变成yeah！数组
-// 数据规模 : 数组长度 <= 10000，数组中的值<=500
+/**
+ * 来自360笔试
+ * 给定一个正数数组arr，长度为n，下标0~n-1
+ * arr中的0、n-1位置不需要达标，它们分别是最左、最右的位置
+ * 中间位置i需要达标，达标的条件是 : arr[i-1] > arr[i] 或者 arr[i+1] > arr[i]哪个都可以
+ * 你每一步可以进行如下操作：对任何位置的数让其-1
+ * 你的目的是让arr[1~n-2]都达标，这时arr称之为yeah！数组
+ * 返回至少要多少步可以让arr变成yeah！数组
+ * 数据规模 : 数组长度 <= 10000，数组中的值<=500
+ *
+ * {@link com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term05.class06.Code04_RestoreWays}
+ */
+
+
 public class Code02_MinCostToYeahArray {
 
 	public static final int INVALID = Integer.MAX_VALUE;
