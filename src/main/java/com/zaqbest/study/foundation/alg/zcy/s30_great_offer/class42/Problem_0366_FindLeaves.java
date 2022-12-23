@@ -106,6 +106,6 @@ public class Problem_0366_FindLeaves {
     public static void main(String[] args) {
         TreeNode root = buildTree(new Integer[]{1,2,3,4,5});
         List<List<Integer>> ans = findLeaves(root);
-        System.out.println(JSONUtil.toJsonPrettyStr(ans));
+        System.out.println(JSONUtil.toJsonStr(ans));
     }
 }

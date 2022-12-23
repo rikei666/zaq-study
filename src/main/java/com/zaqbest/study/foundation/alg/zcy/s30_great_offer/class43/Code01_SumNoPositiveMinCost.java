@@ -29,6 +29,8 @@ public class Code01_SumNoPositiveMinCost {
 	// 执行变相反数的操作，y操作，代价 -> y
 	// 还剩下sum这么多累加和，需要去搞定！
 	// 返回搞定了sum，最低代价是多少？
+	//
+	//存在问题： 这种方法对每一种可能性都进行了枚举，有3个可变参数，其中sum的值可能非常大，不好改成记忆化搜索
 	public static int process1(int[] arr, int x, int y, int i, int sum) {
 		if (sum <= 0) {
 			return 0;

@@ -57,8 +57,11 @@ public class Code03_MagicGoToAim {
 	}
 
 	public static class Node {
+		//上一步传送过来的方式，0-走路，1-传送
 		public int preTransfer;
+		// 城市编号
 		public int city;
+		// 从0号城市来到该城市的成本
 		public int cost;
 
 		public Node(int a, int b, int c) {

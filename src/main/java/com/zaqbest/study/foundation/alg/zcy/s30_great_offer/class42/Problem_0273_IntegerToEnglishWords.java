@@ -1,5 +1,16 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class42;
 
+/**
+ * 273. 整数转换英文表示
+ *
+ * 将非负整数 num 转换为其对应的英文表示
+ *
+ * https://leetcode.cn/problems/integer-to-english-words/
+ *
+ * 思路：
+ * 1~999 处理
+ * 1~19 处理
+ */
 public class Problem_0273_IntegerToEnglishWords {
 
 	public static String num1To19(int num) {

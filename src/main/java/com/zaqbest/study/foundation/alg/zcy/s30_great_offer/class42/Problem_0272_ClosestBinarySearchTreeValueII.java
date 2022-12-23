@@ -25,7 +25,9 @@ public class Problem_0272_ClosestBinarySearchTreeValueII {
 		Stack<TreeNode> lessTops = new Stack<>();
 		getMoreTops(root, target, moreTops);
 		getLessTops(root, target, lessTops);
+		//特殊处理，BST中真的包含8这个节点
 		if (!moreTops.isEmpty() && !lessTops.isEmpty() && moreTops.peek().val == lessTops.peek().val) {
+			//找前置节点或者后置节点都可以
 			getPredecessor(lessTops);
 		}
 		while (k-- > 0) {
@@ -51,6 +53,7 @@ public class Problem_0272_ClosestBinarySearchTreeValueII {
 	// 并且找的过程中，只要某个节点x往左走了，就把x放入moreTops里
 	public static void getMoreTops(TreeNode root, double target, Stack<TreeNode> moreTops) {
 		while (root != null) {
+			//找到target就跳出
 			if (root.val == target) {
 				moreTops.push(root);
 				break;
@@ -68,6 +71,7 @@ public class Problem_0272_ClosestBinarySearchTreeValueII {
 	// 并且找的过程中，只要某个节点x往右走了，就把x放入lessTops里
 	public static void getLessTops(TreeNode root, double target, Stack<TreeNode> lessTops) {
 		while (root != null) {
+			//找到target就跳出
 			if (root.val == target) {
 				lessTops.push(root);
 				break;
@@ -86,6 +90,7 @@ public class Problem_0272_ClosestBinarySearchTreeValueII {
 		TreeNode cur = moreTops.pop();
 		int ret = cur.val;
 		cur = cur.right;
+		//重新调整栈，这一步非常关键
 		while (cur != null) {
 			moreTops.push(cur);
 			cur = cur.left;
@@ -99,6 +104,7 @@ public class Problem_0272_ClosestBinarySearchTreeValueII {
 		TreeNode cur = lessTops.pop();
 		int ret = cur.val;
 		cur = cur.left;
+		//重新调整栈，这一步非常关键
 		while (cur != null) {
 			lessTops.push(cur);
 			cur = cur.right;
