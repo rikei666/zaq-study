@@ -14,8 +14,8 @@ public class Problem_0992_SubarraysWithKDifferentIntegers {
 		int[] equalCounts = new int[n + 1];
 		int lessLeft = 0;
 		int equalLeft = 0;
-		int lessKinds = 0;
-		int equalKinds = 0;
+		int lessKinds = 0; //k-1种类
+		int equalKinds = 0;//k的种类
 		int ans = 0;
 		for (int r = 0; r < n; r++) {
 			// 当前刚来到r位置！

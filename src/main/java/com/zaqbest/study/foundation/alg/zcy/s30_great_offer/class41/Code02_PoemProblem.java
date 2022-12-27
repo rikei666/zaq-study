@@ -46,6 +46,7 @@ public class Code02_PoemProblem {
 		return process1(arr, 0, path, 0);
 	}
 
+	//解法1：暴力方式，枚举所有子序列；然后验证每个子序列是否是有效序列
 	public static int process1(int[] arr, int index, int[] path, int size) {
 		if (index == arr.length) {
 			if (size % 4 != 0) {
