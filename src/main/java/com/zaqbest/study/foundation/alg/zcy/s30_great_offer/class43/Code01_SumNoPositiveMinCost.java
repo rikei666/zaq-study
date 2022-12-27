@@ -60,6 +60,7 @@ public class Code01_SumNoPositiveMinCost {
 	public static int minOpStep2(int[] arr, int x, int y) {
 		Arrays.sort(arr); // 小 -> 大
 		int n = arr.length;
+		// 逆序，小 -> 大 ==> 大 -> 小
 		for (int l = 0, r = n - 1; l <= r; l++, r--) {
 			int tmp = arr[l];
 			arr[l] = arr[r];
@@ -100,6 +101,8 @@ public class Code01_SumNoPositiveMinCost {
 	public static int mostLeft(int[] arr, int l, int v) {
 		int r = arr.length - 1;
 		int m = 0;
+		//特殊说明下，如果没有找到答案，正常是返回-1；
+		//这里返回了arr.length, 指的是l-1的位置
 		int ans = arr.length;
 		while (l <= r) {
 			m = (l + r) / 2;

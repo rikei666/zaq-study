@@ -14,8 +14,6 @@ import java.util.Arrays;
  *
  * {@link com.zaqbest.study.foundation.alg.zcy.s11_trainingcamp.term05.class06.Code04_RestoreWays}
  */
-
-
 public class Code02_MinCostToYeahArray {
 
 	public static final int INVALID = Integer.MAX_VALUE;
@@ -66,6 +64,7 @@ public class Code02_MinCostToYeahArray {
 		for (int num : arr) {
 			min = Math.min(min, num);
 		}
+		//为了使最小值不掉到0以下，每个值都加上了N-min
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] += arr.length - min;
 		}
@@ -82,6 +81,7 @@ public class Code02_MinCostToYeahArray {
 		}
 		// 当前index，不是最后一个数！
 		int ans = INVALID;
+		//前一个值已经达标，则第index位置的值取值范围为0~arr[index]都可以
 		if (preOk) {
 			for (int cur = arr[index]; cur >= 0; cur--) {
 				int next = process1(arr, index + 1, cur, cur < pre);
@@ -89,7 +89,9 @@ public class Code02_MinCostToYeahArray {
 					ans = Math.min(ans, arr[index] - cur + next);
 				}
 			}
-		} else {
+		}
+		// 否则，第index位置的值的只能上升处理，取值范围pre~arr[index]
+		else {
 			for (int cur = arr[index]; cur > pre; cur--) {
 				int next = process1(arr, index + 1, cur, false);
 				if (next != INVALID) {
@@ -115,15 +117,20 @@ public class Code02_MinCostToYeahArray {
 		}
 		int[][][] dp = new int[n][2][];
 		for (int i = 1; i < n; i++) {
+			//每个位置的浮动范围是由它的前一个位置决定的
 			dp[i][0] = new int[arr[i - 1] + 1];
 			dp[i][1] = new int[arr[i - 1] + 1];
 			Arrays.fill(dp[i][0], INVALID);
 			Arrays.fill(dp[i][1], INVALID);
 		}
+		//处理arr[n-1]位置，倒数第1个位置，变化范围是0~arr[i-2]
 		for (int pre = 0; pre <= arr[n - 2]; pre++) {
+			// preOk=0的情况，该位置没有比左边位置更小，所以arr[i-1]必须比
 			dp[n - 1][0][pre] = pre < arr[n - 1] ? 0 : INVALID;
+			// preOk=1的情况，该位置不需要调整，所以成本固定是0
 			dp[n - 1][1][pre] = 0;
 		}
+		//从后往前递推，n-2 -> 1
 		for (int index = n - 2; index >= 1; index--) {
 			for (int pre = 0; pre <= arr[index - 1]; pre++) {
 				for (int cur = arr[index]; cur > pre; cur--) {

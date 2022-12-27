@@ -1,6 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class44;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Problem_0992_SubarraysWithKDifferentIntegers {
 
@@ -52,19 +53,51 @@ public class Problem_0992_SubarraysWithKDifferentIntegers {
 		int i = 0, res = 0;
 		HashMap<Integer, Integer> count = new HashMap<>();
 		for (int j = 0; j < arr.length; ++j) {
+			//新发现一种字符
 			if (count.getOrDefault(arr[j], 0) == 0) {
 				k--;
 			}
+			//次数加1
 			count.put(arr[j], count.getOrDefault(arr[j], 0) + 1);
+			//已经发现的字符，超过了k种
 			while (k < 0) {
+				//字符次数减1
 				count.put(arr[i], count.get(arr[i]) - 1);
+				//字符次数减到了0，k增加
 				if (count.get(arr[i]) == 0) {
+					k++;
+				}
+				//左指针向右移动
+				i++;
+			}
+			//收集答案
+			res += j - i + 1;
+		}
+		return res;
+	}
+
+
+	public static int numsMostK_Study1(int[] arr, int k) {
+		int i=0, j=0, res = 0;
+		Map<Integer, Integer> count = new HashMap<>();
+
+		for (j = 0; j < arr.length; j++){
+			if (count.getOrDefault(arr[j], 0) == 0){
+				k--;
+			}
+			count.put(arr[j], count.getOrDefault(arr[j], 0) + 1);
+
+			while (k < 0){
+				count.put(arr[i], count.get(arr[i]) -1);
+				if (count.get(arr[i]) == 0){
 					k++;
 				}
 				i++;
 			}
-			res += j - i + 1;
+
+			res += j-i+1;
 		}
+
 		return res;
 	}
 
