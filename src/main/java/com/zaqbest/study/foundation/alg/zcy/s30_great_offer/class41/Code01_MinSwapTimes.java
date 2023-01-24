@@ -46,6 +46,7 @@ public class Code01_MinSwapTimes {
 	}
 
 	// 已知arr中，只有0~n-1这些值，并且都出现1次
+	// 不断从i位置发货
 	public static int minSwap2(int[] arr) {
 		int ans = 0;
 		for (int i = 0; i < arr.length; i++) {

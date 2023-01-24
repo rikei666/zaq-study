@@ -123,22 +123,25 @@ public class Code02_MinCostToYeahArray {
 			Arrays.fill(dp[i][0], INVALID);
 			Arrays.fill(dp[i][1], INVALID);
 		}
+		//n-1位置的代价是由n-2位置决定的，例如n-2位置是5，n-1位置是3
+		//情况1：考虑n-2没有被左边搞定（即dp[x][0]), 如果n-2变成了5，4，3，由于n-1只能向下调整，所以无论如何都不可能做到
+		//情况2：考虑n-2已经被左边搞定了（即dp[x][1]),那么n-1位置根本不需要调整，所以成本总是0
 		//处理arr[n-1]位置，倒数第1个位置，变化范围是0~arr[i-2]
 		for (int pre = 0; pre <= arr[n - 2]; pre++) {
-			// preOk=0的情况，该位置没有比左边位置更小，所以arr[i-1]必须比
 			dp[n - 1][0][pre] = pre < arr[n - 1] ? 0 : INVALID;
-			// preOk=1的情况，该位置不需要调整，所以成本固定是0
 			dp[n - 1][1][pre] = 0;
 		}
 		//从后往前递推，n-2 -> 1
 		for (int index = n - 2; index >= 1; index--) {
 			for (int pre = 0; pre <= arr[index - 1]; pre++) {
+				//index位置没有被index-1位置搞定
 				for (int cur = arr[index]; cur > pre; cur--) {
 					int next = dp[index + 1][0][cur];
 					if (next != INVALID) {
 						dp[index][0][pre] = Math.min(dp[index][0][pre], arr[index] - cur + next);
 					}
 				}
+				//index位置有被index-1位置搞定
 				for (int cur = arr[index]; cur >= 0; cur--) {
 					int next = dp[index + 1][cur < pre ? 1 : 0][cur];
 					if (next != INVALID) {
