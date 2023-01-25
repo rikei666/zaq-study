@@ -39,6 +39,7 @@ public class Problem_0291_WordPatternII {
 		// p[pi]没指定！
 		int end = s.length();
 		// 剪枝！重要的剪枝！
+
 		for (int i = p.length() - 1; i > pi; i--) {
 			end -= map[p.charAt(i) - 'a'] == null ? 1 : map[p.charAt(i) - 'a'].length();
 		}

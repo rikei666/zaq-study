@@ -12,6 +12,7 @@ public class Problem_0391_PerfectRectangle {
 		int r = Integer.MIN_VALUE;
 		int d = Integer.MAX_VALUE;
 		int u = Integer.MIN_VALUE;
+		//map(1,map(1,2)) 表示 1，1点出现2次
 		HashMap<Integer, HashMap<Integer, Integer>> map = new HashMap<>();
 		int area = 0;
 		for (int[] rect : matrix) {
