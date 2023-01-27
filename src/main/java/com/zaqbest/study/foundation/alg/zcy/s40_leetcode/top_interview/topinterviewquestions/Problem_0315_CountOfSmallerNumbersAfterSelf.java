@@ -59,6 +59,7 @@ public class Problem_0315_CountOfSmallerNumbersAfterSelf {
 		int p2 = r;
 		while (p1 >= l && p2 >= m + 1) {
 			if (arr[p1].value > arr[p2].value) {
+				//结算p1位置，如果此时 m+1, m+2， ...p2都是比p1要小的，总个数为p2-m, 累加结果
 				ans.set(arr[p1].index, ans.get(arr[p1].index) + p2 - m);
 			}
 			help[i--] = arr[p1].value > arr[p2].value ? arr[p1--] : arr[p2--];
