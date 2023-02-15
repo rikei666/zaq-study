@@ -10,26 +10,27 @@ public class Problem_0642_DesignSearchAutocompleteSystem {
 	class AutocompleteSystem {
 
 		public class TrieNode {
-			public TrieNode father;
-			public String path;
-			public TrieNode[] nexts;
+			public TrieNode father; //父节点
+			public String path; //从父节点到当前节点走过的路径
+			public TrieNode[] nexts;//下一层节点数组
 
 			public TrieNode(TrieNode f, String p) {
 				father = f;
 				path = p;
-				nexts = new TrieNode[27];
+				nexts = new TrieNode[27]; //26个字符加上空格
 			}
 		}
 
 		public class WordCount implements Comparable<WordCount> {
-			public String word;
-			public int count;
+			public String word; //单词
+			public int count; //次数
 
 			public WordCount(String w, int c) {
 				word = w;
 				count = c;
 			}
 
+			//根据词频逆序，相同磁盘按照字典序升序
 			public int compareTo(WordCount o) {
 				return count != o.count ? (o.count - count) : word.compareTo(o.word);
 			}
@@ -56,7 +57,7 @@ public class Problem_0642_DesignSearchAutocompleteSystem {
 		// 'z' -> 26 
 		//  '`'  a b  .. z
 		private int f(char c) {
-			return c == ' ' ? 0 : (c - '`');
+			return c == ' ' ? 0 : (c - 'a' + 1);
 		}
 
 		public AutocompleteSystem(String[] sentences, int[] times) {

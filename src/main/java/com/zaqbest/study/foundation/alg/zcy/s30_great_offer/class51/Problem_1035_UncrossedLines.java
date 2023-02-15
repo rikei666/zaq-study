@@ -2,6 +2,13 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class51;
 
 import java.util.HashMap;
 
+/**
+ *
+ * 最多多少个不交叉的连线问题
+ *
+ * 思路：
+ *    最长公共子序列问题
+ */
 public class Problem_1035_UncrossedLines {
 
 	// 针对这个题的题意，做的动态规划

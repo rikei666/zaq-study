@@ -5,6 +5,10 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 
+/**
+ * 避免洪水泛滥问题
+ * 
+ */
 public class Problem_1488_AvoidFloodInTheCity {
 
 	// rains[i] = j 第i天轮到j号湖泊下雨
@@ -19,16 +23,16 @@ public class Problem_1488_AvoidFloodInTheCity {
 		// 4 : {3,7,19,21}
 		// 1 : { 13 }
 		// 2 : {4, 56}
-		HashMap<Integer, LinkedList<Integer>> map = new HashMap<>();
+		HashMap<Integer, LinkedList<Integer>> rainMap = new HashMap<>();
 		for (int i = 0; i < n; i++) {
 			if (rains[i] != 0) { // 第i天要下雨，rains[i]
 				// 3天 9号
 				// 9号 { 3 }
 				// 9号 {1, 3}
-				if (!map.containsKey(rains[i])) {
-					map.put(rains[i], new LinkedList<>());
+				if (!rainMap.containsKey(rains[i])) {
+					rainMap.put(rains[i], new LinkedList<>());
 				}
-				map.get(rains[i]).addLast(i);
+				rainMap.get(rains[i]).addLast(i);
 			}
 		}
 		// 没抽干的湖泊表
@@ -44,9 +48,9 @@ public class Problem_1488_AvoidFloodInTheCity {
 				}
 				// 放入到没抽干的表里
 				set.add(rains[i]);
-				map.get(rains[i]).pollFirst();
-				if (!map.get(rains[i]).isEmpty()) {
-					heap.add(new Work(rains[i], map.get(rains[i]).peekFirst()));
+				rainMap.get(rains[i]).pollFirst();
+				if (!rainMap.get(rains[i]).isEmpty()) {
+					heap.add(new Work(rains[i], rainMap.get(rains[i]).peekFirst()));
 				}
 				// 题目规定
 				ans[i] = -1;

@@ -1,5 +1,11 @@
 package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class51;
 
+/**
+ * 珂珂吃香蕉问题
+ *
+ * 思路：
+ *     二分
+ */
 public class Problem_0875_KokoEatingBananas {
 
 	public static int minEatingSpeed(int[] piles, int h) {
@@ -22,6 +28,13 @@ public class Problem_0875_KokoEatingBananas {
 		return ans;
 	}
 
+	/**
+	 * 以speed的速度，需要多少个小时可以吃完
+	 *
+	 * @param piles
+	 * @param speed
+	 * @return
+	 */
 	public static int hours(int[] piles, int speed) {
 		int ans = 0;
 		int offset = speed - 1;

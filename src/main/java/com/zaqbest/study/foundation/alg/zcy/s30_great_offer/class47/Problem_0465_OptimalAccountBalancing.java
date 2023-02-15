@@ -19,6 +19,7 @@ public class Problem_0465_OptimalAccountBalancing {
 		// debt数组的累加和，必为0！
 		int[] debt = debts(transactions);
 		int N = debt.length;
+		//??? 没看懂，为什么是N-process1
 		return N - process1(debt, (1 << N) - 1, 0, N);
 	}
 
