@@ -9,7 +9,7 @@ import java.util.Arrays;
  *
  * 思路
  * - 暴力解（对数器）
- * - 贪心算法（）
+ * - 贪心算法
  */
 public class Code04_MaxPairNumber {
 

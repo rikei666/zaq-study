@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * 自由之路
+ * 514. 自由之路
  *
  * 本题测试链接 : https://leetcode.cn/problems/freedom-trail/
  */
@@ -13,6 +13,7 @@ public class Code07_FreedomTrail {
 	public static int findRotateSteps(String r, String k) {
 		char[] ring = r.toCharArray();
 		int N = ring.length;
+		//表示第ring[i]字符，在a位置，b位置，c位置，。。。
 		HashMap<Character, ArrayList<Integer>> map = new HashMap<>();
 		for (int i = 0; i < N; i++) {
 			if (!map.containsKey(ring[i])) {

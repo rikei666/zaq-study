@@ -13,7 +13,7 @@ import java.util.TreeMap;
  * - 堆排序
  * - 有序表
  *
- * 每张难度的工作只保留钱最多的一个（这个点是我没有get到的）
+ * 每种难度的工作只保留钱最多的一个（这个点是我没有get到的）
  */
 public class Code01_ChooseWork {
 

@@ -3,6 +3,8 @@ package com.zaqbest.study.foundation.alg.zcy.s30_great_offer.class03;
 import java.util.*;
 
 /**
+ * 1755. 最接近目标值的子序列和
+ *
  * 本题测试链接 : https://leetcode.cn/problems/closest-subsequence-sum/
  * 本题数据量描述:
  * 1 <= nums.length <= 40

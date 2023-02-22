@@ -41,6 +41,7 @@ public class Code01_QueryHobby {
 	}
 
 	public static class QueryBox2 {
+		//map含义，对于数字x, 分别在,a, b, c ,...位置出现
 		private HashMap<Integer, ArrayList<Integer>> map;
 
 		public QueryBox2(int[] arr) {
