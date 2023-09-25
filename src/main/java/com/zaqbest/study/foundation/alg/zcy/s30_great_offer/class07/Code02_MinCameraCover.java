@@ -43,6 +43,7 @@ public class Code02_MinCameraCover {
 	// 所有可能性都穷尽了
 	public static Info process1(TreeNode X) {
 		if (X == null) { // base case
+			//这里如何理解？如果是空节点，认为已经被覆盖了，该节点无法放相机
 			return new Info(Integer.MAX_VALUE, 0, Integer.MAX_VALUE);
 		}
 

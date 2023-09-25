@@ -46,6 +46,7 @@ public class Code04_Power2Diffs {
 					L++;
 				}
 			} else {
+				//跳过已收集到的结果
 				while (L < N && Math.abs(arr[L]) == leftAbs) {
 					L++;
 				}

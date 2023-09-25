@@ -29,7 +29,7 @@ public class Code03_MaxGap {
 			return 0;
 		}
 		boolean[] hasNum = new boolean[len + 1];
-		int[] maxs = new int[len + 1];
+		int[] maxs = new int[len + 1]; //[i]表示，第i号桶的最大值
 		int[] mins = new int[len + 1];
 		int bid = 0;
 		for (int i = 0; i < len; i++) {

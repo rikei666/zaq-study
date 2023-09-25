@@ -1,7 +1,7 @@
 package com.zaqbest.study.foundation.alg.zcy.s10_primary.class08;
 
 /**
- * 是否平衡数
+ * 是否平衡树
  */
 public class Code01_IsBalanced {
 
@@ -35,15 +35,15 @@ public class Code01_IsBalanced {
 	}
 
 	public static boolean isBalanced2(Node head) {
-		return process2(head).isBalaced;
+		return process2(head).isBalanced;
 	}
 
 	public static class Info {
-		public boolean isBalaced; //是否平衡
+		public boolean isBalanced; //是否平衡
 		public int height;//树的高度
 
 		public Info(boolean b, int h) {
-			isBalaced = b;
+			isBalanced = b;
 			height = h;
 		}
 	}
@@ -63,7 +63,7 @@ public class Code01_IsBalanced {
 		Info rightInfo = process2(head.right);
 		int height = Math.max(leftInfo.height, rightInfo.height) + 1;
 		boolean isBalanced = true;
-		if (!leftInfo.isBalaced || !rightInfo.isBalaced || Math.abs(leftInfo.height - rightInfo.height) > 1) {
+		if (!leftInfo.isBalanced || !rightInfo.isBalanced || Math.abs(leftInfo.height - rightInfo.height) > 1) {
 			isBalanced = false;
 		}
 		return new Info(isBalanced, height);

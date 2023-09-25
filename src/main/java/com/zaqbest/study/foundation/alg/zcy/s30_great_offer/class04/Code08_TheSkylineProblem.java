@@ -61,6 +61,8 @@ public class Code08_TheSkylineProblem {
 					mapHeightTimes.put(nodes[i].h, mapHeightTimes.get(nodes[i].h) - 1);
 				}
 			}
+
+			//获取当前最高的高度
 			if (mapHeightTimes.isEmpty()) {
 				mapXHeight.put(nodes[i].x, 0);
 			} else {
@@ -71,6 +73,7 @@ public class Code08_TheSkylineProblem {
 		for (Entry<Integer, Integer> entry : mapXHeight.entrySet()) {
 			int curX = entry.getKey();
 			int curMaxHeight = entry.getValue();
+			//如果高度发生变化，记录结果
 			if (ans.isEmpty() || ans.get(ans.size() - 1).get(1) != curMaxHeight) {
 				ans.add(new ArrayList<>(Arrays.asList(curX, curMaxHeight)));
 			}

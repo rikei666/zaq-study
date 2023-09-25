@@ -44,6 +44,28 @@ public class Code02_UnRecursiveTraversalBT {
 		System.out.println();
 	}
 
+	public static void pre_study(Node head) {
+		System.out.println("pre order:");
+		if (head != null) {
+			Stack<Node> stack = new Stack<>();
+			stack.push(head);
+
+			while (!stack.isEmpty()) {
+				head = stack.pop();
+
+				System.out.println(head.value);
+
+				if (head.right != null) {
+					stack.push(head.right);
+				}
+
+				if (head.left != null) {
+					stack.push(head.left);
+				}
+			}
+		}
+	}
+
 	/**
 	 * 中序遍历
 	 *

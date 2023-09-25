@@ -6,7 +6,7 @@ public class Problem_0045_JumpGameII {
 			return 0;
 		}
 		int step = 0;
-		int cur = 0; //再走step的时候，最远可以走到的位置
+		int cur = 0; //在走step的时候，最远可以走到的位置
 		int next = arr[0]; //如果再走一步，能到达的最远位置
 		for (int i = 1; i < arr.length; i++) {
 //            if(next >= arr.length - 1){
